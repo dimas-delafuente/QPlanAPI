@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="UseCases\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Interfaces\Repositories\" />
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Interfaces\UseCases\" />
+    <Folder Include="DTO\" />
+    <Folder Include="UseCases\RestaurantsUseCases\" />
+    <Folder Include="Interfaces\UseCases\RestaurantsUseCases\" />
+    <Folder Include="DTO\Restaurants\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QPlanAPI.Domain\QPlanAPI.Domain.csproj" />
+  </ItemGroup>
+</Project>
