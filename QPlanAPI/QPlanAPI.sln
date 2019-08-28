@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QPlanAPI.Infrastructure", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QPlanAPI.Domain", "QPlanAPI.Domain\QPlanAPI.Domain.csproj", "{6E7474B0-EEED-4853-AA97-2D6A62B2C72F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QPlanAPI.DataAccess", "QPlanAPI.DataAccessLayer\QPlanAPI.DataAccess.csproj", "{0D227714-5FAC-488E-8B7B-F08E9D78067B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QPlanAPI.DataAccess", "QPlanAPI.DataAccess\QPlanAPI.DataAccess.csproj", "{0D227714-5FAC-488E-8B7B-F08E9D78067B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QPlanAPI.Test", "QPlanAPI.Test\QPlanAPI.Test.csproj", "{34B03821-95C0-4882-A8D1-096FA8FE9AE0}"
 EndProject

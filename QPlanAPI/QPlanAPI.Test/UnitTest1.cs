@@ -21,7 +21,7 @@ namespace QPlanAPI.Test
             var mockUserRepository = new Mock<IRestaurantRepository>();
             mockUserRepository
               .Setup(repo => repo.Create(It.IsAny<Restaurant>()))
-              .Returns(Task.FromResult(new AddRestaurantResponse(true, string.Empty)));
+              .Returns(Task.FromResult(true));
 
             // 2. The use case and star of this test
             var useCase = new AddRestaurantUseCase(mockUserRepository.Object);

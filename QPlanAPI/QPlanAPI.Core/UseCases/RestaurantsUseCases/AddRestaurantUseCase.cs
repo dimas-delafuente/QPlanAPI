@@ -16,11 +16,24 @@ namespace QPlanAPI.Core.UseCases.Restaurants
             _restaurantRepository = restaurantRepository;
         }
 
-        public async Task<bool> Handle(AddRestaurantRequest message, IOutputPort<AddRestaurantResponse> outputPort)
+        public async Task<bool> Handle(AddRestaurantRequest request, IOutputPort<AddRestaurantResponse> outputPort)
         {
-            var response = await _restaurantRepository.Create(new Restaurant());
-            outputPort.Handle(response.Success ? new AddRestaurantResponse(true, string.Empty) : new AddRestaurantResponse(false, string.Empty));
-            return response.Success;
+            bool created = await _restaurantRepository.Create(new Restaurant
+            {
+                Id = request.Id,
+                Name = request.Name,
+                Address = request.Address,
+                City = request.City,
+                PostalCode = request.PostalCode,
+                Location = request.Location,
+                Phone = request.Phone,
+                Categories = request.Categories,
+                Rating = request.Rating,
+                Url = request.Url,
+                CoverUrl = request.Url
+            });
+            outputPort.Handle(created ? new AddRestaurantResponse(true, string.Empty) : new AddRestaurantResponse(false, string.Empty));
+            return created;
         }
     }
 }
