@@ -5,10 +5,12 @@ namespace QPlanAPI.Core.DTO.Restaurants
 {
     public class GetRestaurantsResponse : UseCaseResponse
     {
-        public GetRestaurantsResponse(bool success, string message) : base(success, message)
+        public List<Restaurant> Restaurants { get; set; }
+
+        public GetRestaurantsResponse(List<Restaurant> restaurants, bool success, string message) : base(success, message)
         {
+            Restaurants = restaurants;
         }
 
-        public List<Restaurant> Restaurants { get; set; }
     }
 }

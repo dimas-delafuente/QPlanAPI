@@ -9,9 +9,15 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\QPlanAPI.DataAccess\QPlanAPI.DataAccess.csproj" />
+    <ProjectReference Include="..\QPlanAPI.Core\QPlanAPI.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presenters\" />
+    <Folder Include="Serialization\" />
   </ItemGroup>
 </Project>

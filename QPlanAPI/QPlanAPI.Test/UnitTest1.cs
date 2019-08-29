@@ -3,7 +3,7 @@ using Moq;
 using QPlanAPI.Core.DTO.Restaurants;
 using QPlanAPI.Core.Interfaces.Repositories;
 using QPlanAPI.Core.Interfaces.UseCases;
-using QPlanAPI.Core.UseCases.Restaurants;
+using QPlanAPI.Core.UseCases;
 using QPlanAPI.Domain.Restaurants;
 using Xunit;
 

@@ -2,10 +2,9 @@
 using QPlanAPI.Core.DTO.Restaurants;
 using QPlanAPI.Core.Interfaces.Repositories;
 using QPlanAPI.Core.Interfaces.UseCases;
-using QPlanAPI.Core.Interfaces.UseCases.Restaurants;
 using QPlanAPI.Domain.Restaurants;
 
-namespace QPlanAPI.Core.UseCases.Restaurants
+namespace QPlanAPI.Core.UseCases
 {
     public class AddRestaurantUseCase : IAddRestaurantUseCase
     {

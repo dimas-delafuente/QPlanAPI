@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -34,11 +35,11 @@ namespace QPlanAPI.DataAccess.Repositories
 
         public async Task<IEnumerable<Restaurant>> GetAllRestaurants()
         {
-
-            return _mapper.Map<IEnumerable<Restaurant>>(await _context
+            List<RestaurantEntity> response = await _context
                             .Restaurants
                             .FindAsync(_ => true)
-                            .Result.ToListAsync());
+                            .Result.ToListAsync();
+            return _mapper.Map<List<Restaurant>>(response);
         }
 
        
@@ -47,7 +48,7 @@ namespace QPlanAPI.DataAccess.Repositories
             var point = GeoJson.Point(GeoJson.Geographic(location.Longitude, location.Latitude));
             var filter = Builders<RestaurantEntity>.Filter.Near(r => r.Location, point, radius);
 
-            return _mapper.Map<IEnumerable<Restaurant>>(await _context.Restaurants.FindAsync(filter).Result.ToListAsync());
+            return _mapper.Map<List<Restaurant>>(await _context.Restaurants.FindAsync(filter).Result.ToListAsync());
         }
 
         //TODO

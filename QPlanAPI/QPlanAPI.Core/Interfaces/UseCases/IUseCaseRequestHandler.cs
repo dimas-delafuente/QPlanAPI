@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace QPlanAPI.Core.Interfaces.UseCases.Restaurants
+namespace QPlanAPI.Core.Interfaces.UseCases
 {
     public interface IUseCaseRequestHandler<in TUseCaseRequest, out TUseCaseResponse> where TUseCaseRequest : IUseCaseRequest<TUseCaseResponse>
     {

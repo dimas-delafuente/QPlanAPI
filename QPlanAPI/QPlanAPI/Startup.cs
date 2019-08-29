@@ -13,17 +13,19 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using QPlanAPI.Core;
 using QPlanAPI.DataAccess;
+using QPlanAPI.Presenters;
 
 namespace QPlanAPI
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -38,7 +40,10 @@ namespace QPlanAPI
                 }
             });
 
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddApplicationCore();
+
+            services.AddSingleton<RestaurantPresenter>();
 
         }
 

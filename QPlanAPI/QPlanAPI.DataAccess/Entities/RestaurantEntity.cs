@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Driver;
 using MongoDB.Driver.GeoJsonObjectModel;
 
 namespace QPlanAPI.DataAccess.Entities
 {
     public class RestaurantEntity
     {
-        public RestaurantEntity()
-        {
-
-        }
 
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
@@ -50,7 +44,6 @@ namespace QPlanAPI.DataAccess.Entities
 
         [BsonIgnoreIfNull]
         [BsonElement("Url")]
-
         public string Url { get; set; }
 
         [BsonIgnoreIfNull]
@@ -58,4 +51,7 @@ namespace QPlanAPI.DataAccess.Entities
         public string CoverUrl { get; set; }
 
     }
+
+
+
 }

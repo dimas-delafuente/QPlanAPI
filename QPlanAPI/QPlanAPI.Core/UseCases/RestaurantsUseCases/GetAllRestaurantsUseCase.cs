@@ -3,8 +3,10 @@ using QPlanAPI.Core.DTO.Restaurants;
 using QPlanAPI.Core.Interfaces.Repositories;
 using QPlanAPI.Core.Interfaces.UseCases;
 using System.Linq;
+using System.Collections.Generic;
+using QPlanAPI.Domain.Restaurants;
 
-namespace QPlanAPI.Core.UseCases.RestaurantsUseCases
+namespace QPlanAPI.Core.UseCases
 {
     public class GetAllRestaurantsUseCase : IGetAllRestaurantsUseCase
     {
@@ -17,8 +19,8 @@ namespace QPlanAPI.Core.UseCases.RestaurantsUseCases
 
         public async Task<bool> Handle(GetRestaurantsRequest request, IOutputPort<GetRestaurantsResponse> outputPort)
         {
-            var response = await _restaurantRepository.GetAllRestaurants();
-            outputPort.Handle(response.Any() ? new GetRestaurantsResponse(true, string.Empty) : new GetRestaurantsResponse(false, string.Empty));
+            IEnumerable<Restaurant> response = await _restaurantRepository.GetAllRestaurants();
+            outputPort.Handle(response.Any() ? new GetRestaurantsResponse(response.ToList(), true, string.Empty) : new GetRestaurantsResponse(new List<Restaurant>(), false, string.Empty));
             return response.Any();
         }
     }
