@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using QPlanAPI.Core.DTO.Restaurants;
 using QPlanAPI.Core.Interfaces.UseCases;
+using QPlanAPI.Domain;
 using QPlanAPI.Presenters;
 
 namespace QPlanAPI.Controllers
@@ -15,10 +16,16 @@ namespace QPlanAPI.Controllers
     {
         private readonly RestaurantPresenter _restaurantPresenter;
         private readonly IGetAllRestaurantsUseCase _getAllRestaurants;
+        private readonly IGetRestaurantsByLocationUseCase _getRestaurantsByLocation;
 
-        public RestaurantsController(IGetAllRestaurantsUseCase getAllRestaurants, RestaurantPresenter restaurantPresenter)
+        private const double DEFAULT_RADIUS_MAX_DISTANCE = 1000;
+
+
+        public RestaurantsController(IGetAllRestaurantsUseCase getAllRestaurants, IGetRestaurantsByLocationUseCase getRestaurantsByLocation,
+         RestaurantPresenter restaurantPresenter)
         {
             _getAllRestaurants = getAllRestaurants;
+            _getRestaurantsByLocation = getRestaurantsByLocation;
             _restaurantPresenter = restaurantPresenter;
         }
 
@@ -35,6 +42,18 @@ namespace QPlanAPI.Controllers
         public ActionResult<string> Get(int id)
         {
             return "value";
+        }
+
+        [HttpGet("location")]
+        public async Task<ActionResult> Get(double longitude, double latitude, double radius)
+        {
+            await _getRestaurantsByLocation.Handle(new GetRestaurantsByLocationRequest
+            {
+                Location = new Location(longitude, latitude),
+                Radius = radius <= 0 ? DEFAULT_RADIUS_MAX_DISTANCE : radius
+            }, _restaurantPresenter);
+
+            return _restaurantPresenter.Result;
         }
 
         // POST api/values

@@ -10,6 +10,7 @@ namespace QPlanAPI.Core
         {
             services.AddScoped<IAddRestaurantUseCase, AddRestaurantUseCase>();
             services.AddScoped<IGetAllRestaurantsUseCase, GetAllRestaurantsUseCase>();
+            services.AddScoped<IGetRestaurantsByLocationUseCase, GetRestaurantsByLocationUseCase>();
 
         }
     }

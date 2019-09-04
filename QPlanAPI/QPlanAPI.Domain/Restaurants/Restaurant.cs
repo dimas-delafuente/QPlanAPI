@@ -10,6 +10,8 @@ namespace QPlanAPI.Domain.Restaurants
 
         public Location Location { get; set; }
 
+        public double Distance { get; set; }
+
         public string Address { get; set; }
 
         public string City { get; set; }

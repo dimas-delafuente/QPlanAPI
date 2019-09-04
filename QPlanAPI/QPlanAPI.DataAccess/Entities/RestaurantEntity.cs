@@ -52,6 +52,11 @@ namespace QPlanAPI.DataAccess.Entities
 
     }
 
+    public class RestaurantLocationEntity : RestaurantEntity
+    {
+        public BsonDouble Distance { get; set; }
+    }
+
 
 
 }

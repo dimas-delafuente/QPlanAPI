@@ -13,13 +13,17 @@ namespace QPlanAPI.DataAccess.Profiles
         public RestaurantProfile()
         {
             CreateMap<Restaurant, RestaurantEntity>()
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => 
+                .ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
                 new GeoJsonPoint<GeoJson2DGeographicCoordinates>(GeoJson.Geographic(src.Location.Longitude, src.Location.Latitude))));
 
             CreateMap<RestaurantEntity, Restaurant>().
                 ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
+                    new Location(src.Location.Coordinates.Longitude, src.Location.Coordinates.Latitude)));
+
+            CreateMap<RestaurantLocationEntity, Restaurant>().
+                ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
                     new Location(src.Location.Coordinates.Longitude, src.Location.Coordinates.Latitude)))
-                    .ForMember(dest => dest.Categories, opt => opt.MapFrom(src => src.Categories));
+                .ForMember(dest => dest.Distance, opt => opt.MapFrom(src => (double)src.Distance));
 
         }
     }

@@ -10,13 +10,16 @@ using QPlanAPI.DataAccess.Contexts;
 using QPlanAPI.DataAccess.Entities;
 using QPlanAPI.Domain;
 using QPlanAPI.Domain.Restaurants;
+using MongoDB.Bson;
+
 
 namespace QPlanAPI.DataAccess.Repositories
 {
+
+
     public class RestaurantRepository : IRestaurantRepository
     {
         private readonly IRestaurantContext _context;
-
         private readonly IMapper _mapper;
 
 
@@ -42,20 +45,19 @@ namespace QPlanAPI.DataAccess.Repositories
             return _mapper.Map<List<Restaurant>>(response);
         }
 
-       
+
         public async Task<IEnumerable<Restaurant>> GetRestaurantsByLocation(Location location, double radius)
         {
-            var point = GeoJson.Point(GeoJson.Geographic(location.Longitude, location.Latitude));
-            var filter = Builders<RestaurantEntity>.Filter.Near(r => r.Location, point, radius);
+            var result = await _context.Restaurants.Aggregate<RestaurantLocationEntity>(GetGeoNearQuery(location, radius)).ToListAsync();
 
-            return _mapper.Map<List<Restaurant>>(await _context.Restaurants.FindAsync(filter).Result.ToListAsync());
+            return _mapper.Map<List<Restaurant>>(result);
         }
 
         //TODO
         public async Task<bool> Create(Restaurant restaurant)
         {
             RestaurantEntity entity = _mapper.Map<RestaurantEntity>(restaurant);
-            try 
+            try
             {
                 await _context.Restaurants.InsertOneAsync(entity);
 
@@ -79,5 +81,27 @@ namespace QPlanAPI.DataAccess.Repositories
         {
             throw new NotImplementedException();
         }
+
+        #region "Private Methods"
+
+        private List<BsonDocument> GetGeoNearQuery(Location location, double radius)
+        {
+            var geoNearOptions = new BsonDocument {
+                { "near", new BsonDocument {
+                    { "type", "Point" },
+                    { "coordinates", new BsonArray {location.Longitude, location.Latitude} },
+                } },
+                { "distanceField", "Distance" },
+                { "maxDistance", radius},
+                { "spherical" , true }
+            };
+
+            var geoNearQuery = new List<BsonDocument>{
+                new BsonDocument { { "$geoNear", geoNearOptions } }
+            };
+
+            return geoNearQuery;
+        }
+        #endregion
     }
 }

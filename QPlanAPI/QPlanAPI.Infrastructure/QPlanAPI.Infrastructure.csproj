@@ -7,4 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\QPlanAPI.Core\QPlanAPI.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ServiceCollectionExtension.cs" />
+  </ItemGroup>
 </Project>
