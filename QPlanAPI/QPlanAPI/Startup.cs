@@ -12,8 +12,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using QPlanAPI.Core;
+using QPlanAPI.Infrastructure;
 using QPlanAPI.DataAccess;
 using QPlanAPI.Presenters;
+using QPlanAPI.Config;
+using System.IO;
 
 namespace QPlanAPI
 {
@@ -32,16 +35,21 @@ namespace QPlanAPI
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddMongoDbClient(new DbSettings {
+            services.AddMongoDbClient(new DbSettings
+            {
                 ConnectionString = Configuration.GetSection("MongoDbSettings:ConnectionString").Value,
                 DatabaseName = Configuration.GetSection("MongoDbSettings:DatabaseName").Value,
-                DatabaseCollections = new DbSettings.DbCollections {
+                DatabaseCollections = new DbSettings.DbCollections
+                {
                     Restaurants = Configuration.GetSection("MongoDbSettings:DatabaseCollections:Restaurants").Value
                 }
             });
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddApplicationCore();
+            services.AddApplicationInfrastructure();
+
+            services.Configure<ExternalRestaurantsConfig>(GetExternalRestaurantsConfiguration());
 
             services.AddSingleton<RestaurantPresenter>();
 
@@ -62,6 +70,17 @@ namespace QPlanAPI
 
             app.UseHttpsRedirection();
             app.UseMvc();
+        }
+
+        private IConfiguration GetExternalRestaurantsConfiguration()
+        {
+            var builder = new ConfigurationBuilder();
+            builder.SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile(Path.Combine("Config", "externalrestaurantssettings.json"));
+
+            IConfigurationRoot configuration = builder.Build();
+
+            return configuration;
         }
     }
 }

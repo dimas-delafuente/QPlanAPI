@@ -2,11 +2,19 @@
 
 namespace QPlanAPI.Domain.Restaurants
 {
+
+    public enum RestaurantType
+    {
+        McDonalds
+    }
+
     public class Restaurant
     {
         public string Id { get; set; }
 
         public string Name { get; set; }
+
+        public RestaurantType Type { get; set; }
 
         public Location Location { get; set; }
 
@@ -16,7 +24,7 @@ namespace QPlanAPI.Domain.Restaurants
 
         public string City { get; set; }
 
-        public long PostalCode { get; set; }
+        public string PostalCode { get; set; }
 
         public string Phone { get; set; }
 

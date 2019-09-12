@@ -53,8 +53,7 @@ namespace QPlanAPI.DataAccess.Repositories
             return _mapper.Map<List<Restaurant>>(result);
         }
 
-        //TODO
-        public async Task<bool> Create(Restaurant restaurant)
+        public async Task<bool> Insert(Restaurant restaurant)
         {
             RestaurantEntity entity = _mapper.Map<RestaurantEntity>(restaurant);
             try
@@ -70,14 +69,44 @@ namespace QPlanAPI.DataAccess.Repositories
             return true;
         }
 
+        public async Task<bool> InsertMany(HashSet<Restaurant> restaurants)
+        {
+            List<RestaurantEntity> entities = _mapper.Map<List<RestaurantEntity>>(restaurants);
+            try
+            {
+                await _context.Restaurants.InsertManyAsync(entities);
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
+
 
         public async Task<bool> Delete(string name)
         {
             throw new NotImplementedException();
         }
 
+        public async Task<bool> DeleteByRestaurantType(RestaurantType type)
+        {
+            try
+            {
 
-        public async Task<bool> Update(Restaurant game)
+                await _context.Restaurants.DeleteManyAsync(r => r.Type.Equals(type));
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+
+        public async Task<bool> Update(Restaurant restaurant)
         {
             throw new NotImplementedException();
         }
