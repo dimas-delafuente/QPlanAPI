@@ -32,15 +32,9 @@ msbuild.wrn
 .vs/
 
 # MongoDB
-QPlanData/*
-QPlanData/!*.wt
-QPlanData/sizeStorer.wt
+QPlanData/mongod.lock
+QPlanData/WiredTiger
+QPlanData/WiredTiger.turtle
 QPlanData/WiredTiger.wt
-QPlanData/WiredTigerLAS.wt
-QPlanData/collection-0*
-QPlanData/collection-2*
-QPlanData/collection-4*
-QPlanData/index-1*
-QPlanData/index-3*
-QPlanData/index-5*
-QPlanData/index-6*
+QPlanData/diagnostic.data/*
+QPlanData/journal/*
