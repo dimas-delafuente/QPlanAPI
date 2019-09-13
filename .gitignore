@@ -30,3 +30,11 @@ msbuild.wrn
 
 # Visual Studio 2015
 .vs/
+
+# MongoDB
+QPlanData/mongod.lock
+QPlanData/WiredTiger
+QPlanData/WiredTiger.turtle
+QPlanData/WiredTiger.wt
+QPlanData/diagnostic.data/*
+QPlanData/journal/*
