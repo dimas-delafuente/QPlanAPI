@@ -1,0 +1,4 @@
+language: csharp
+dotnet: 2.2.100
+after_success:
+- bash <(curl -s https://codecov.io/bash)
