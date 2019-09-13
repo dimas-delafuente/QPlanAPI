@@ -12,9 +12,11 @@ namespace QPlanAPI.Core.Interfaces.Repositories
         Task<IEnumerable<Restaurant>> GetAllRestaurants();
         Task<IEnumerable<Restaurant>> GetRestaurantsByLocation(Location location, double radius);
 
-        Task<bool> Create(Restaurant restaurant);
-        Task<bool> Update(Restaurant game);
+        Task<bool> Insert(Restaurant restaurant);
+        Task<bool> InsertMany(HashSet<Restaurant> restaurant);
+        Task<bool> Update(Restaurant restaurant);
         Task<bool> Delete(string name);
+        Task<bool> DeleteByRestaurantType(RestaurantType type);
 
 
     }

@@ -23,7 +23,7 @@ namespace QPlanAPI.Test.Restaurants
         public async void Can_Add_Restaurant()
         {
             _restaurantRepository
-              .Setup(repo => repo.Create(It.IsAny<Restaurant>()))
+              .Setup(repo => repo.Insert(It.IsAny<Restaurant>()))
               .Returns(Task.FromResult(true));
 
             var useCase = new AddRestaurantUseCase(_restaurantRepository.Object);
