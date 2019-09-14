@@ -8,7 +8,9 @@
     },
     {
       "type": "KFC",
-      "endpoints": [""]
+      "endpoints": [
+        "https://kfc.es/wp-content/themes/KFC/library/data/rest.geojson"
+      ]
     }
   ]
 }

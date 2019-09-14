@@ -5,7 +5,8 @@ namespace QPlanAPI.Config
 
     public enum RestaurantType
     {
-        McDonalds
+        McDonalds,
+        KFC
     }
 
     public class ExternalRestaurantsConfig

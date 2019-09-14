@@ -36,7 +36,7 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
                 {
                     if (apiRestaurants is object && apiRestaurants.Any())
                     {
-                        if (await _restaurantRepository.DeleteByRestaurantType(RestaurantType.McDonalds))
+                        if (await _restaurantRepository.DeleteByRestaurantType(apiRestaurants.FirstOrDefault().Type))
                         {
                             return await _restaurantRepository.InsertMany(apiRestaurants);
                         }

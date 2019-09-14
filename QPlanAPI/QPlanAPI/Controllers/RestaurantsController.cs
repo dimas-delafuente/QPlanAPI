@@ -83,11 +83,18 @@ namespace QPlanAPI.Controllers
         {
         }
 
-        [HttpGet("test12345")]
-        public void Test()
+        [HttpGet("test/mcdonalds")]
+        public void TestMcDonalds()
         {
             var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.McDonalds));
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(McDonaldsRestaurantsResponse[]));
+        }
+
+        [HttpGet("test/kfc")]
+        public void TestKFC()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.KFC));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(KFCRestaurantResponse));
         }
     }
 }

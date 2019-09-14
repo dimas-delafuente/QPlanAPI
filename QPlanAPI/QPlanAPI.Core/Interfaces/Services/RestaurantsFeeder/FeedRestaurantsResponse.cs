@@ -33,4 +33,39 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
 
     }
 
+
+    public class KFCRestaurantResponse : FeedRestaurantsResponse
+    {
+        [JsonProperty("features")]
+        public KFCRestaurant[] Restaurants { get; set; }
+
+        public class KFCRestaurant
+        {
+            public KFCGeometry Geometry { get; set; }
+            public KFCProperties Properties { get; set; }
+
+            public class KFCProperties
+            {
+                [JsonProperty("title")]
+                public string Name { get; set; }
+                public string Address { get; set; }
+
+                [JsonProperty("postal")]
+                public string PostalCode { get; set; }
+
+                [JsonProperty("locality")]
+                public string City { get; set; }
+                public string Phone { get; set; }
+
+
+            }
+
+            public class KFCGeometry
+            {
+                public string[] Coordinates { get; set; }
+            }
+        }
+
+
+    }
 }
