@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
@@ -7,7 +6,6 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
     public class FeedRestaurantsResponse { }
 
 
-    [Serializable]
     public class McDonaldsRestaurantsResponse : FeedRestaurantsResponse
     {
         [JsonProperty("name")]
@@ -32,9 +30,7 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
         public string Horario { get; set; }
 
     }
-
-
-    public class KFCRestaurantResponse : FeedRestaurantsResponse
+    public class KFCRestaurantsResponse : FeedRestaurantsResponse
     {
         [JsonProperty("features")]
         public KFCRestaurant[] Restaurants { get; set; }
@@ -67,5 +63,54 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
         }
 
 
+    }
+
+    public class FostersRestaurantsResponse : FeedRestaurantsResponse
+    {
+        public string Name { get; set; }
+        public string Phone { get; set; }
+
+        public string Url { get; set; }
+
+        [JsonProperty("image")]
+        public string CoverUrl { get; set; }
+
+        [JsonProperty("location")]
+        public ForstersLocation Location { get; set; }
+
+        public class ForstersLocation
+        {
+            [JsonProperty("lat")]
+            public string Latitude { get; set; }
+            [JsonProperty("lon")]
+            public string Longitude { get; set; }
+            [JsonProperty("postal_code")]
+            public string PostalCode { get; set; }
+            [JsonProperty("thoroughfare")]
+            public string Address { get; set; }
+            [JsonProperty("locality")]
+            public string City { get; set; }
+        }
+    }
+
+    public class GinosRestaurantsResponse : FeedRestaurantsResponse
+    {
+        [JsonProperty("markers")]
+        public List<List<string>> Restaurants { get; set; }
+    }
+
+    public class TacoBellRestaurantsResponse : FeedRestaurantsResponse
+    {
+        [JsonProperty("direccion")]
+        public string Address { get; set; }
+
+        [JsonProperty("telefono")]
+        public string Phone { get; set; }
+
+        [JsonProperty("justeat_web")]
+        public string Url { get; set; }
+
+        public string Longitude { get; set; }
+        public string Latitude { get; set; }
     }
 }

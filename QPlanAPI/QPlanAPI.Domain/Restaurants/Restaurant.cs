@@ -6,7 +6,10 @@ namespace QPlanAPI.Domain.Restaurants
     public enum RestaurantType
     {
         McDonalds,
-        KFC
+        KFC,
+        FostersHollywood,
+        Ginos,
+        TacoBell
     }
 
     public class Restaurant

@@ -11,6 +11,22 @@
       "endpoints": [
         "https://kfc.es/wp-content/themes/KFC/library/data/rest.geojson"
       ]
+    },
+    {
+      "type": "FostersHollywood",
+      "endpoints": ["https://fostershollywood.es/service/restaurants"]
+    },
+    {
+      "type": "Ginos",
+      "endpoints": [
+        "https://www.ginos.es/nearest_stores?page=1&latitude=40.4926842&longitude=-3.8777554&cyt=non"
+      ]
+    },
+    {
+      "type": "TacoBell",
+      "endpoints": [
+        "https://tacobell.es/wp-admin/admin-ajax.php?action=busquedaTodas"
+      ]
     }
   ]
 }

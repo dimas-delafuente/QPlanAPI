@@ -94,7 +94,28 @@ namespace QPlanAPI.Controllers
         public void TestKFC()
         {
             var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.KFC));
-            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(KFCRestaurantResponse));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(KFCRestaurantsResponse));
+        }
+
+        [HttpGet("test/fosters")]
+        public void TestFosters()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.FostersHollywood));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(FostersRestaurantsResponse[]));
+        }
+
+        [HttpGet("test/ginos")]
+        public void TestGinos()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.Ginos));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(GinosRestaurantsResponse));
+        }
+
+        [HttpGet("test/tacobell")]
+        public void TestTacoBell()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.TacoBell));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(TacoBellRestaurantsResponse[]));
         }
     }
 }
