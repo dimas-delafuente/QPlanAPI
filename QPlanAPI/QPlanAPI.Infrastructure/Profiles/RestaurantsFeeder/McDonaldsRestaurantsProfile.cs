@@ -46,14 +46,14 @@ namespace QPlanAPI.Infrastructure.Profiles
         {
             try
             {
-                var addressFields = address.Split(',');
-                return addressFields[addressFields.Length - 1].Trim();
+                string[] addressFields = address.Split(',');
+                string postalCode = addressFields[addressFields.Length - 1].Trim();
+                return postalCode.Length < 5 ? $"0{postalCode}" : postalCode;
             }
             catch
             {
                 return string.Empty;
             }
-
         }
 
         //TODO 

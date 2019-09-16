@@ -9,7 +9,8 @@ namespace QPlanAPI.Domain.Restaurants
         KFC,
         FostersHollywood,
         Ginos,
-        TacoBell
+        TacoBell,
+        PapaJohns
     }
 
     public class Restaurant

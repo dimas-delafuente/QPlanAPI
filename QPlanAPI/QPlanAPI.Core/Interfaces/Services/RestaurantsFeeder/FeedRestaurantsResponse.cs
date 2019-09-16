@@ -113,4 +113,27 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
         public string Longitude { get; set; }
         public string Latitude { get; set; }
     }
+
+    public class PapaJohnsRestaurantsResponse : FeedRestaurantsResponse
+    {
+        [JsonProperty("page")]
+        public List<PapaJohnsRestaurant> Restaurants { get; set; }
+
+        public class PapaJohnsRestaurant
+        {
+            public string Name { get; set; }
+
+            [JsonProperty("text_address")]
+            public string Address { get; set; }
+
+            [JsonProperty("commune")]
+            public string City { get; set; }
+
+            public string Phone { get; set; }
+
+            public string Latitude { get; set; }
+
+            public string Longitude { get; set; }
+        }
+    }
 }

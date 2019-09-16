@@ -9,7 +9,8 @@ namespace QPlanAPI.Config
         KFC,
         FostersHollywood,
         Ginos,
-        TacoBell
+        TacoBell,
+        PapaJohns
     }
 
     public class ExternalRestaurantsConfig

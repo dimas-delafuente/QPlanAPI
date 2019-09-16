@@ -27,6 +27,14 @@
       "endpoints": [
         "https://tacobell.es/wp-admin/admin-ajax.php?action=busquedaTodas"
       ]
+    },
+    {
+      "type": "PapaJohns",
+      "endpoints": [
+        "https://api.new.papajohns.es/v1/stores?latitude=40.46366700000001&longitude=-3.7492200000000366&page=1",
+        "https://api.new.papajohns.es/v1/stores?latitude=40.46366700000001&longitude=-3.7492200000000366&page=2",
+        "https://api.new.papajohns.es/v1/stores?latitude=40.46366700000001&longitude=-3.7492200000000366&page=3"
+      ]
     }
   ]
 }

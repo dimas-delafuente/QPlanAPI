@@ -72,4 +72,20 @@ namespace QPlanAPI.Infrastructure.Converters
         }
 
     }
+
+
+    public class PapaJohnsResponseToRestaurantConverter : ITypeConverter<PapaJohnsRestaurantsResponse, Restaurant[]>
+    {
+        public Restaurant[] Convert(PapaJohnsRestaurantsResponse src, Restaurant[] dest, ResolutionContext context)
+        {
+            List<Restaurant> restaurants = new List<Restaurant> { };
+            foreach (var restaurant in src.Restaurants)
+            {
+                restaurants.Add(context.Mapper.Map<Restaurant>(restaurant));
+            }
+
+            return restaurants.ToArray();
+        }
+
+    }
 }
