@@ -88,4 +88,19 @@ namespace QPlanAPI.Infrastructure.Converters
         }
 
     }
+
+    public class TGBResponseToRestaurantConverter : ITypeConverter<TGBRestaurantsResponse, Restaurant[]>
+    {
+        public Restaurant[] Convert(TGBRestaurantsResponse src, Restaurant[] dest, ResolutionContext context)
+        {
+            List<Restaurant> restaurants = new List<Restaurant> { };
+            foreach (var restaurant in src.Information.Restaurants)
+            {
+                restaurants.Add(context.Mapper.Map<Restaurant>(restaurant));
+            }
+
+            return restaurants.ToArray();
+        }
+
+    }
 }

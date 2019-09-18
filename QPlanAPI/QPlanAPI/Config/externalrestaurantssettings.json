@@ -35,6 +35,10 @@
         "https://api.new.papajohns.es/v1/stores?latitude=40.46366700000001&longitude=-3.7492200000000366&page=2",
         "https://api.new.papajohns.es/v1/stores?latitude=40.46366700000001&longitude=-3.7492200000000366&page=3"
       ]
+    },
+    {
+      "type": "TGB",
+      "endpoints": ["https://thegoodburger.com/wp-content/uploads/data.json"]
     }
   ]
 }

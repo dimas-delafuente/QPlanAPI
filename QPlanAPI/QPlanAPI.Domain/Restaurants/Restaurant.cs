@@ -10,7 +10,8 @@ namespace QPlanAPI.Domain.Restaurants
         FostersHollywood,
         Ginos,
         TacoBell,
-        PapaJohns
+        PapaJohns,
+        TGB
     }
 
     public class Restaurant

@@ -124,5 +124,12 @@ namespace QPlanAPI.Controllers
             var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.PapaJohns));
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(PapaJohnsRestaurantsResponse));
         }
+
+        [HttpGet("test/tgb")]
+        public void TestTGB()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.TGB));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(TGBRestaurantsResponse));
+        }
     }
 }

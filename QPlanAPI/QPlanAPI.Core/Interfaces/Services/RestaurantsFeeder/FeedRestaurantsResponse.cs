@@ -136,4 +136,34 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
             public string Longitude { get; set; }
         }
     }
+
+    public class TGBRestaurantsResponse : FeedRestaurantsResponse
+    {
+
+        [JsonProperty("options")]
+        public TGBInformation Information { get; set; }
+
+        public class TGBInformation
+        {
+            [JsonProperty("stores")]
+            public List<TGBRestaurant> Restaurants { get; set; }
+
+            public class TGBRestaurant
+            {
+                public string Name { get; set; }
+
+                public string Address { get; set; }
+
+                [JsonProperty("store_city")]
+                public string City { get; set; }
+
+                [JsonProperty("lat_long")]
+                public string Coordinates { get; set; }
+
+                [JsonProperty("link")]
+                public string Url { get; set; }
+
+            }
+        }
+    }
 }

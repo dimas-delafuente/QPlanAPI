@@ -10,7 +10,8 @@ namespace QPlanAPI.Config
         FostersHollywood,
         Ginos,
         TacoBell,
-        PapaJohns
+        PapaJohns,
+        TGB
     }
 
     public class ExternalRestaurantsConfig
