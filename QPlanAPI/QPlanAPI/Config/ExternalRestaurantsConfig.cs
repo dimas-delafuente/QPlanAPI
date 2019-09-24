@@ -1,8 +1,5 @@
-using System.Collections.Generic;
-
 namespace QPlanAPI.Config
 {
-
     public enum RestaurantType
     {
         McDonalds,
@@ -11,7 +8,8 @@ namespace QPlanAPI.Config
         Ginos,
         TacoBell,
         PapaJohns,
-        TGB
+        TGB,
+        Subway
     }
 
     public class ExternalRestaurantsConfig

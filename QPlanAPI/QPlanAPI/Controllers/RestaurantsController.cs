@@ -83,6 +83,18 @@ namespace QPlanAPI.Controllers
         {
         }
 
+        [HttpGet("test/all")]
+        public void UpdateRestaurantsInfo()
+        {
+            TestMcDonalds();
+            TestKFC();
+            TestFosters();
+            TestGinos();
+            TestTacoBell();
+            TestPapaJohns();
+            TestTGB();
+        }
+
         [HttpGet("test/mcdonalds")]
         public void TestMcDonalds()
         {
@@ -130,6 +142,13 @@ namespace QPlanAPI.Controllers
         {
             var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.TGB));
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(TGBRestaurantsResponse));
+        }
+
+        [HttpGet("test/subway")]
+        public void TestSubway()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.Subway));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(SubwayRestaurantsResponse));
         }
     }
 }

@@ -11,7 +11,8 @@ namespace QPlanAPI.Domain.Restaurants
         Ginos,
         TacoBell,
         PapaJohns,
-        TGB
+        TGB,
+        Subway
     }
 
     public class Restaurant

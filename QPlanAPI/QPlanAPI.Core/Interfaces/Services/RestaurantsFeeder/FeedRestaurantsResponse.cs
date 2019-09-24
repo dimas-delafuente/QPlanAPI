@@ -45,15 +45,11 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
                 [JsonProperty("title")]
                 public string Name { get; set; }
                 public string Address { get; set; }
-
                 [JsonProperty("postal")]
                 public string PostalCode { get; set; }
-
                 [JsonProperty("locality")]
                 public string City { get; set; }
                 public string Phone { get; set; }
-
-
             }
 
             public class KFCGeometry
@@ -61,20 +57,15 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
                 public string[] Coordinates { get; set; }
             }
         }
-
-
     }
 
     public class FostersRestaurantsResponse : FeedRestaurantsResponse
     {
         public string Name { get; set; }
         public string Phone { get; set; }
-
         public string Url { get; set; }
-
         [JsonProperty("image")]
         public string CoverUrl { get; set; }
-
         [JsonProperty("location")]
         public ForstersLocation Location { get; set; }
 
@@ -111,6 +102,7 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
         public string Url { get; set; }
 
         public string Longitude { get; set; }
+
         public string Latitude { get; set; }
     }
 
@@ -165,5 +157,22 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
 
             }
         }
+    }
+
+    public class SubwayRestaurantsResponse : FeedRestaurantsResponse
+    {
+        public string Name { get; set; }
+
+        [JsonProperty("text_address")]
+        public string Address { get; set; }
+
+        [JsonProperty("commune")]
+        public string City { get; set; }
+
+        public string Phone { get; set; }
+
+        public string Latitude { get; set; }
+
+        public string Longitude { get; set; }
     }
 }

@@ -14,7 +14,7 @@
     },
     {
       "type": "FostersHollywood",
-      "endpoints": ["https://fostershollywood.es/service/restaurants"]
+      "endpoints": [ "https://fostershollywood.es/service/restaurants" ]
     },
     {
       "type": "Ginos",
@@ -38,7 +38,15 @@
     },
     {
       "type": "TGB",
-      "endpoints": ["https://thegoodburger.com/wp-content/uploads/data.json"]
+      "endpoints": [
+        "https://thegoodburger.com/wp-content/uploads/data.json"
+      ]
+    },
+    {
+      "type": "Subway",
+      "endpoints": [
+        "http://subwayspain.com/es/?option=com_storelocator&view=map&format=raw&searchall=1"
+      ]
     }
   ]
 }
