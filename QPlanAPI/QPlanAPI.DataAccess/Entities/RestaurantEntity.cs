@@ -30,7 +30,7 @@ namespace QPlanAPI.DataAccess.Entities
 
         [BsonRequired]
         [BsonElement("PostalCode")]
-        public long PostalCode { get; set; }
+        public string PostalCode { get; set; }
 
         [BsonElement("Phone")]
         public string Phone { get; set; }
@@ -50,6 +50,15 @@ namespace QPlanAPI.DataAccess.Entities
         [BsonElement("CoverUrl")]
         public string CoverUrl { get; set; }
 
+        [BsonRequired]
+        [BsonElement("Type")]
+        public string Type { get; set; }
+
+    }
+
+    public class RestaurantLocationEntity : RestaurantEntity
+    {
+        public BsonDouble Distance { get; set; }
     }
 
 

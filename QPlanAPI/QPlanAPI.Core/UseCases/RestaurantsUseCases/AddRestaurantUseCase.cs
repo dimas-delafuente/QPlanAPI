@@ -17,7 +17,7 @@ namespace QPlanAPI.Core.UseCases
 
         public async Task<bool> Handle(AddRestaurantRequest request, IOutputPort<AddRestaurantResponse> outputPort)
         {
-            bool created = await _restaurantRepository.Create(new Restaurant
+            bool created = await _restaurantRepository.Insert(new Restaurant
             {
                 Id = request.Id,
                 Name = request.Name,

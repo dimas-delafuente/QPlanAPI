@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using QPlanAPI.Core.DTO.Restaurants;
 using QPlanAPI.Core.Interfaces.UseCases;
+using QPlanAPI.Domain;
 using QPlanAPI.Presenters;
+using QPlanAPI.Infrastructure.Services.RestaurantsFeeder;
+using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
+using QPlanAPI.Config;
+using Microsoft.Extensions.Options;
 
 namespace QPlanAPI.Controllers
 {
@@ -15,11 +20,22 @@ namespace QPlanAPI.Controllers
     {
         private readonly RestaurantPresenter _restaurantPresenter;
         private readonly IGetAllRestaurantsUseCase _getAllRestaurants;
+        private readonly IGetRestaurantsByLocationUseCase _getRestaurantsByLocation;
+        private readonly IRestaurantsFeederService<FeedApiRestaurantsRequest> _restaurantsFeeder;
 
-        public RestaurantsController(IGetAllRestaurantsUseCase getAllRestaurants, RestaurantPresenter restaurantPresenter)
+        private readonly ExternalRestaurantsConfig _externalRestaurantsConfig;
+
+        private const double DEFAULT_RADIUS_MAX_DISTANCE = 1000;
+
+
+        public RestaurantsController(IGetAllRestaurantsUseCase getAllRestaurants, IGetRestaurantsByLocationUseCase getRestaurantsByLocation,
+         RestaurantPresenter restaurantPresenter, IRestaurantsFeederService<FeedApiRestaurantsRequest> restaurantsFeeder, IOptions<ExternalRestaurantsConfig> externalRestaurantsConfig)
         {
             _getAllRestaurants = getAllRestaurants;
+            _getRestaurantsByLocation = getRestaurantsByLocation;
             _restaurantPresenter = restaurantPresenter;
+            _restaurantsFeeder = restaurantsFeeder;
+            _externalRestaurantsConfig = externalRestaurantsConfig.Value;
         }
 
         // GET api/values
@@ -35,6 +51,18 @@ namespace QPlanAPI.Controllers
         public ActionResult<string> Get(int id)
         {
             return "value";
+        }
+
+        [HttpGet("location")]
+        public async Task<ActionResult> Get(double longitude, double latitude, double radius)
+        {
+            await _getRestaurantsByLocation.Handle(new GetRestaurantsByLocationRequest
+            {
+                Location = new Location(longitude, latitude),
+                Radius = radius <= 0 ? DEFAULT_RADIUS_MAX_DISTANCE : radius
+            }, _restaurantPresenter);
+
+            return _restaurantPresenter.Result;
         }
 
         // POST api/values
@@ -53,6 +81,13 @@ namespace QPlanAPI.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        [HttpGet("test12345")]
+        public void Test()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.McDonalds));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(McDonaldsRestaurantsResponse[]));
         }
     }
 }
