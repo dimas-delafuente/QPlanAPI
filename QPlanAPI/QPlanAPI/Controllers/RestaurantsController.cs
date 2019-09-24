@@ -83,11 +83,72 @@ namespace QPlanAPI.Controllers
         {
         }
 
-        [HttpGet("test12345")]
-        public void Test()
+        [HttpGet("test/all")]
+        public void UpdateRestaurantsInfo()
+        {
+            TestMcDonalds();
+            TestKFC();
+            TestFosters();
+            TestGinos();
+            TestTacoBell();
+            TestPapaJohns();
+            TestTGB();
+        }
+
+        [HttpGet("test/mcdonalds")]
+        public void TestMcDonalds()
         {
             var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.McDonalds));
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(McDonaldsRestaurantsResponse[]));
+        }
+
+        [HttpGet("test/kfc")]
+        public void TestKFC()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.KFC));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(KFCRestaurantsResponse));
+        }
+
+        [HttpGet("test/fosters")]
+        public void TestFosters()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.FostersHollywood));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(FostersRestaurantsResponse[]));
+        }
+
+        [HttpGet("test/ginos")]
+        public void TestGinos()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.Ginos));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(GinosRestaurantsResponse));
+        }
+
+        [HttpGet("test/tacobell")]
+        public void TestTacoBell()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.TacoBell));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(TacoBellRestaurantsResponse[]));
+        }
+
+        [HttpGet("test/papajohns")]
+        public void TestPapaJohns()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.PapaJohns));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(PapaJohnsRestaurantsResponse));
+        }
+
+        [HttpGet("test/tgb")]
+        public void TestTGB()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.TGB));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(TGBRestaurantsResponse));
+        }
+
+        [HttpGet("test/subway")]
+        public void TestSubway()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.Subway));
+            _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(SubwayRestaurantsResponse));
         }
     }
 }
