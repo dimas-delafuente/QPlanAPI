@@ -4,10 +4,11 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
+- develop
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'linux-latest'
+
 
 variables:
   solution: '**/*.sln'
@@ -32,3 +33,11 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure para estudiantes (4bb861cd-d16b-41ff-915c-1439ec7e768e)'
+    appType: 'webAppLinux'
+    WebAppName: 'qplan-api'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'DOTNETCORE|2.2'
