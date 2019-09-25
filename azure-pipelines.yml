@@ -20,21 +20,22 @@ steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
-    version: '2.2.1'
+    version: '2.1.300'
+    includePreviewVersions: true
 
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-
+- script: dotnet restore
 - task: DotNetCoreCLI@2
+  displayName: Build
   inputs:
-    command: 'build'
+    command: build
+    projects: '**/*.csproj'
+    arguments: '--configuration Release'
     
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'test'
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--configuration Release'
 
 - task: AzureRmWebAppDeployment@4
   inputs:
