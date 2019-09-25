@@ -36,7 +36,7 @@ steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
-    azureSubscription: 'Azure NinetyFive Subscription'
+    azureSubscription: 'Azure para estudiantes (4bb861cd-d16b-41ff-915c-1439ec7e768e)'
     appType: 'webAppLinux'
     WebAppName: 'qplan-api'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
