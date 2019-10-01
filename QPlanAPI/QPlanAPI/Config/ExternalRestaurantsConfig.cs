@@ -11,7 +11,8 @@ namespace QPlanAPI.Config
         TacoBell,
         PapaJohns,
         TGB,
-        Subway
+        Subway,
+        DominosPizza
     }
 
     public class ExternalRestaurantsConfig

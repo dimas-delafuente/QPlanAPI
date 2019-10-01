@@ -8,8 +8,9 @@ namespace QPlanAPI.Infrastructure
     {
         public static void AddApplicationInfrastructure(this IServiceCollection services)
         {
+            
             services.AddScoped<IRestaurantsFeederService<FeedApiRestaurantsRequest>, ApiRestaurantsFeeder>();
-
+            services.AddScoped<IRestaurantsFeederService<FeedHtmlRestaurantsRequest>, HtmlRestaurantsFeeder>();
         }
     }
 }

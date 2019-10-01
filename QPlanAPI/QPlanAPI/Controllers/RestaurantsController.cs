@@ -150,5 +150,12 @@ namespace QPlanAPI.Controllers
             var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.Subway));
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(SubwayRestaurantsResponse));
         }
+
+        [HttpGet("test/dominospizza")]
+        public void TestDominosPizza()
+        {
+            var config = _externalRestaurantsConfig.ApiRestaurants.FirstOrDefault(x => x.Type.Equals(RestaurantType.DominosPizza));
+            //_restaurantsFeeder.HandleAsync(new FeedHtmlRestaurantsRequest { ApiEndpoints = config.Endpoints }, typeof(FeedRestaurantsResponse));
+        }
     }
 }

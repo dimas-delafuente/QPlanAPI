@@ -15,7 +15,7 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
     {
         private readonly IRestaurantRepository _restaurantRepository;
         private readonly IMapper _mapper;
-        private static HttpClient _client;
+        private HttpClient _client;
 
         public ApiRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository)
         {
