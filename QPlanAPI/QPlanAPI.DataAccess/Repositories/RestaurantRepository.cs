@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using MongoDB.Driver;
-using MongoDB.Driver.GeoJsonObjectModel;
 using QPlanAPI.Core.Interfaces.Repositories;
 using QPlanAPI.DataAccess.Contexts;
 using QPlanAPI.DataAccess.Entities;
@@ -31,34 +29,25 @@ namespace QPlanAPI.DataAccess.Repositories
 
         public async Task<Restaurant> GetRestaurant(string id)
         {
-            return _mapper.Map<Restaurant>(await _context
-                            .Restaurants
-                            .FindAsync(r => r.Id.Equals(id)));
+            return _mapper.Map<Restaurant>(await _context.GetRestaurantById(id));
         }
 
         public async Task<IEnumerable<Restaurant>> GetAllRestaurants()
         {
-            List<RestaurantEntity> response = await _context
-                            .Restaurants
-                            .FindAsync(_ => true)
-                            .Result.ToListAsync();
-            return _mapper.Map<List<Restaurant>>(response);
+            return _mapper.Map<List<Restaurant>>(await _context.GetRestaurants());
         }
 
 
         public async Task<IEnumerable<Restaurant>> GetRestaurantsByLocation(Location location, double radius)
         {
-            var result = await _context.Restaurants.Aggregate<RestaurantLocationEntity>(GetGeoNearQuery(location, radius)).ToListAsync();
-
-            return _mapper.Map<List<Restaurant>>(result);
+            return _mapper.Map<List<Restaurant>>(await _context.GetRestaurantsByLocation(location.Longitude, location.Latitude, radius));
         }
 
         public async Task<bool> Insert(Restaurant restaurant)
         {
-            RestaurantEntity entity = _mapper.Map<RestaurantEntity>(restaurant);
             try
             {
-                await _context.Restaurants.InsertOneAsync(entity);
+                await _context.Insert(_mapper.Map<RestaurantEntity>(restaurant));
 
             }
             catch
@@ -71,10 +60,9 @@ namespace QPlanAPI.DataAccess.Repositories
 
         public async Task<bool> InsertMany(HashSet<Restaurant> restaurants)
         {
-            List<RestaurantEntity> entities = _mapper.Map<List<RestaurantEntity>>(restaurants);
             try
             {
-                await _context.Restaurants.InsertManyAsync(entities);
+                await _context.InsertMany(_mapper.Map<List<RestaurantEntity>>(restaurants));
             }
             catch
             {
@@ -85,17 +73,25 @@ namespace QPlanAPI.DataAccess.Repositories
         }
 
 
-        public async Task<bool> Delete(string name)
+        public async Task<bool> Delete(string id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                await _context.Delete(id);
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public async Task<bool> DeleteByRestaurantType(RestaurantType type)
         {
             try
             {
-
-                await _context.Restaurants.DeleteManyAsync(r => r.Type.Equals(type));
+                await _context.DeleteByRestaurantType(type);
             }
             catch
             {
@@ -111,26 +107,6 @@ namespace QPlanAPI.DataAccess.Repositories
             throw new NotImplementedException();
         }
 
-        #region "Private Methods"
-
-        private List<BsonDocument> GetGeoNearQuery(Location location, double radius)
-        {
-            var geoNearOptions = new BsonDocument {
-                { "near", new BsonDocument {
-                    { "type", "Point" },
-                    { "coordinates", new BsonArray {location.Longitude, location.Latitude} },
-                } },
-                { "distanceField", "Distance" },
-                { "maxDistance", radius},
-                { "spherical" , true }
-            };
-
-            var geoNearQuery = new List<BsonDocument>{
-                new BsonDocument { { "$geoNear", geoNearOptions } }
-            };
-
-            return geoNearQuery;
-        }
-        #endregion
+        
     }
 }

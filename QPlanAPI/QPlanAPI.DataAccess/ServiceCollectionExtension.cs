@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.Azure.Documents;
+using Microsoft.Azure.Documents.Client;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using QPlanAPI.Core;
 using QPlanAPI.Core.Interfaces.Repositories;
@@ -21,8 +21,12 @@ namespace QPlanAPI.DataAccess
                     options.DatabaseCollections = dbSettings.DatabaseCollections;
                 });
 
+            services.AddSingleton<IDocumentClient, DocumentClient>(
+                _ => new DocumentClient(new System.Uri("https://qplandb.documents.azure.com:10255"), "aRlOGoG0Tx6xCPMaPCdE4ShvnHKmVUp3PezUEgUZjklq8JtGzxGgrqihx38n7Ql2MLOebf9h3f1iNEG9e7C3GA=="));
+
             services.AddSingleton<IMongoClient, MongoClient>(
                 _ => new MongoClient(dbSettings.ConnectionString));
+
 
             //DB Contexts
             services.InitializeDbContexts();
@@ -30,6 +34,7 @@ namespace QPlanAPI.DataAccess
 
         private static void InitializeDbContexts(this IServiceCollection services) {
             services.AddScoped<IRestaurantContext, RestaurantContext>();
+            services.AddScoped<IRestaurantContext, AzureRestaurantContext>();
             services.AddScoped<IRestaurantRepository, RestaurantRepository>();
         }
     }
