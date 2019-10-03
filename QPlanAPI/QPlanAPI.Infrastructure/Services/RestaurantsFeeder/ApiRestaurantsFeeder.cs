@@ -11,52 +11,25 @@ using System.Collections.Generic;
 
 namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
-    public class ApiRestaurantsFeeder : IRestaurantsFeederService<FeedApiRestaurantsRequest>
-    {
+    public class ApiRestaurantsFeeder : BaseRestaurantsFeeder
+    { 
         private readonly IRestaurantRepository _restaurantRepository;
         private readonly IMapper _mapper;
         private HttpClient _client;
 
-        public ApiRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository)
+        public ApiRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository) : base(restaurantRepository)
         {
             _restaurantRepository = restaurantRepository;
             _mapper = mapper;
             _client = new HttpClient();
-
         }
 
-        public async Task<bool> Handle(FeedApiRestaurantsRequest request, Type responseType)
-        {
-
-            if (request.ApiEndpoints.Any())
-            {
-                HashSet<Restaurant> apiRestaurants = await GetRestaurants(request.ApiEndpoints, responseType);
-
-                try
-                {
-                    if (apiRestaurants is object && apiRestaurants.Any())
-                    {
-                        if (await _restaurantRepository.DeleteByRestaurantType(apiRestaurants.FirstOrDefault().Type))
-                        {
-                            return await _restaurantRepository.InsertMany(apiRestaurants);
-                        }
-                    }
-                }
-                catch
-                {
-                    return false;
-                }
-            }
-
-            return false;
-        }
-
-        private async Task<HashSet<Restaurant>> GetRestaurants(List<string> ApiEndpoints, Type responseType)
+        public override async Task<HashSet<Restaurant>> GetRestaurants(List<string> endpoints, Type responseType)
         {
             //TODO No evita añadir repetidos
             HashSet<Restaurant> apiRestaurants = new HashSet<Restaurant>();
 
-            foreach (string endpoint in ApiEndpoints)
+            foreach (string endpoint in endpoints)
             {
                 try
                 {
