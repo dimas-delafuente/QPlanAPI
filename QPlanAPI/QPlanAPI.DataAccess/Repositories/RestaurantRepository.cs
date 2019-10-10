@@ -22,6 +22,7 @@ namespace QPlanAPI.DataAccess.Repositories
         private readonly IRestaurantContext _context;
         private readonly IMapper _mapper;
 
+        private const double EARTH_RADIUS_METERS = 6371000;
 
         public RestaurantRepository(IRestaurantContext context, IMapper mapper)
         {
@@ -48,9 +49,16 @@ namespace QPlanAPI.DataAccess.Repositories
 
         public async Task<IEnumerable<Restaurant>> GetRestaurantsByLocation(Location location, double radius)
         {
-            var result = await _context.Restaurants.Aggregate<RestaurantLocationEntity>(GetGeoNearQuery(location, radius)).ToListAsync();
+            var nearSphereFilter = new FilterDefinitionBuilder<RestaurantEntity>().NearSphere(r => r.Location, 
+                new GeoJsonPoint<GeoJson2DCoordinates>(new GeoJson2DCoordinates(location.Longitude, location.Latitude)), radius);
 
-            return _mapper.Map<List<Restaurant>>(result);
+            List<RestaurantEntity> restaurants = await _context.Restaurants.FindAsync(nearSphereFilter).Result.ToListAsync();
+            restaurants.ForEach(r => {
+                double distance = Math.Acos(Math.Sin(r.Location.Coordinates.Latitude * Math.PI / 180.0) * Math.Sin(location.Latitude * Math.PI / 180.0) +
+                    Math.Cos(r.Location.Coordinates.Latitude * Math.PI / 180.0) * Math.Cos(location.Latitude * Math.PI / 180.0)
+                    * Math.Cos((location.Longitude - r.Location.Coordinates.Longitude) * Math.PI / 180.0)) * EARTH_RADIUS_METERS;
+            });
+            return _mapper.Map<List<Restaurant>>(restaurants);
         }
 
         public async Task<bool> Insert(Restaurant restaurant)
