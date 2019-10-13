@@ -8,6 +8,8 @@ using System;
 using System.Net.Http;
 using System.Linq;
 using System.Collections.Generic;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
@@ -22,7 +24,6 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
             _restaurantRepository = restaurantRepository;
             _mapper = mapper;
             _client = new HttpClient();
-
         }
 
         public async Task<bool> Handle(FeedApiRestaurantsRequest request, Type responseType)
@@ -30,16 +31,14 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
             if (request.ApiEndpoints.Any())
             {
-                HashSet<Restaurant> apiRestaurants = await GetRestaurants(request.ApiEndpoints, responseType);
+                HashSet<Restaurant> apiRestaurants = await GetRestaurants(request, responseType);
 
                 try
                 {
-                    if (apiRestaurants is object && apiRestaurants.Any())
+                    if (apiRestaurants is object && apiRestaurants.Any() 
+                        && await _restaurantRepository.DeleteByRestaurantType(apiRestaurants.FirstOrDefault().Type))
                     {
-                        if (await _restaurantRepository.DeleteByRestaurantType(apiRestaurants.FirstOrDefault().Type))
-                        {
-                            return await _restaurantRepository.InsertMany(apiRestaurants);
-                        }
+                        return await _restaurantRepository.InsertMany(apiRestaurants);
                     }
                 }
                 catch
@@ -51,12 +50,14 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
             return false;
         }
 
-        private async Task<HashSet<Restaurant>> GetRestaurants(List<string> ApiEndpoints, Type responseType)
+        #region Private Methods
+
+        private async Task<HashSet<Restaurant>> GetRestaurants(FeedApiRestaurantsRequest request, Type responseType)
         {
             //TODO No evita añadir repetidos
             HashSet<Restaurant> apiRestaurants = new HashSet<Restaurant>();
 
-            foreach (string endpoint in ApiEndpoints)
+            foreach (string endpoint in request.ApiEndpoints)
             {
                 try
                 {
@@ -68,9 +69,18 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
                         if (!String.IsNullOrEmpty(responseContent))
                         {
-                            var restaurantsRetrieved = JsonConvert.DeserializeObject(responseContent, responseType);
-                            var restaurants = _mapper.Map<Restaurant[]>(restaurantsRetrieved);
-                            apiRestaurants.UnionWith(restaurants);
+                            switch (request.ApiFormat)
+                            {
+                                case "XML":
+                                    apiRestaurants.UnionWith(GetXmlRestaurants(responseContent, responseType));
+                                    break;
+                                case "HTML":
+                                    // TO DO
+                                    break;
+                                default:
+                                    apiRestaurants.UnionWith(GetJsonRestaurants(responseContent, responseType));
+                                    break;
+                            }
                         }
                     }
                 }
@@ -82,5 +92,26 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
             return apiRestaurants;
         }
+
+        private Restaurant[] GetJsonRestaurants(string responseContent, Type responseType)
+        {
+            var restaurantsRetrieved = JsonConvert.DeserializeObject(responseContent, responseType);
+            return _mapper.Map<Restaurant[]>(restaurantsRetrieved);
+        }
+
+        private Restaurant[] GetXmlRestaurants(string responseContent, Type responseType)
+        {
+            var xmlSerializer = new XmlSerializer(responseType);
+            object restaurantsRetrieved;
+
+            using (TextReader reader = new StringReader(responseContent))
+            {
+                restaurantsRetrieved = xmlSerializer.Deserialize(reader);
+            }
+
+            return _mapper.Map<Restaurant[]>(restaurantsRetrieved);
+        }
+
+        #endregion Private Methods
     }
 }

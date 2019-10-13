@@ -8,5 +8,7 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
     public class FeedApiRestaurantsRequest : FeedRestaurantsRequest
     {
         public List<string> ApiEndpoints { get; set; }
+
+        public string ApiFormat { get; set; }
     }
 }
