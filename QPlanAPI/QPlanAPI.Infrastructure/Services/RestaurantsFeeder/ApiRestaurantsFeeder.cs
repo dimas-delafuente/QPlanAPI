@@ -71,11 +71,11 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
                         {
                             switch (request.ApiFormat)
                             {
-                                case "XML":
+                                case RestaurantFormat.XML:
                                     apiRestaurants.UnionWith(GetXmlRestaurants(responseContent, responseType));
                                     break;
-                                case "HTML":
-                                    // TO DO
+                                case RestaurantFormat.HTML:
+                                    // TODO
                                     break;
                                 default:
                                     apiRestaurants.UnionWith(GetJsonRestaurants(responseContent, responseType));

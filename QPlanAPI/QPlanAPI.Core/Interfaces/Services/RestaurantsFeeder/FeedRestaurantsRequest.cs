@@ -9,6 +9,17 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
     {
         public List<string> ApiEndpoints { get; set; }
 
-        public string ApiFormat { get; set; }
+        public RestaurantFormat ApiFormat { get; set; }
     }
+
+    #region Enums
+
+    public enum RestaurantFormat
+    {
+        JSON,
+        XML,
+        HTML
+    }
+
+    #endregion Enums
 }

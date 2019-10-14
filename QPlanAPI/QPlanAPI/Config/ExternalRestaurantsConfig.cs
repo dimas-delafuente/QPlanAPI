@@ -1,3 +1,4 @@
+using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
 using System.Collections.Generic;
 
 namespace QPlanAPI.Config
@@ -26,13 +27,6 @@ namespace QPlanAPI.Config
         PapaJohns,
         TGB,
         Subway
-    }
-
-    public enum RestaurantFormat
-    {
-        JSON,
-        XML,
-        HTML
     }
 
     #endregion Enums

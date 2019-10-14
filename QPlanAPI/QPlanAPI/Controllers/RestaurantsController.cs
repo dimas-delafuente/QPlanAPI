@@ -99,7 +99,7 @@ namespace QPlanAPI.Controllers
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest
             {
                 ApiEndpoints = config.Endpoints,
-                ApiFormat = config.Format.ToString()
+                ApiFormat = config.Format
             }, typeof(McDonaldsRestaurantsResponse[]));
         }
 
@@ -110,7 +110,7 @@ namespace QPlanAPI.Controllers
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest
             {
                 ApiEndpoints = config.Endpoints,
-                ApiFormat = config.Format.ToString()
+                ApiFormat = config.Format
             }, typeof(KFCRestaurantsResponse));
         }
 
@@ -121,7 +121,7 @@ namespace QPlanAPI.Controllers
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest
             {             
                 ApiEndpoints = config.Endpoints,
-                ApiFormat = config.Format.ToString()
+                ApiFormat = config.Format
             }, typeof(FostersRestaurantsResponse[]));
         }
 
@@ -132,7 +132,7 @@ namespace QPlanAPI.Controllers
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest
             {
                 ApiEndpoints = config.Endpoints,
-                ApiFormat = config.Format.ToString()
+                ApiFormat = config.Format
             }, typeof(GinosRestaurantsResponse));
         }
 
@@ -143,7 +143,7 @@ namespace QPlanAPI.Controllers
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest
             {
                 ApiEndpoints = config.Endpoints,
-                ApiFormat = config.Format.ToString()
+                ApiFormat = config.Format
             }, typeof(TacoBellRestaurantsResponse[]));
         }
 
@@ -154,7 +154,7 @@ namespace QPlanAPI.Controllers
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest
             {
                 ApiEndpoints = config.Endpoints,
-                ApiFormat = config.Format.ToString()
+                ApiFormat = config.Format
             }, typeof(PapaJohnsRestaurantsResponse));
         }
 
@@ -165,7 +165,7 @@ namespace QPlanAPI.Controllers
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest
             {
                 ApiEndpoints = config.Endpoints,
-                ApiFormat = config.Format.ToString()
+                ApiFormat = config.Format
             }, typeof(TGBRestaurantsResponse));
         }
 
@@ -176,7 +176,7 @@ namespace QPlanAPI.Controllers
             _restaurantsFeeder.Handle(new FeedApiRestaurantsRequest
             {
                 ApiEndpoints = config.Endpoints,
-                ApiFormat = config.Format.ToString()
+                ApiFormat = config.Format
             }, typeof(SubwayRestaurantsResponse));
         }
     }
