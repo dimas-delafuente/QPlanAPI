@@ -20,8 +20,8 @@ namespace QPlanAPI.Presenters
 
         public void Handle(UseCaseResponse response)
         {
-            Result.StatusCode = (int) (response.Success ? HttpStatusCode.OK : HttpStatusCode.BadRequest);
-            Result.Content = JsonSerializer.SerializeObject(response);
+            Result.StatusCode = (int)(response.Success ? HttpStatusCode.OK : HttpStatusCode.BadRequest);
+            Result.Content = QPlanJsonSerializer.SerializeObject(response);
         }
     }
 }
