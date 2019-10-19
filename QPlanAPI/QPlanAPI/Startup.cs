@@ -75,8 +75,8 @@ namespace QPlanAPI
         private IConfiguration GetExternalRestaurantsConfiguration()
         {
             var builder = new ConfigurationBuilder();
-            builder.SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile(Path.Combine("Config", "externalrestaurantssettings.json"));
+            builder.SetBasePath(Path.Combine(AppContext.BaseDirectory, @"..\..\..\Config"))
+            .AddJsonFile(@"externalrestaurantssettings.json");
 
             IConfigurationRoot configuration = builder.Build();
 
