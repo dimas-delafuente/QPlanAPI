@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using QPlanAPI.Core.DTO.Restaurants;
 using QPlanAPI.Core.Interfaces.UseCases;
 using QPlanAPI.Domain;
 using QPlanAPI.Presenters;
-using QPlanAPI.Infrastructure.Services.RestaurantsFeeder;
 using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
 using QPlanAPI.Config;
 using Microsoft.Extensions.Options;

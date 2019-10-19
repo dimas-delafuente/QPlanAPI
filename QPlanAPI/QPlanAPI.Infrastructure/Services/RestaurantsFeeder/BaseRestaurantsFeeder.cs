@@ -25,15 +25,15 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
             if (request.Endpoints.Any())
             {
-                HashSet<Restaurant> htmlRestaurants = await GetRestaurants(request.Endpoints, responseType);
+                HashSet<Restaurant> restaurants = await GetRestaurants(request.Endpoints, responseType);
 
                 try
                 {
-                    if (htmlRestaurants is object && htmlRestaurants.Any())
+                    if (restaurants is object && restaurants.Any())
                     {
-                        if (await _restaurantRepository.DeleteByRestaurantType(htmlRestaurants.FirstOrDefault().Type))
+                        if (await _restaurantRepository.DeleteByRestaurantType(restaurants.FirstOrDefault().Type))
                         {
-                            return await _restaurantRepository.InsertMany(htmlRestaurants);
+                            return await _restaurantRepository.InsertMany(restaurants);
                         }
                     }
                 }
