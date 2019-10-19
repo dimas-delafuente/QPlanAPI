@@ -32,13 +32,12 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
                     var doc = new HtmlDocument();
                     HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(endpoint);
                     webRequest.UserAgent = USER_AGENT_VALID;
-                    Stream stream = webRequest.GetResponse().GetResponseStream();
-                    doc.Load(stream);
+                    var webResponse = await webRequest.GetResponseAsync();
+
+                    doc.Load(webResponse.GetResponseStream());
 
                     //RECORRER LOS NODOS
 
-
-                    stream.Close();
 
                 }
                 catch (Exception e)
