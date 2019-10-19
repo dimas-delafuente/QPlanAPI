@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using QPlanAPI.Core;
 using QPlanAPI.Infrastructure;
 using QPlanAPI.DataAccess;
@@ -75,8 +69,8 @@ namespace QPlanAPI
         private IConfiguration GetExternalRestaurantsConfiguration()
         {
             var builder = new ConfigurationBuilder();
-            builder.SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile(Path.Combine("Config", "externalrestaurantssettings.json"));
+            builder.SetBasePath(Path.Combine(AppContext.BaseDirectory, @"..\..\..\Config"))
+            .AddJsonFile(@"externalrestaurantssettings.json");
 
             IConfigurationRoot configuration = builder.Build();
 

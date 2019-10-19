@@ -6,58 +6,31 @@ using QPlanAPI.Core.Interfaces.Repositories;
 using Newtonsoft.Json;
 using System;
 using System.Net.Http;
-using System.Linq;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.IO;
 
 namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
-    public class ApiRestaurantsFeeder : IRestaurantsFeederService<FeedApiRestaurantsRequest>
-    {
-        private readonly IRestaurantRepository _restaurantRepository;
+    public class ApiRestaurantsFeeder : BaseRestaurantsFeeder
+    { 
         private readonly IMapper _mapper;
-        private static HttpClient _client;
+        private readonly HttpClient _client;
 
-        public ApiRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository)
+        public ApiRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository) : base(restaurantRepository)
         {
-            _restaurantRepository = restaurantRepository;
             _mapper = mapper;
             _client = new HttpClient();
         }
 
-        public async Task<bool> Handle(FeedApiRestaurantsRequest request, Type responseType)
-        {
-
-            if (request.ApiEndpoints.Any())
-            {
-                HashSet<Restaurant> apiRestaurants = await GetRestaurants(request, responseType);
-
-                try
-                {
-                    if (apiRestaurants is object && apiRestaurants.Any() 
-                        && await _restaurantRepository.DeleteByRestaurantType(apiRestaurants.FirstOrDefault().Type))
-                    {
-                        return await _restaurantRepository.InsertMany(apiRestaurants);
-                    }
-                }
-                catch
-                {
-                    return false;
-                }
-            }
-
-            return false;
-        }
-
-        #region Private Methods
-
-        private async Task<HashSet<Restaurant>> GetRestaurants(FeedApiRestaurantsRequest request, Type responseType)
+        public override async Task<HashSet<Restaurant>> GetRestaurants(FeedRestaurantsRequest request, Type responseType)
         {
             //TODO No evita añadir repetidos
             HashSet<Restaurant> apiRestaurants = new HashSet<Restaurant>();
 
-            foreach (string endpoint in request.ApiEndpoints)
+            var apiRequest = request as FeedApiRestaurantsRequest;
+
+            foreach (string endpoint in apiRequest.Endpoints)
             {
                 try
                 {
@@ -69,13 +42,10 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
                         if (!String.IsNullOrEmpty(responseContent))
                         {
-                            switch (request.ApiFormat)
+                            switch (apiRequest.ApiFormat)
                             {
                                 case RestaurantFormat.XML:
                                     apiRestaurants.UnionWith(GetXmlRestaurants(responseContent, responseType));
-                                    break;
-                                case RestaurantFormat.HTML:
-                                    // TODO
                                     break;
                                 default:
                                     apiRestaurants.UnionWith(GetJsonRestaurants(responseContent, responseType));
@@ -92,6 +62,8 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
             return apiRestaurants;
         }
+
+        #region Private Methods
 
         private Restaurant[] GetJsonRestaurants(string responseContent, Type responseType)
         {

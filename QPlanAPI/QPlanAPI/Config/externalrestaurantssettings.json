@@ -57,6 +57,13 @@
         "http://subwayspain.com/es/?option=com_storelocator&view=map&format=raw&searchall=1"
       ],
       "format": "XML"
+    },
+    {
+      "type": "DominosPizza",
+      "endpoints": [
+        "https://www.dominospizza.es/Tienda/GetTiendasJson"
+      ],
+      "format": "HTML"
     }
   ]
 }

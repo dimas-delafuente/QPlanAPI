@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 using Newtonsoft.Json;
 
 namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
@@ -161,18 +162,60 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
 
     public class SubwayRestaurantsResponse : FeedRestaurantsResponse
     {
-        public string Name { get; set; }
+        [XmlElement("markers")]
+        SubwayInformation Information { get; set; }
 
-        [JsonProperty("text_address")]
-        public string Address { get; set; }
+        public class SubwayInformation
+        {
+            [XmlElement("limited")]
+            public string Limited { get; set; }
+            [XmlElement("marker")]
+            List<SubwayRestaurant> Restaurants { get; set; }
 
-        [JsonProperty("commune")]
-        public string City { get; set; }
+            public class SubwayRestaurant
+            {
+                [XmlElement("name")]
+                public string Name { get; set; }
+                [XmlElement("category")]
+                public string Category { get; set; }
+                [XmlElement("markertype")]
+                public string Markertype { get; set; }
+                [XmlElement("featured")]
+                public string Featured { get; set; }
+                [XmlElement("address")]
+                public string Address { get; set; }
+                [XmlElement("lat")]
+                public string Latitude { get; set; }
+                [XmlElement("lng")]
+                public string Longitude { get; set; }
+                [XmlElement("distance")]
+                public string Distance { get; set; }
+                [XmlElement("fulladdress")]
+                public string Fulladdress { get; set; }
+                [XmlElement("phone")]
+                public string Phone { get; set; }
+                [XmlElement("url")]
+                public string Url { get; set; }
+                [XmlElement("email")]
+                public string Email { get; set; }
+                [XmlElement("facebook")]
+                public string Facebook { get; set; }
+                [XmlElement("twitter")]
+                public string Twitter { get; set; }
+                [XmlElement("tags")]
+                public string Tags { get; set; }
+                [XmlElement("custom1")]
+                public string Custom1 { get; set; }
+                [XmlElement("custom2")]
+                public string Custom2 { get; set; }
+                [XmlElement("custom3")]
+                public string Custom3 { get; set; }
+                [XmlElement("custom4")]
+                public string Custom4 { get; set; }
+                [XmlElement("custom5")]
+                public string Custom5 { get; set; }
+            }
+        }
 
-        public string Phone { get; set; }
-
-        public string Latitude { get; set; }
-
-        public string Longitude { get; set; }
     }
 }
