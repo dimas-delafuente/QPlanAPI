@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
@@ -36,9 +37,23 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
                     doc.Load(webResponse.GetResponseStream());
 
-                    //RECORRER LOS NODOS
+                    var nodes = doc.DocumentNode.SelectNodes("//ul");
+                    foreach (var node in nodes) 
+                    {
 
+                        var dominosPizzaRestaurant = new DominosPizzaRestaurantsResponse
+                        {
+                            Name = HttpUtility.HtmlDecode(node.SelectSingleNode("li/span[@itemprop='name']").InnerText),
+                            Address = HttpUtility.HtmlDecode(node.SelectSingleNode("li/div/h3/span[@itemprop='streetAddress']").InnerText),
+                            Url = node.SelectSingleNode("li/div/p/a[@class='nm']").Attributes["href"].Value,
+                            Latitude = node.SelectSingleNode("li[@itemtype='http://schema.org/Restaurant']").Attributes["data-latitude"].Value,
+                            Longitude = node.SelectSingleNode("li[@itemtype='http://schema.org/Restaurant']").Attributes["data-longitude"].Value,
+                            Phone = node.SelectSingleNode("li/div/p/span[@itemprop='telephone']").InnerText,
+                            Horario = node.SelectSingleNode("li/div/p/span/meta[@itemprop='openingHours']").Attributes["content"].Value
+                        };
 
+                        htmlRestaurants.Add(_mapper.Map<Restaurant>(dominosPizzaRestaurant));
+                    }
                 }
                 catch (Exception e)
                 {

@@ -9,14 +9,14 @@ using System.Text.RegularExpressions;
 
 namespace QPlanAPI.Infrastructure.Profiles
 {
-    public class KFCRestaurantsProfile : Profile
+    public class KFCRestaurantsProfile : BaseProfile
     {
         public KFCRestaurantsProfile()
         {
             CreateMap<KFCRestaurantsResponse.KFCRestaurant, Restaurant>()
             .ForMember(dest => dest.Type, opt => opt.MapFrom(_ => RestaurantType.KFC))
                 .ForMember(dest => dest.Categories, opt => opt.MapFrom(_ => new List<string> { "FastFood" }))
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => GetKFCLocation(src.Geometry.Coordinates)))
+                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => GetLocation(src.Geometry.Coordinates)))
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Properties.Name))
                 .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Properties.Address))
                 .ForMember(dest => dest.City, opt => opt.MapFrom(src => src.Properties.City.ToUpper()))
@@ -26,22 +26,6 @@ namespace QPlanAPI.Infrastructure.Profiles
             CreateMap<KFCRestaurantsResponse, Restaurant[]>()
             .ConvertUsing(new KFCResponseToRestaurantConverter());
         }
-
-        private Location GetKFCLocation(string[] coordinates)
-        {
-            try
-            {
-                double lng = Convert.ToDouble(coordinates[0]);
-                double lat = Convert.ToDouble(coordinates[1]);
-                return new Location(lng, lat);
-            }
-            catch
-            {
-                return new Location(0, 0);
-            }
-
-        }
-
 
     }
 }

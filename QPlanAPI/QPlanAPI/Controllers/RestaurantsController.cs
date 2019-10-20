@@ -190,7 +190,7 @@ namespace QPlanAPI.Controllers
             _restaurantsHtmlFeeder.Handle(new FeedHtmlRestaurantsRequest
             {
                 Endpoints = config.Endpoints
-            }, typeof(FeedRestaurantsResponse));
+            }, typeof(DominosPizzaRestaurantsResponse));
         }
     }
 }
