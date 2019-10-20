@@ -14,13 +14,30 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
     public class HtmlRestaurantsFeeder : BaseRestaurantsFeeder
     {
+        #region Consts
+
         private const string USER_AGENT_VALID = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36";
+
+        #endregion
+
+
+        #region Properties
+
         private readonly IMapper _mapper;
+
+        #endregion
+
+
+        #region Ctor
 
         public HtmlRestaurantsFeeder(IRestaurantRepository restaurantRepository, IMapper mapper) : base(restaurantRepository)
         {
             _mapper = mapper;
         }
+
+        #endregion
+
+        #region Public Methods
 
         public override async Task<HashSet<Restaurant>> GetRestaurants(FeedRestaurantsRequest request, Type responseType)
         {
@@ -37,7 +54,7 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
                     doc.Load(webResponse.GetResponseStream());
 
-                    var nodes = doc.DocumentNode.SelectNodes("//ul");
+                    HtmlNodeCollection nodes = doc.DocumentNode.SelectNodes("//ul");
                     foreach (var node in nodes) 
                     {
 
@@ -63,5 +80,7 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
             return htmlRestaurants;
         }
+
+        #endregion
     }
 }
