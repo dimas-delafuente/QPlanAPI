@@ -8,34 +8,20 @@ using System.Text.RegularExpressions;
 
 namespace QPlanAPI.Infrastructure.Profiles
 {
-    public class McDonaldsRestaurantsProfile : Profile
+    public class McDonaldsRestaurantsProfile : BaseProfile
     {
         public McDonaldsRestaurantsProfile()
         {
             CreateMap<McDonaldsRestaurantsResponse, Restaurant>()
                 .ForMember(dest => dest.Type, opt => opt.MapFrom(_ => RestaurantType.McDonalds))
                 .ForMember(dest => dest.Categories, opt => opt.MapFrom(_ => new List<string> { "FastFood" }))
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => GetMcDonaldsLocation(src.Longitude, src.Latitude)))
+                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => GetLocation(src.Longitude, src.Latitude)))
                 .ForMember(dest => dest.City, opt => opt.MapFrom(src => GetMcDonaldsCity(src.Address)))
                 .ForMember(dest => dest.PostalCode, opt => opt.MapFrom(src => GetMcDonaldsPostalCode(src.Address)))
                 .ForMember(dest => dest.Address, opt => opt.MapFrom(src => GetMcDonaldsAddress(src.Address)))
                 .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => Regex.Replace(src.Phone, @"[^\d]", "").Trim()));
         }
 
-        private Location GetMcDonaldsLocation(string longitude, string latitude)
-        {
-            try
-            {
-                double lng = Convert.ToDouble(longitude.Split(',')[0]);
-                double lat = Convert.ToDouble(latitude.Split(',')[0]);
-                return new Location(lng, lat);
-            }
-            catch
-            {
-                return new Location(0, 0);
-            }
-
-        }
         private string GetMcDonaldsCity(string address)
         {
             var addressFields = address.Split(',');

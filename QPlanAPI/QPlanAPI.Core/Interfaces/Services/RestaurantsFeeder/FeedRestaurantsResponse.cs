@@ -216,6 +216,21 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
                 public string Custom5 { get; set; }
             }
         }
+    }
+    public class DominosPizzaRestaurantsResponse : FeedRestaurantsResponse
+    {
+        public string Name { get; set; }
 
+        public string Address { get; set; }
+
+        public string Phone { get; set; }
+
+        public string Schedule { get; set; }
+
+        public string Latitude { get; set; }
+
+        public string Longitude { get; set; }
+
+        public string Url { get; set; }
     }
 }

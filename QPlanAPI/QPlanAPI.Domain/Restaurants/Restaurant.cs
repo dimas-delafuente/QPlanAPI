@@ -42,7 +42,8 @@ namespace QPlanAPI.Domain.Restaurants
         TacoBell,
         PapaJohns,
         TGB,
-        Subway
+        Subway,
+        DominosPizza
     }
 
     #endregion Enums
