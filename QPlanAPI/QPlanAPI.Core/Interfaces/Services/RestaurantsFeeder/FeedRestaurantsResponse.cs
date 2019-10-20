@@ -225,7 +225,7 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
 
         public string Phone { get; set; }
 
-        public string Horario { get; set; }
+        public string Schedule { get; set; }
 
         public string Latitude { get; set; }
 

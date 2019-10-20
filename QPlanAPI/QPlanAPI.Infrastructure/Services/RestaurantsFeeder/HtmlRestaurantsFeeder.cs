@@ -41,7 +41,7 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
         public override async Task<HashSet<Restaurant>> GetRestaurants(FeedRestaurantsRequest request, Type responseType)
         {
-            HashSet<Restaurant> htmlRestaurants = new HashSet<Restaurant>();
+            var htmlRestaurants = new HashSet<Restaurant>();
 
             foreach (string endpoint in request.Endpoints)
             {
@@ -54,23 +54,8 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
                     doc.Load(webResponse.GetResponseStream());
 
-                    HtmlNodeCollection nodes = doc.DocumentNode.SelectNodes("//ul");
-                    foreach (var node in nodes) 
-                    {
+                    htmlRestaurants.UnionWith(_mapper.Map<Restaurant[]>(GetDominosPizzaRestaurants(doc)));
 
-                        var dominosPizzaRestaurant = new DominosPizzaRestaurantsResponse
-                        {
-                            Name = HttpUtility.HtmlDecode(node.SelectSingleNode("li/span[@itemprop='name']").InnerText),
-                            Address = HttpUtility.HtmlDecode(node.SelectSingleNode("li/div/h3/span[@itemprop='streetAddress']").InnerText),
-                            Url = node.SelectSingleNode("li/div/p/a[@class='nm']").Attributes["href"].Value,
-                            Latitude = node.SelectSingleNode("li[@itemtype='http://schema.org/Restaurant']").Attributes["data-latitude"].Value,
-                            Longitude = node.SelectSingleNode("li[@itemtype='http://schema.org/Restaurant']").Attributes["data-longitude"].Value,
-                            Phone = node.SelectSingleNode("li/div/p/span[@itemprop='telephone']").InnerText,
-                            Horario = node.SelectSingleNode("li/div/p/span/meta[@itemprop='openingHours']").Attributes["content"].Value
-                        };
-
-                        htmlRestaurants.Add(_mapper.Map<Restaurant>(dominosPizzaRestaurant));
-                    }
                 }
                 catch (Exception e)
                 {
@@ -80,6 +65,38 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
             return htmlRestaurants;
         }
+
+        #endregion
+
+        #region Private Methods
+        private HashSet<DominosPizzaRestaurantsResponse> GetDominosPizzaRestaurants(HtmlDocument doc)
+        {
+            var dominosPizzaRestaurants = new HashSet<DominosPizzaRestaurantsResponse>();
+            try
+            {
+                HtmlNodeCollection nodes = doc.DocumentNode.SelectNodes("//ul");
+                foreach (var node in nodes)
+                {
+                    dominosPizzaRestaurants.Add(new DominosPizzaRestaurantsResponse
+                    {
+                        Name = HttpUtility.HtmlDecode(node.SelectSingleNode("li/span[@itemprop='name']").InnerText),
+                        Address = HttpUtility.HtmlDecode(node.SelectSingleNode("li/div/h3/span[@itemprop='streetAddress']").InnerText),
+                        Url = node.SelectSingleNode("li/div/p/a[@class='nm']").Attributes["href"].Value,
+                        Latitude = node.SelectSingleNode("li[@itemtype='http://schema.org/Restaurant']").Attributes["data-latitude"].Value,
+                        Longitude = node.SelectSingleNode("li[@itemtype='http://schema.org/Restaurant']").Attributes["data-longitude"].Value,
+                        Phone = node.SelectSingleNode("li/div/p/span[@itemprop='telephone']").InnerText,
+                        Schedule = node.SelectSingleNode("li/div/p/span/meta[@itemprop='openingHours']").Attributes["content"].Value
+                    });
+                }
+            }
+            catch (Exception e)
+            {
+                return new HashSet<DominosPizzaRestaurantsResponse>();
+            }
+
+            return dominosPizzaRestaurants;
+        }
+
 
         #endregion
     }
