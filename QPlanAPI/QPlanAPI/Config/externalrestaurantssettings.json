@@ -4,29 +4,36 @@
       "type": "McDonalds",
       "endpoints": [
         "https://www.mcdonalds.es/sites/all/modules/localizador/marcadores-json.php?lat=40.46366700000001&lng=-3.7492200000000366&radius=10000&metas=&adress=Espa%C3%B1a"
-      ]
+      ],
+      "format": "JSON"
     },
     {
       "type": "KFC",
       "endpoints": [
         "https://kfc.es/wp-content/themes/KFC/library/data/rest.geojson"
-      ]
+      ],
+      "format": "JSON"
     },
     {
       "type": "FostersHollywood",
-      "endpoints": [ "https://fostershollywood.es/service/restaurants" ]
+      "endpoints": [
+        "https://fostershollywood.es/service/restaurants"
+      ],
+      "format": "JSON"
     },
     {
       "type": "Ginos",
       "endpoints": [
         "https://www.ginos.es/nearest_stores?page=1&latitude=40.4926842&longitude=-3.8777554&cyt=non"
-      ]
+      ],
+      "format": "JSON"
     },
     {
       "type": "TacoBell",
       "endpoints": [
         "https://tacobell.es/wp-admin/admin-ajax.php?action=busquedaTodas"
-      ]
+      ],
+      "format": "JSON"
     },
     {
       "type": "PapaJohns",
@@ -34,19 +41,29 @@
         "https://api.new.papajohns.es/v1/stores?latitude=40.46366700000001&longitude=-3.7492200000000366&page=1",
         "https://api.new.papajohns.es/v1/stores?latitude=40.46366700000001&longitude=-3.7492200000000366&page=2",
         "https://api.new.papajohns.es/v1/stores?latitude=40.46366700000001&longitude=-3.7492200000000366&page=3"
-      ]
+      ],
+      "format": "JSON"
     },
     {
       "type": "TGB",
       "endpoints": [
         "https://thegoodburger.com/wp-content/uploads/data.json"
-      ]
+      ],
+      "format": "JSON"
     },
     {
       "type": "Subway",
       "endpoints": [
         "http://subwayspain.com/es/?option=com_storelocator&view=map&format=raw&searchall=1"
-      ]
+      ],
+      "format": "XML"
+    },
+    {
+      "type": "DominosPizza",
+      "endpoints": [
+        "https://www.dominospizza.es/Tienda/GetTiendasJson"
+      ],
+      "format": "HTML"
     }
   ]
 }
