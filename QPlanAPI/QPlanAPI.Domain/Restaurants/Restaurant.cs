@@ -2,19 +2,6 @@
 
 namespace QPlanAPI.Domain.Restaurants
 {
-
-    public enum RestaurantType
-    {
-        McDonalds,
-        KFC,
-        FostersHollywood,
-        Ginos,
-        TacoBell,
-        PapaJohns,
-        TGB,
-        Subway
-    }
-
     public class Restaurant
     {
         public string Id { get; set; }
@@ -43,4 +30,21 @@ namespace QPlanAPI.Domain.Restaurants
 
         public string CoverUrl { get; set; }
     }
+
+    #region Enums
+
+    public enum RestaurantType
+    {
+        McDonalds,
+        KFC,
+        FostersHollywood,
+        Ginos,
+        TacoBell,
+        PapaJohns,
+        TGB,
+        Subway,
+        DominosPizza
+    }
+
+    #endregion Enums
 }

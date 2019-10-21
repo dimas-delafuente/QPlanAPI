@@ -3,10 +3,29 @@
 namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
 {
 
-    public class FeedRestaurantsRequest { }
+    public class FeedRestaurantsRequest {
+
+        public List<string> Endpoints { get; set; }
+    }
 
     public class FeedApiRestaurantsRequest : FeedRestaurantsRequest
     {
-        public List<string> ApiEndpoints { get; set; }
+        public RestaurantFormat ApiFormat { get; set; }
     }
+
+    public class FeedHtmlRestaurantsRequest : FeedRestaurantsRequest
+    {
+
+    }
+
+    #region Enums
+
+    public enum RestaurantFormat
+    {
+        JSON,
+        XML,
+        HTML
+    }
+
+    #endregion Enums
 }

@@ -6,57 +6,31 @@ using QPlanAPI.Core.Interfaces.Repositories;
 using Newtonsoft.Json;
 using System;
 using System.Net.Http;
-using System.Linq;
 using System.Collections.Generic;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
-    public class ApiRestaurantsFeeder : IRestaurantsFeederService<FeedApiRestaurantsRequest>
-    {
-        private readonly IRestaurantRepository _restaurantRepository;
+    public class ApiRestaurantsFeeder : BaseRestaurantsFeeder
+    { 
         private readonly IMapper _mapper;
-        private static HttpClient _client;
+        private readonly HttpClient _client;
 
-        public ApiRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository)
+        public ApiRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository) : base(restaurantRepository)
         {
-            _restaurantRepository = restaurantRepository;
             _mapper = mapper;
             _client = new HttpClient();
-
         }
 
-        public async Task<bool> Handle(FeedApiRestaurantsRequest request, Type responseType)
-        {
-
-            if (request.ApiEndpoints.Any())
-            {
-                HashSet<Restaurant> apiRestaurants = await GetRestaurants(request.ApiEndpoints, responseType);
-
-                try
-                {
-                    if (apiRestaurants is object && apiRestaurants.Any())
-                    {
-                        if (await _restaurantRepository.DeleteByRestaurantType(apiRestaurants.FirstOrDefault().Type))
-                        {
-                            return await _restaurantRepository.InsertMany(apiRestaurants);
-                        }
-                    }
-                }
-                catch
-                {
-                    return false;
-                }
-            }
-
-            return false;
-        }
-
-        private async Task<HashSet<Restaurant>> GetRestaurants(List<string> ApiEndpoints, Type responseType)
+        public override async Task<HashSet<Restaurant>> GetRestaurants(FeedRestaurantsRequest request, Type responseType)
         {
             //TODO No evita añadir repetidos
             HashSet<Restaurant> apiRestaurants = new HashSet<Restaurant>();
 
-            foreach (string endpoint in ApiEndpoints)
+            var apiRequest = request as FeedApiRestaurantsRequest;
+
+            foreach (string endpoint in apiRequest.Endpoints)
             {
                 try
                 {
@@ -68,9 +42,15 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
                         if (!String.IsNullOrEmpty(responseContent))
                         {
-                            var restaurantsRetrieved = JsonConvert.DeserializeObject(responseContent, responseType);
-                            var restaurants = _mapper.Map<Restaurant[]>(restaurantsRetrieved);
-                            apiRestaurants.UnionWith(restaurants);
+                            switch (apiRequest.ApiFormat)
+                            {
+                                case RestaurantFormat.XML:
+                                    apiRestaurants.UnionWith(GetXmlRestaurants(responseContent, responseType));
+                                    break;
+                                default:
+                                    apiRestaurants.UnionWith(GetJsonRestaurants(responseContent, responseType));
+                                    break;
+                            }
                         }
                     }
                 }
@@ -82,5 +62,28 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
             return apiRestaurants;
         }
+
+        #region Private Methods
+
+        private Restaurant[] GetJsonRestaurants(string responseContent, Type responseType)
+        {
+            var restaurantsRetrieved = JsonConvert.DeserializeObject(responseContent, responseType);
+            return _mapper.Map<Restaurant[]>(restaurantsRetrieved);
+        }
+
+        private Restaurant[] GetXmlRestaurants(string responseContent, Type responseType)
+        {
+            var xmlSerializer = new XmlSerializer(responseType);
+            object restaurantsRetrieved;
+
+            using (TextReader reader = new StringReader(responseContent))
+            {
+                restaurantsRetrieved = xmlSerializer.Deserialize(reader);
+            }
+
+            return _mapper.Map<Restaurant[]>(restaurantsRetrieved);
+        }
+
+        #endregion Private Methods
     }
 }
