@@ -29,6 +29,16 @@ namespace QPlanAPI
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowOrigin",
+                builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                });
+            });
+
             services.AddMongoDbClient(new DbSettings
             {
                 ConnectionString = Configuration.GetSection("MongoDbSettings:ConnectionString").Value,
@@ -62,6 +72,8 @@ namespace QPlanAPI
                 app.UseHsts();
             }
 
+            app.UseCors();
+
             app.UseHttpsRedirection();
             app.UseMvc();
         }
@@ -69,7 +81,7 @@ namespace QPlanAPI
         private IConfiguration GetExternalRestaurantsConfiguration()
         {
             var builder = new ConfigurationBuilder();
-            builder.SetBasePath(Path.Combine(AppContext.BaseDirectory, @"..\..\..\Config"))
+            builder.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(),"Config"))
             .AddJsonFile(@"externalrestaurantssettings.json");
 
             IConfigurationRoot configuration = builder.Build();
