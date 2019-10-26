@@ -1,26 +1,29 @@
-using AutoMapper;
 using QPlanAPI.Domain.Restaurants;
 using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
 using System.Collections.Generic;
-using QPlanAPI.Domain;
-using System;
 using System.Text.RegularExpressions;
 
 namespace QPlanAPI.Infrastructure.Profiles
 {
     public class McDonaldsRestaurantsProfile : BaseProfile
     {
+        #region Public Methods
+
         public McDonaldsRestaurantsProfile()
         {
             CreateMap<McDonaldsRestaurantsResponse, Restaurant>()
                 .ForMember(dest => dest.Type, opt => opt.MapFrom(_ => RestaurantType.McDonalds))
-                .ForMember(dest => dest.Categories, opt => opt.MapFrom(_ => new List<string> { "FastFood" }))
+                .ForMember(dest => dest.Categories, opt => opt.MapFrom(_ => new List<string> { FastFoodCategory }))
                 .ForMember(dest => dest.Location, opt => opt.MapFrom(src => GetLocation(src.Longitude, src.Latitude)))
                 .ForMember(dest => dest.City, opt => opt.MapFrom(src => GetMcDonaldsCity(src.Address)))
                 .ForMember(dest => dest.PostalCode, opt => opt.MapFrom(src => GetMcDonaldsPostalCode(src.Address)))
                 .ForMember(dest => dest.Address, opt => opt.MapFrom(src => GetMcDonaldsAddress(src.Address)))
-                .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => Regex.Replace(src.Phone, @"[^\d]", "").Trim()));
+                .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => Regex.Replace(src.Phone, PhoneRegex, string.Empty).Trim()));
         }
+
+        #endregion Public Methods
+
+        #region Private Methods
 
         private string GetMcDonaldsCity(string address)
         {
@@ -53,5 +56,7 @@ namespace QPlanAPI.Infrastructure.Profiles
 
             return baseAddress.Trim();
         }
+
+        #endregion Private Methods
     }
 }

@@ -18,7 +18,6 @@ namespace QPlanAPI.Infrastructure.Converters
 
             return restaurants.ToArray();
         }
-
     }
 
     public class GinosResponseToRestaurantConverter : ITypeConverter<GinosRestaurantsResponse, Restaurant[]>
@@ -73,7 +72,6 @@ namespace QPlanAPI.Infrastructure.Converters
 
     }
 
-
     public class PapaJohnsResponseToRestaurantConverter : ITypeConverter<PapaJohnsRestaurantsResponse, Restaurant[]>
     {
         public Restaurant[] Convert(PapaJohnsRestaurantsResponse src, Restaurant[] dest, ResolutionContext context)
@@ -86,7 +84,20 @@ namespace QPlanAPI.Infrastructure.Converters
 
             return restaurants.ToArray();
         }
+    }
 
+    public class SubwayResponseToRestaurantConverter : ITypeConverter<SubwayRestaurantsResponse, Restaurant[]>
+    {
+        public Restaurant[] Convert(SubwayRestaurantsResponse src, Restaurant[] dest, ResolutionContext context)
+        {
+            List<Restaurant> restaurants = new List<Restaurant> { };
+            foreach (var restaurant in src.Restaurants)
+            {
+                restaurants.Add(context.Mapper.Map<Restaurant>(restaurant));
+            }
+
+            return restaurants.ToArray();
+        }
     }
 
     public class TGBResponseToRestaurantConverter : ITypeConverter<TGBRestaurantsResponse, Restaurant[]>
@@ -101,6 +112,5 @@ namespace QPlanAPI.Infrastructure.Converters
 
             return restaurants.ToArray();
         }
-
     }
 }

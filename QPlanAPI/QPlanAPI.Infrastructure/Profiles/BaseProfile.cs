@@ -1,16 +1,19 @@
 ﻿using AutoMapper;
 using QPlanAPI.Domain;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace QPlanAPI.Infrastructure.Profiles
 {
     public abstract class BaseProfile : Profile
     {
+        #region Constants
+        public const string PhoneRegex = @"[^\d]";
+        public const string PostalCodeRegex = @"\d{4,5}";
+        public const string FastFoodCategory = "FastFood";
+        #endregion Constants
 
-        private const string PostalCodeRegex = @"\d{4,5}";
+        #region Public Methods
 
         public Location GetLocation(string longitude, string latitude)
         {
@@ -24,22 +27,6 @@ namespace QPlanAPI.Infrastructure.Profiles
             {
                 return new Location(0, 0);
             }
-
-        }
-
-        public Location GetLocation(string[] coordinates)
-        {
-            try
-            {
-                double lng = Convert.ToDouble(coordinates[0]);
-                double lat = Convert.ToDouble(coordinates[1]);
-                return new Location(lng, lat);
-            }
-            catch
-            {
-                return new Location(0, 0);
-            }
-
         }
 
         public string GetPostalCode(string address)
@@ -48,5 +35,7 @@ namespace QPlanAPI.Infrastructure.Profiles
             string postalCode = r.Match(address)?.Value.Trim();
             return postalCode.Length < 5 ? $"0{postalCode}" : postalCode;
         }
+
+        #endregion Public Methods
     }
 }
