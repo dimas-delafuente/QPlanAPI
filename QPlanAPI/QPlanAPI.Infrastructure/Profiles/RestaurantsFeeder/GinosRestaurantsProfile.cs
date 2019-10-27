@@ -7,10 +7,14 @@ namespace QPlanAPI.Infrastructure.Profiles
 {
     public class GinosRestaurantsProfile : Profile
     {
+        #region Public Methods
+
         public GinosRestaurantsProfile()
         {
             CreateMap<GinosRestaurantsResponse, Restaurant[]>()
             .ConvertUsing(new GinosResponseToRestaurantConverter());
         }
+
+        #endregion Public Methods
     }
 }
