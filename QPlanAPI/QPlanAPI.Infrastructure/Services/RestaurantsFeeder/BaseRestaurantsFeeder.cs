@@ -10,14 +10,18 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
     public abstract class BaseRestaurantsFeeder : IRestaurantsFeederService<FeedRestaurantsRequest>
     {
-
+        #region Properties
         private readonly IRestaurantRepository _restaurantRepository;
+        #endregion Properties
 
-
+        #region Ctor
         protected BaseRestaurantsFeeder(IRestaurantRepository restaurantRepository)
         {
             _restaurantRepository = restaurantRepository;
         }
+        #endregion Ctor
+
+        #region Public Methods
 
         public async Task<bool> Handle(FeedRestaurantsRequest request, Type responseType)
         {
@@ -44,6 +48,8 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
         }
 
         abstract public Task<HashSet<Restaurant>> GetRestaurants(FeedRestaurantsRequest request, Type responseType);
+
+        #endregion Public Methods
     }
 
 }

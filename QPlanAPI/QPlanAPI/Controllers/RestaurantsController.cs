@@ -15,26 +15,33 @@ namespace QPlanAPI.Controllers
     [ApiController]
     public class RestaurantsController : ControllerBase
     {
+        #region Constants
+        private const double DEFAULT_RADIUS_MAX_DISTANCE = 1000;
+        #endregion Constants
+
+        #region Properties
         private readonly RestaurantPresenter _restaurantPresenter;
         private readonly IGetAllRestaurantsUseCase _getAllRestaurants;
         private readonly IGetRestaurantsByLocationUseCase _getRestaurantsByLocation;
         private readonly IRestaurantsFeederService<FeedApiRestaurantsRequest> _restaurantsApiFeeder;
         private readonly IRestaurantsFeederService<FeedHtmlRestaurantsRequest> _restaurantsHtmlFeeder;
-
+        private readonly IRestaurantsFeederService<FeedLocalRestaurantsRequest> _restaurantsLocalFeeder;
         private readonly ExternalRestaurantsConfig _externalRestaurantsConfig;
+        #endregion Properties
 
-        private const double DEFAULT_RADIUS_MAX_DISTANCE = 1000;
-
+        #region Public Methods
 
         public RestaurantsController(IGetAllRestaurantsUseCase getAllRestaurants, IGetRestaurantsByLocationUseCase getRestaurantsByLocation,
          RestaurantPresenter restaurantPresenter, IRestaurantsFeederService<FeedApiRestaurantsRequest> restaurantsApiFeeder,
-         IRestaurantsFeederService<FeedHtmlRestaurantsRequest> restaurantshtmlFeeder, IOptions<ExternalRestaurantsConfig> externalRestaurantsConfig)
+         IRestaurantsFeederService<FeedHtmlRestaurantsRequest> restaurantsHtmlFeeder, IRestaurantsFeederService<FeedLocalRestaurantsRequest> restaurantsLocalFeeder,
+         IOptions<ExternalRestaurantsConfig> externalRestaurantsConfig)
         {
             _getAllRestaurants = getAllRestaurants;
             _getRestaurantsByLocation = getRestaurantsByLocation;
             _restaurantPresenter = restaurantPresenter;
             _restaurantsApiFeeder = restaurantsApiFeeder;
-            _restaurantsHtmlFeeder = restaurantshtmlFeeder;
+            _restaurantsHtmlFeeder = restaurantsHtmlFeeder;
+            _restaurantsLocalFeeder = restaurantsLocalFeeder;
             _externalRestaurantsConfig = externalRestaurantsConfig.Value;
         }
 
@@ -93,6 +100,8 @@ namespace QPlanAPI.Controllers
             TestTacoBell();
             TestPapaJohns();
             TestTGB();
+            TestDominosPizza();
+            TestSubway();
         }
 
         [HttpGet("test/mcdonalds")]
@@ -192,5 +201,34 @@ namespace QPlanAPI.Controllers
                 Endpoints = config.Endpoints
             }, typeof(DominosPizzaRestaurantsResponse));
         }
+
+        [HttpGet("test/vips")]
+        public void TestVips()
+        {
+            _restaurantsLocalFeeder.Handle(new FeedLocalRestaurantsRequest
+            {
+                FileName = "vips.json"
+            }, typeof(VipsRestaurantsResponse));;
+        }
+
+        [HttpGet("test/lasureña")]
+        public void TestLaSureña()
+        {
+            _restaurantsLocalFeeder.Handle(new FeedLocalRestaurantsRequest
+            {
+                FileName = "lasureña.json"
+            }, typeof(LaSureñaRestaurantsResponse));
+        }
+
+        [HttpGet("test/montaditos")]
+        public void TestMontaditos()
+        {
+            _restaurantsLocalFeeder.Handle(new FeedLocalRestaurantsRequest
+            {
+                FileName = "montaditos.json"
+            }, typeof(MontaditosRestaurantsResponse));
+        }
+
+        #endregion Public Methods
     }
 }

@@ -13,15 +13,21 @@ using System.IO;
 namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
     public class ApiRestaurantsFeeder : BaseRestaurantsFeeder
-    { 
+    {
+        #region Properties
         private readonly IMapper _mapper;
         private readonly HttpClient _client;
+        #endregion Properties
 
+        #region Ctor
         public ApiRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository) : base(restaurantRepository)
         {
             _mapper = mapper;
             _client = new HttpClient();
         }
+        #endregion Ctor
+
+        #region Public Methods
 
         public override async Task<HashSet<Restaurant>> GetRestaurants(FeedRestaurantsRequest request, Type responseType)
         {
@@ -54,7 +60,7 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
                         }
                     }
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     return new HashSet<Restaurant>();
                 }
@@ -62,6 +68,8 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
             return apiRestaurants;
         }
+
+        #endregion Public Methods
 
         #region Private Methods
 
