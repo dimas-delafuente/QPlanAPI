@@ -20,12 +20,8 @@ namespace QPlanAPI.DataAccess.Profiles
             CreateMap<RestaurantEntity, Restaurant>().
                 ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
                     new Location(src.Location.Coordinates.Longitude, src.Location.Coordinates.Latitude)))
-                    .ForMember(dest => dest.Type, opt => opt.MapFrom(src => Enum.Parse(typeof(RestaurantType), src.Type)));
-
-            CreateMap<RestaurantLocationEntity, Restaurant>().
-                ForMember(dest => dest.Location, opt => opt.MapFrom(src =>
-                    new Location(src.Location.Coordinates.Longitude, src.Location.Coordinates.Latitude)))
-                .ForMember(dest => dest.Distance, opt => opt.MapFrom(src => (double)src.Distance));
+                    .ForMember(dest => dest.Type, opt => opt.MapFrom(src => Enum.Parse(typeof(RestaurantType), src.Type)))
+                    .ForMember(dest => dest.Distance, opt => opt.MapFrom(src => (double)src.Distance));
 
         }
     }
