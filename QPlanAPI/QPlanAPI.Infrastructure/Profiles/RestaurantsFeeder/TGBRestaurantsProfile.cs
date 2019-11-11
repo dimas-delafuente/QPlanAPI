@@ -3,7 +3,6 @@ using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
 using System.Collections.Generic;
 using QPlanAPI.Infrastructure.Converters;
 using System.Text.RegularExpressions;
-using System.Linq;
 
 namespace QPlanAPI.Infrastructure.Profiles
 {
@@ -21,7 +20,7 @@ namespace QPlanAPI.Infrastructure.Profiles
             .ForMember(dest => dest.Type, opt => opt.MapFrom(_ => RestaurantType.TGB))
                 .ForMember(dest => dest.Categories, opt => opt.MapFrom(_ => new List<string> { FastFoodCategory }))
                 .ForMember(dest => dest.Location, opt => opt.MapFrom(src => 
-                    GetLocation(src.Coordinates.Split(',').ElementAtOrDefault(0), src.Coordinates.Split(',').ElementAtOrDefault(1))))
+                    GetLocation(src.Coordinates)))
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
                 .ForMember(dest => dest.Address, opt => opt.MapFrom(src => GetTGBAddressField(src.Address)))
                 .ForMember(dest => dest.City, opt => opt.MapFrom(src => src.City.ToUpper()))
