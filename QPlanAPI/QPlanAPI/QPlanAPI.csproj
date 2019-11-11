@@ -15,4 +15,9 @@
     <Folder Include="Presenters\"/>
     <Folder Include="Serialization\"/>
   </ItemGroup>
+    <ItemGroup>
+    <Content Update="Config\*">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
