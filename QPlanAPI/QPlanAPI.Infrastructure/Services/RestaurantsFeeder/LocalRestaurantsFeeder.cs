@@ -11,10 +11,6 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
     public class LocalRestaurantsFeeder : BaseRestaurantsFeeder
     {
-        #region Consts
-        private const string LOCAL_DIRECTORY = "";
-        #endregion Consts
-
         #region Properties
         private readonly IMapper _mapper;
         #endregion Properties
@@ -36,8 +32,7 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 
             var localRequest = request as FeedLocalRestaurantsRequest;
 
-            string responseContent = "";
-            var restaurantsRetrieved = JsonConvert.DeserializeObject(responseContent, responseType);
+            var restaurantsRetrieved = await Task.Run( () => JsonConvert.DeserializeObject(localRequest.FileContent, responseType));
             Restaurant[] restaurants = _mapper.Map<Restaurant[]>(restaurantsRetrieved);
 
             localRestaurants.UnionWith(restaurants);

@@ -8,6 +8,7 @@ using QPlanAPI.Presenters;
 using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
 using QPlanAPI.Config;
 using Microsoft.Extensions.Options;
+using System.IO;
 
 namespace QPlanAPI.Controllers
 {
@@ -207,8 +208,8 @@ namespace QPlanAPI.Controllers
         {
             _restaurantsLocalFeeder.Handle(new FeedLocalRestaurantsRequest
             {
-                FileName = "vips.json"
-            }, typeof(VipsRestaurantsResponse));;
+                FileContent = GetLocalRestaurantContent("vips.json")
+            }, typeof(VipsRestaurantsResponse));
         }
 
         [HttpGet("test/lasureña")]
@@ -216,7 +217,7 @@ namespace QPlanAPI.Controllers
         {
             _restaurantsLocalFeeder.Handle(new FeedLocalRestaurantsRequest
             {
-                FileName = "lasureña.json"
+                FileContent = GetLocalRestaurantContent("lasureña.json")
             }, typeof(LaSureñaRestaurantsResponse));
         }
 
@@ -225,10 +226,25 @@ namespace QPlanAPI.Controllers
         {
             _restaurantsLocalFeeder.Handle(new FeedLocalRestaurantsRequest
             {
-                FileName = "montaditos.json"
+                FileContent = GetLocalRestaurantContent("montaditos.json")
             }, typeof(MontaditosRestaurantsResponse));
         }
 
         #endregion Public Methods
+
+        #region Private Methods
+
+        private string GetLocalRestaurantContent(string fileName)
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Config", "ExternalRestaurants", fileName);
+            string content = string.Empty;
+
+            using (StreamReader reader = new StreamReader(filePath))
+                content = reader.ReadToEnd();
+
+            return content;
+        }
+
+        #endregion Private Methods
     }
 }

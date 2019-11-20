@@ -20,7 +20,7 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
 
     public class FeedLocalRestaurantsRequest : FeedRestaurantsRequest
     {
-        public string FileName { get; set; }
+        public string FileContent { get; set; }
     }
 
     #region Enums
