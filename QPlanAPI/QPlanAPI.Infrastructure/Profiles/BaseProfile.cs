@@ -2,6 +2,7 @@
 using QPlanAPI.Domain;
 using System;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace QPlanAPI.Infrastructure.Profiles
 {
@@ -28,6 +29,14 @@ namespace QPlanAPI.Infrastructure.Profiles
                 return new Location(0, 0);
             }
         }
+
+        public Location GetLocation(string location)
+        {
+            string[] coordinates = location.Split(',');
+            return GetLocation(coordinates.ElementAtOrDefault(0), coordinates.ElementAtOrDefault(1));
+        }
+
+
 
         public string GetPostalCode(string address)
         {

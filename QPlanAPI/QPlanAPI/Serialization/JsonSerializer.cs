@@ -1,23 +1,19 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
-
+﻿using System.Text.Json;
+using System.Text.Encodings.Web;
 namespace QPlanAPI.Serialization
 {
-    public sealed class JsonSerializer
+    public sealed class QPlanJsonSerializer
     {
-        private static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        private static readonly JsonSerializerOptions _settings = new JsonSerializerOptions
         {
-            ContractResolver = new JsonContractResolver(),
-            NullValueHandling = NullValueHandling.Ignore
+            IgnoreNullValues = true,
+            WriteIndented = true,
+            Encoder = JavaScriptEncoder.Default
         };
 
         public static string SerializeObject(object o)
         {
-            return JsonConvert.SerializeObject(o, Formatting.Indented, Settings);
-        }
-
-        public sealed class JsonContractResolver : CamelCasePropertyNamesContractResolver
-        {
+            return JsonSerializer.Serialize(o, _settings);
         }
     }
 }
