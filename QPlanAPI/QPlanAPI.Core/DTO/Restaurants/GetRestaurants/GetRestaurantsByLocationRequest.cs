@@ -7,6 +7,8 @@ namespace QPlanAPI.Core.DTO.Restaurants
     {
         public Location Location { get; set; }
 
+        public PagedRequest PagedRequest { get; set; }
+
         public double Radius { get; set; }
     }
 }

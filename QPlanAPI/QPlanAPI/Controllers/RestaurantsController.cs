@@ -40,9 +40,10 @@ namespace QPlanAPI.Controllers
 
         // GET api/restaurants
         [HttpGet]
-        public async Task<ActionResult> Get([FromQuery]int page = 0,[FromQuery]int pageSize = 10)
+        public async Task<ActionResult> Get(int page = 0, int pageSize = 10)
         {
-            await _getAllRestaurants.Handle(new GetRestaurantsRequest() {Page = page, PageSize = pageSize }, _restaurantPresenter);
+            var pagedRequest = new PagedRequest { Page = page, PageSize = pageSize };
+            await _getAllRestaurants.Handle(new GetRestaurantsRequest() {  PagedRequest = pagedRequest }, _restaurantPresenter);
             return _restaurantPresenter.Result;
         }
 
@@ -54,12 +55,15 @@ namespace QPlanAPI.Controllers
         }
 
         [HttpGet("location")]
-        public async Task<ActionResult> Get(double longitude, double latitude, double radius)
+        public async Task<ActionResult> Get(double longitude, double latitude, double radius, int page = 0, int pageSize = 10)
         {
-            await _getRestaurantsByLocation.Handle(new GetRestaurantsByLocationRequest
+                var pagedRequest = new PagedRequest { Page = page, PageSize = pageSize };
+
+                await _getRestaurantsByLocation.Handle(new GetRestaurantsByLocationRequest
             {
                 Location = new Location(longitude, latitude),
-                Radius = radius <= 0 ? DEFAULT_RADIUS_MAX_DISTANCE : radius
+                Radius = radius <= 0 ? DEFAULT_RADIUS_MAX_DISTANCE : radius,
+                PagedRequest = new PagedRequest {Page = page , PageSize = pageSize }
             }, _restaurantPresenter);
 
             return _restaurantPresenter.Result;

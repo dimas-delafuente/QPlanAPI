@@ -38,11 +38,11 @@ namespace QPlanAPI.DataAccess.Repositories
                             .FindAsync(r => r.Id.Equals(id)));
         }
 
-        public async Task<IEnumerable<Restaurant>> GetPagedRestaurants(int page, int pageSize)
+        public async Task<IEnumerable<Restaurant>> GetPagedRestaurants(PagedRequest pagedRequest)
         {
             List<RestaurantEntity> response = await _context
                             .Restaurants
-                            .Find(_ => true).Skip(page * pageSize).Limit(pageSize).ToListAsync();
+                            .Find(_ => true).Skip(pagedRequest.Page * pagedRequest.PageSize).Limit(pagedRequest.PageSize).ToListAsync();
 
             return _mapper.Map<List<Restaurant>>(response);
         }
@@ -56,6 +56,24 @@ namespace QPlanAPI.DataAccess.Repositories
                             .Result.ToListAsync();
             return _mapper.Map<List<Restaurant>>(response);
         }
+
+
+
+        public async Task<IEnumerable<Restaurant>> GetPagedRestaurantsByLocation(Location location, double radius, PagedRequest pagedRequest)
+        {
+            var nearSphereFilter = new FilterDefinitionBuilder<RestaurantEntity>().NearSphere(r => r.Location,
+                                        new GeoJsonPoint<GeoJson2DCoordinates>(new GeoJson2DCoordinates(location.Longitude, location.Latitude)), radius);
+
+            List<RestaurantEntity> restaurants = await _context
+                .Restaurants.Find(nearSphereFilter).Skip(pagedRequest.Page * pagedRequest.PageSize).Limit(pagedRequest.PageSize).ToListAsync();
+
+            restaurants.ForEach(r =>
+            {
+                r.Distance = GetDistanceToOrigin(location, r.Location);
+            });
+            return _mapper.Map<List<Restaurant>>(restaurants);
+        }
+
 
 
         public async Task<IEnumerable<Restaurant>> GetRestaurantsByLocation(Location location, double radius)
@@ -156,6 +174,7 @@ namespace QPlanAPI.DataAccess.Repositories
                     Math.Cos(restaurantLocation.Coordinates.Latitude * RADIANS) * Math.Cos(originLocation.Latitude * RADIANS)
                     * Math.Cos((originLocation.Longitude - restaurantLocation.Coordinates.Longitude) * RADIANS)) * EARTH_RADIUS_METERS;
         }
+
         #endregion
     }
 }
