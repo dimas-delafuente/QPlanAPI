@@ -38,15 +38,15 @@ namespace QPlanAPI.Controllers
             _externalRestaurantsConfig = externalRestaurantsConfig.Value;
         }
 
-        // GET api/values
+        // GET api/restaurants
         [HttpGet]
-        public async Task<ActionResult> Get()
+        public async Task<ActionResult> Get([FromQuery]int page = 0,[FromQuery]int pageSize = 10)
         {
-            await _getAllRestaurants.Handle(new GetRestaurantsRequest(), _restaurantPresenter);
+            await _getAllRestaurants.Handle(new GetRestaurantsRequest() {Page = page, PageSize = pageSize }, _restaurantPresenter);
             return _restaurantPresenter.Result;
         }
 
-        // GET api/values/5
+        // GET api/restaurants/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
@@ -65,19 +65,19 @@ namespace QPlanAPI.Controllers
             return _restaurantPresenter.Result;
         }
 
-        // POST api/values
+        // POST api/restaurants
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/values/5
+        // PUT api/restaurants/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE api/restaurants/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

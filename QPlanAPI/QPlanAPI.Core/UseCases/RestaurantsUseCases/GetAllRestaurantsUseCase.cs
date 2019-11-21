@@ -19,7 +19,7 @@ namespace QPlanAPI.Core.UseCases
 
         public async Task<bool> Handle(GetRestaurantsRequest request, IOutputPort<GetRestaurantsResponse> outputPort)
         {
-            IEnumerable<Restaurant> response = await _restaurantRepository.GetAllRestaurants();
+            IEnumerable<Restaurant> response = await _restaurantRepository.GetPagedRestaurants(request.Page, request.PageSize);
             outputPort.Handle(response.Any() ? new GetRestaurantsResponse(response.ToList(), true, string.Empty) : new GetRestaurantsResponse(new List<Restaurant>(), false, string.Empty));
             return response.Any();
         }

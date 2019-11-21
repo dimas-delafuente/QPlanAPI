@@ -38,6 +38,16 @@ namespace QPlanAPI.DataAccess.Repositories
                             .FindAsync(r => r.Id.Equals(id)));
         }
 
+        public async Task<IEnumerable<Restaurant>> GetPagedRestaurants(int page, int pageSize)
+        {
+            List<RestaurantEntity> response = await _context
+                            .Restaurants
+                            .Find(_ => true).Skip(page * pageSize).Limit(pageSize).ToListAsync();
+
+            return _mapper.Map<List<Restaurant>>(response);
+        }
+
+
         public async Task<IEnumerable<Restaurant>> GetAllRestaurants()
         {
             List<RestaurantEntity> response = await _context

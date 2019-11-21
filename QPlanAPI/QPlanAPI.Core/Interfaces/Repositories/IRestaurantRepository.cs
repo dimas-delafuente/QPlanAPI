@@ -9,6 +9,7 @@ namespace QPlanAPI.Core.Interfaces.Repositories
     {
 
         Task<Restaurant> GetRestaurant(string name);
+        Task<IEnumerable<Restaurant>> GetPagedRestaurants(int page, int pageSize);
         Task<IEnumerable<Restaurant>> GetAllRestaurants();
         Task<IEnumerable<Restaurant>> GetRestaurantsByLocation(Location location, double radius);
 
