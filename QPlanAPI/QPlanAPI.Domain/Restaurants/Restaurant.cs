@@ -43,7 +43,10 @@ namespace QPlanAPI.Domain.Restaurants
         PapaJohns,
         TGB,
         Subway,
-        DominosPizza
+        DominosPizza,
+        Montaditos,
+        LaSureña,
+        Vips
     }
 
     #endregion Enums

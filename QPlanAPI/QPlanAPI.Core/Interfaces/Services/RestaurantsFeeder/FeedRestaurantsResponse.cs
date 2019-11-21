@@ -211,27 +211,25 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
 
     public class LaSureñaRestaurantsResponse : FeedRestaurantsResponse
     {
-        public string Name { get; set; }
-
+        [JsonProperty("ciudad")]
         public string City { get; set; }
-
+        [JsonProperty("direccion")]
         public string Address { get; set; }
-
+        [JsonProperty("latitud")]
         public string Latitude { get; set; }
-
+        [JsonProperty("longitud")]
         public string Longitude { get; set; }
     }
 
     public class MontaditosRestaurantsResponse : FeedRestaurantsResponse
     {
-        public string Name { get; set; }
-
+        [JsonProperty("ciudad")]
         public string City { get; set; }
-
+        [JsonProperty("direccion")]
         public string Address { get; set; }
-
+        [JsonProperty("latitud")]
         public string Latitude { get; set; }
-
+        [JsonProperty("longitud")]
         public string Longitude { get; set; }
     }
 }

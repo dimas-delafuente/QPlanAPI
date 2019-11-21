@@ -26,7 +26,7 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
         public async Task<bool> Handle(FeedRestaurantsRequest request, Type responseType)
         {
 
-            if (request.Endpoints.Any())
+            if (request.Endpoints?.Count > 0 || request is FeedLocalRestaurantsRequest)
             {
                 HashSet<Restaurant> restaurants = await GetRestaurants(request, responseType);
 
