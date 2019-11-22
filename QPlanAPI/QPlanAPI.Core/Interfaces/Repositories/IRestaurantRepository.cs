@@ -9,7 +9,9 @@ namespace QPlanAPI.Core.Interfaces.Repositories
     {
 
         Task<Restaurant> GetRestaurant(string name);
+        Task<IEnumerable<Restaurant>> GetPagedRestaurants(PagedRequest pagedRequest);
         Task<IEnumerable<Restaurant>> GetAllRestaurants();
+        Task<IEnumerable<Restaurant>> GetPagedRestaurantsByLocation(Location location, double radius, PagedRequest pagedRequest);
         Task<IEnumerable<Restaurant>> GetRestaurantsByLocation(Location location, double radius);
 
         Task<bool> Insert(Restaurant restaurant);

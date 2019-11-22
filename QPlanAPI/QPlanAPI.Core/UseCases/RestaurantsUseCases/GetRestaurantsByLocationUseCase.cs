@@ -19,7 +19,7 @@ namespace QPlanAPI.Core.UseCases
 
         public async Task<bool> Handle(GetRestaurantsByLocationRequest request, IOutputPort<GetRestaurantsResponse> outputPort)
         {
-            IEnumerable<Restaurant> response = await _restaurantRepository.GetRestaurantsByLocation(request.Location, request.Radius);
+            IEnumerable<Restaurant> response = await _restaurantRepository.GetPagedRestaurantsByLocation(request.Location, request.Radius, request.PagedRequest);
             outputPort.Handle(response.Any() ? new GetRestaurantsResponse(response.ToList(), true, string.Empty) : new GetRestaurantsResponse(new List<Restaurant>(), false, string.Empty));
             return response.Any();
         }

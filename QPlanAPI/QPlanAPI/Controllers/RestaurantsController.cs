@@ -38,15 +38,16 @@ namespace QPlanAPI.Controllers
             _externalRestaurantsConfig = externalRestaurantsConfig.Value;
         }
 
-        // GET api/values
+        // GET api/restaurants
         [HttpGet]
-        public async Task<ActionResult> Get()
+        public async Task<ActionResult> Get(int page = 0, int pageSize = 10)
         {
-            await _getAllRestaurants.Handle(new GetRestaurantsRequest(), _restaurantPresenter);
+            var pagedRequest = new PagedRequest { Page = page, PageSize = pageSize };
+            await _getAllRestaurants.Handle(new GetRestaurantsRequest() {  PagedRequest = pagedRequest }, _restaurantPresenter);
             return _restaurantPresenter.Result;
         }
 
-        // GET api/values/5
+        // GET api/restaurants/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
@@ -54,30 +55,33 @@ namespace QPlanAPI.Controllers
         }
 
         [HttpGet("location")]
-        public async Task<ActionResult> Get(double longitude, double latitude, double radius)
+        public async Task<ActionResult> Get(double longitude, double latitude, double radius, int page = 0, int pageSize = 10)
         {
-            await _getRestaurantsByLocation.Handle(new GetRestaurantsByLocationRequest
+                var pagedRequest = new PagedRequest { Page = page, PageSize = pageSize };
+
+                await _getRestaurantsByLocation.Handle(new GetRestaurantsByLocationRequest
             {
                 Location = new Location(longitude, latitude),
-                Radius = radius <= 0 ? DEFAULT_RADIUS_MAX_DISTANCE : radius
+                Radius = radius <= 0 ? DEFAULT_RADIUS_MAX_DISTANCE : radius,
+                PagedRequest = new PagedRequest {Page = page , PageSize = pageSize }
             }, _restaurantPresenter);
 
             return _restaurantPresenter.Result;
         }
 
-        // POST api/values
+        // POST api/restaurants
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/values/5
+        // PUT api/restaurants/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE api/restaurants/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
