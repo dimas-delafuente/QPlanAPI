@@ -2,7 +2,6 @@ using QPlanAPI.Domain.Restaurants;
 using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using System;
 
 namespace QPlanAPI.Infrastructure.Profiles
 {
