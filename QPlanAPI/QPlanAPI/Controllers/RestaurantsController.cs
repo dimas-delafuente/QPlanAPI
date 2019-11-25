@@ -57,8 +57,6 @@ namespace QPlanAPI.Controllers
         [HttpGet("location")]
         public async Task<ActionResult> Get(double longitude, double latitude, double radius, int page = 0, int pageSize = 10)
         {
-                var pagedRequest = new PagedRequest { Page = page, PageSize = pageSize };
-
                 await _getRestaurantsByLocation.Handle(new GetRestaurantsByLocationRequest
             {
                 Location = new Location(longitude, latitude),
