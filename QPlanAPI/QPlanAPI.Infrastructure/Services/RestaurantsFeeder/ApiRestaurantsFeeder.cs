@@ -15,14 +15,12 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
     public class ApiRestaurantsFeeder : BaseRestaurantsFeeder
     {
         #region Properties
-        private readonly IMapper _mapper;
         private readonly HttpClient _client;
         #endregion Properties
 
         #region Ctor
-        public ApiRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository) : base(restaurantRepository)
+        public ApiRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository) : base(mapper, restaurantRepository)
         {
-            _mapper = mapper;
             _client = new HttpClient();
         }
         #endregion Ctor

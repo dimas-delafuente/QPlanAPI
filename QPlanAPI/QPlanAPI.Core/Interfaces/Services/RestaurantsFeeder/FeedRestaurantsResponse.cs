@@ -209,7 +209,7 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
         public string Longitude { get; set; }
     }
 
-    public class LaSureñaRestaurantsResponse : FeedRestaurantsResponse
+    public class LaSurenaRestaurantsResponse : FeedRestaurantsResponse
     {
         [JsonProperty("ciudad")]
         public string City { get; set; }

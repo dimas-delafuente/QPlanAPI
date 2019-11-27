@@ -1,25 +1,21 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using AutoMapper;
 using Newtonsoft.Json;
 using QPlanAPI.Core.Interfaces.Repositories;
 using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
 using QPlanAPI.Domain.Restaurants;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
     public class LocalRestaurantsFeeder : BaseRestaurantsFeeder
     {
-        #region Properties
-        private readonly IMapper _mapper;
-        #endregion Properties
-
         #region Ctor
 
-        public LocalRestaurantsFeeder(IRestaurantRepository restaurantRepository, IMapper mapper) : base(restaurantRepository)
+        public LocalRestaurantsFeeder(IRestaurantRepository restaurantRepository, IMapper mapper) : base(mapper, restaurantRepository)
         {
-            _mapper = mapper;
+
         }
 
         #endregion Ctor

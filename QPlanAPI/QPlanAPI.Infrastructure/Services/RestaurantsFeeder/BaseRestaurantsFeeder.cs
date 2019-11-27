@@ -1,22 +1,25 @@
-﻿using QPlanAPI.Core.Interfaces.Repositories;
-using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
-using QPlanAPI.Domain.Restaurants;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using QPlanAPI.Core.Interfaces.Repositories;
+using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
+using QPlanAPI.Domain.Restaurants;
 
 namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
     public abstract class BaseRestaurantsFeeder : IRestaurantsFeederService<FeedRestaurantsRequest>
     {
         #region Properties
+        public readonly IMapper _mapper;
         private readonly IRestaurantRepository _restaurantRepository;
         #endregion Properties
 
         #region Ctor
-        protected BaseRestaurantsFeeder(IRestaurantRepository restaurantRepository)
+        protected BaseRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository)
         {
+            _mapper = mapper;
             _restaurantRepository = restaurantRepository;
         }
         #endregion Ctor

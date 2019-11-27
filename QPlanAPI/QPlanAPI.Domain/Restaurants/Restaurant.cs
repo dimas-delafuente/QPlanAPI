@@ -45,7 +45,7 @@ namespace QPlanAPI.Domain.Restaurants
         Subway,
         DominosPizza,
         Montaditos,
-        LaSureña,
+        LaSurena,
         Vips
     }
 

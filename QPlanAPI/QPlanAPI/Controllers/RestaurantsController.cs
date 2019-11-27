@@ -1,14 +1,14 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using QPlanAPI.Config;
 using QPlanAPI.Core.DTO.Restaurants;
+using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
 using QPlanAPI.Core.Interfaces.UseCases;
 using QPlanAPI.Domain;
 using QPlanAPI.Presenters;
-using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
-using QPlanAPI.Config;
-using Microsoft.Extensions.Options;
-using System.IO;
 
 namespace QPlanAPI.Controllers
 {
@@ -215,13 +215,13 @@ namespace QPlanAPI.Controllers
             }, typeof(VipsRestaurantsResponse[]));
         }
 
-        [HttpGet("test/lasureña")]
+        [HttpGet("test/lasurena")]
         public void TestLaSureña()
         {
             _restaurantsLocalFeeder.Handle(new FeedLocalRestaurantsRequest
             {
-                FileContent = GetLocalRestaurantContent("lasureña.json")
-            }, typeof(LaSureñaRestaurantsResponse[]));
+                FileContent = GetLocalRestaurantContent("lasurena.json")
+            }, typeof(LaSurenaRestaurantsResponse[]));
         }
 
         [HttpGet("test/montaditos")]
