@@ -36,13 +36,11 @@ namespace QPlanAPI.Infrastructure.Profiles
             return GetLocation(coordinates.ElementAtOrDefault(0), coordinates.ElementAtOrDefault(1));
         }
 
-
-
         public string GetPostalCode(string address)
         {
             Regex r = new Regex(PostalCodeRegex);
             string postalCode = r.Match(address)?.Value.Trim();
-            return postalCode.Length < 5 ? $"0{postalCode}" : postalCode;
+            return postalCode?.Length < 5 ? $"0{postalCode}" : postalCode;
         }
 
         #endregion Public Methods

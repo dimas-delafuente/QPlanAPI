@@ -1,41 +1,28 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Threading.Tasks;
+using System.Web;
+using AutoMapper;
 using HtmlAgilityPack;
 using QPlanAPI.Core.Interfaces.Repositories;
 using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
 using QPlanAPI.Domain.Restaurants;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Net;
-using System.Threading.Tasks;
-using System.Web;
 
 namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
     public class HtmlRestaurantsFeeder : BaseRestaurantsFeeder
     {
         #region Consts
-
         private const string USER_AGENT_VALID = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36";
-
-        #endregion
-
-
-        #region Properties
-
-        private readonly IMapper _mapper;
-
-        #endregion
-
+        #endregion Consts
 
         #region Ctor
-
-        public HtmlRestaurantsFeeder(IRestaurantRepository restaurantRepository, IMapper mapper) : base(restaurantRepository)
+        public HtmlRestaurantsFeeder(IRestaurantRepository restaurantRepository, IMapper mapper) : base(mapper, restaurantRepository)
         {
-            _mapper = mapper;
-        }
 
-        #endregion
+        }
+        #endregion Ctor
 
         #region Public Methods
 
@@ -57,7 +44,7 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
                     htmlRestaurants.UnionWith(_mapper.Map<Restaurant[]>(GetDominosPizzaRestaurants(doc)));
 
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     return new HashSet<Restaurant>();
                 }
@@ -66,9 +53,10 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
             return htmlRestaurants;
         }
 
-        #endregion
+        #endregion Public Methods
 
         #region Private Methods
+
         private HashSet<DominosPizzaRestaurantsResponse> GetDominosPizzaRestaurants(HtmlDocument doc)
         {
             var dominosPizzaRestaurants = new HashSet<DominosPizzaRestaurantsResponse>();
@@ -89,7 +77,7 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
                     });
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return new HashSet<DominosPizzaRestaurantsResponse>();
             }
@@ -97,7 +85,6 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
             return dominosPizzaRestaurants;
         }
 
-
-        #endregion
+        #endregion Private Methods
     }
 }

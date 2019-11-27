@@ -1,13 +1,14 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using QPlanAPI.Config;
 using QPlanAPI.Core.DTO.Restaurants;
+using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
 using QPlanAPI.Core.Interfaces.UseCases;
 using QPlanAPI.Domain;
 using QPlanAPI.Presenters;
-using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
-using QPlanAPI.Config;
-using Microsoft.Extensions.Options;
 
 namespace QPlanAPI.Controllers
 {
@@ -15,26 +16,33 @@ namespace QPlanAPI.Controllers
     [ApiController]
     public class RestaurantsController : ControllerBase
     {
+        #region Constants
+        private const double DEFAULT_RADIUS_MAX_DISTANCE = 1000;
+        #endregion Constants
+
+        #region Properties
         private readonly RestaurantPresenter _restaurantPresenter;
         private readonly IGetAllRestaurantsUseCase _getAllRestaurants;
         private readonly IGetRestaurantsByLocationUseCase _getRestaurantsByLocation;
         private readonly IRestaurantsFeederService<FeedApiRestaurantsRequest> _restaurantsApiFeeder;
         private readonly IRestaurantsFeederService<FeedHtmlRestaurantsRequest> _restaurantsHtmlFeeder;
-
+        private readonly IRestaurantsFeederService<FeedLocalRestaurantsRequest> _restaurantsLocalFeeder;
         private readonly ExternalRestaurantsConfig _externalRestaurantsConfig;
+        #endregion Properties
 
-        private const double DEFAULT_RADIUS_MAX_DISTANCE = 1000;
-
+        #region Public Methods
 
         public RestaurantsController(IGetAllRestaurantsUseCase getAllRestaurants, IGetRestaurantsByLocationUseCase getRestaurantsByLocation,
          RestaurantPresenter restaurantPresenter, IRestaurantsFeederService<FeedApiRestaurantsRequest> restaurantsApiFeeder,
-         IRestaurantsFeederService<FeedHtmlRestaurantsRequest> restaurantshtmlFeeder, IOptions<ExternalRestaurantsConfig> externalRestaurantsConfig)
+         IRestaurantsFeederService<FeedHtmlRestaurantsRequest> restaurantsHtmlFeeder, IRestaurantsFeederService<FeedLocalRestaurantsRequest> restaurantsLocalFeeder,
+         IOptions<ExternalRestaurantsConfig> externalRestaurantsConfig)
         {
             _getAllRestaurants = getAllRestaurants;
             _getRestaurantsByLocation = getRestaurantsByLocation;
             _restaurantPresenter = restaurantPresenter;
             _restaurantsApiFeeder = restaurantsApiFeeder;
-            _restaurantsHtmlFeeder = restaurantshtmlFeeder;
+            _restaurantsHtmlFeeder = restaurantsHtmlFeeder;
+            _restaurantsLocalFeeder = restaurantsLocalFeeder;
             _externalRestaurantsConfig = externalRestaurantsConfig.Value;
         }
 
@@ -95,6 +103,11 @@ namespace QPlanAPI.Controllers
             TestTacoBell();
             TestPapaJohns();
             TestTGB();
+            TestDominosPizza();
+            TestSubway();
+            TestVips();
+            TestLaSureña();
+            TestMontaditos();
         }
 
         [HttpGet("test/mcdonalds")]
@@ -194,5 +207,49 @@ namespace QPlanAPI.Controllers
                 Endpoints = config.Endpoints
             }, typeof(DominosPizzaRestaurantsResponse));
         }
+
+        [HttpGet("test/vips")]
+        public void TestVips()
+        {
+            _restaurantsLocalFeeder.Handle(new FeedLocalRestaurantsRequest
+            {
+                FileContent = GetLocalRestaurantContent("vips.json")
+            }, typeof(VipsRestaurantsResponse[]));
+        }
+
+        [HttpGet("test/lasurena")]
+        public void TestLaSureña()
+        {
+            _restaurantsLocalFeeder.Handle(new FeedLocalRestaurantsRequest
+            {
+                FileContent = GetLocalRestaurantContent("lasurena.json")
+            }, typeof(LaSurenaRestaurantsResponse[]));
+        }
+
+        [HttpGet("test/montaditos")]
+        public void TestMontaditos()
+        {
+            _restaurantsLocalFeeder.Handle(new FeedLocalRestaurantsRequest
+            {
+                FileContent = GetLocalRestaurantContent("montaditos.json")
+            }, typeof(MontaditosRestaurantsResponse[]));
+        }
+
+        #endregion Public Methods
+
+        #region Private Methods
+
+        private string GetLocalRestaurantContent(string fileName)
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Config", "LocalRestaurants", fileName);
+            string content = string.Empty;
+
+            using (StreamReader reader = new StreamReader(filePath))
+                content = reader.ReadToEnd();
+
+            return content;
+        }
+
+        #endregion Private Methods
     }
 }

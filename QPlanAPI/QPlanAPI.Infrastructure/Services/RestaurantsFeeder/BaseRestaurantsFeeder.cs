@@ -1,28 +1,35 @@
-﻿using QPlanAPI.Core.Interfaces.Repositories;
-using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
-using QPlanAPI.Domain.Restaurants;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using QPlanAPI.Core.Interfaces.Repositories;
+using QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder;
+using QPlanAPI.Domain.Restaurants;
 
 namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
 {
     public abstract class BaseRestaurantsFeeder : IRestaurantsFeederService<FeedRestaurantsRequest>
     {
-
+        #region Properties
+        public readonly IMapper _mapper;
         private readonly IRestaurantRepository _restaurantRepository;
+        #endregion Properties
 
-
-        protected BaseRestaurantsFeeder(IRestaurantRepository restaurantRepository)
+        #region Ctor
+        protected BaseRestaurantsFeeder(IMapper mapper, IRestaurantRepository restaurantRepository)
         {
+            _mapper = mapper;
             _restaurantRepository = restaurantRepository;
         }
+        #endregion Ctor
+
+        #region Public Methods
 
         public async Task<bool> Handle(FeedRestaurantsRequest request, Type responseType)
         {
 
-            if (request.Endpoints.Any())
+            if (request.Endpoints?.Count > 0 || request is FeedLocalRestaurantsRequest)
             {
                 HashSet<Restaurant> restaurants = await GetRestaurants(request, responseType);
 
@@ -44,6 +51,8 @@ namespace QPlanAPI.Infrastructure.Services.RestaurantsFeeder
         }
 
         abstract public Task<HashSet<Restaurant>> GetRestaurants(FeedRestaurantsRequest request, Type responseType);
+
+        #endregion Public Methods
     }
 
 }

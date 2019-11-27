@@ -1,0 +1,590 @@
+﻿[
+  {
+    "ciudad": "TELDE",
+    "direccion": "CC LAS TERRAZAS DE JINAMAR, AUTOPISTA GC-1, KM 5,5 C.P. (35220)",
+    "latitud": "28.0303679",
+    "longitud": "-15.4011543"
+  },
+  {
+    "ciudad": "BADAJOZ",
+    "direccion": "AVENIDA SINFORIANO MADROÑERO 19 C.P. (06011)",
+    "latitud": "38.8695326",
+    "longitud": "-6.9908532"
+  },
+  {
+    "ciudad": "JEREZ DE LA FRONTERA",
+    "direccion": "AVENIDA FERNANDO PORTILLO 4 C.P. (11405)",
+    "latitud": "36.6951065",
+    "longitud": "-6.1079525"
+  },
+  {
+    "ciudad": "HOSPITALET DE LLOBREGAT",
+    "direccion": "RAMBLA JUST OLIVERAS 1 C.P. (08901)",
+    "latitud": "41.3599923",
+    "longitud": "2.099697"
+  },
+  {
+    "ciudad": "SARDINERO",
+    "direccion": "PZ BRISAS 1 (URB.PIQUIO) C.P. (39005)",
+    "latitud": "43.4745368",
+    "longitud": "-3.793573"
+  },
+  {
+    "ciudad": "BENALMADENA",
+    "direccion": "AVDA DEL PUERTO DEPORTIVO S/N, L4, L4BIS, PUERTO MARINA C.P. (29630)",
+    "latitud": "36.5979926",
+    "longitud": "-4.5155695"
+  },
+  {
+    "ciudad": "MURCIA",
+    "direccion": "PLAZA SANTO DOMINGO 15 C.P. (30008)",
+    "latitud": "37.9870657",
+    "longitud": "-1.1311127"
+  },
+  {
+    "ciudad": "BADAJOZ",
+    "direccion": "PLAZA DE ESPAÑA 7, ESQ. ZURBARAN C.P. (06002)",
+    "latitud": "38.8779462",
+    "longitud": "-6.9725092"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "PASEO DE SANT JOAN 77 C.P. (08009)",
+    "latitud": "41.3977623",
+    "longitud": "2.1691246"
+  },
+  {
+    "ciudad": "CORDOBA",
+    "direccion": "CALLE ISLA MENORCA 2 C.P. (14011)",
+    "latitud": "37.8928354",
+    "longitud": "-4.8015721"
+  },
+  {
+    "ciudad": "CACERES",
+    "direccion": "CALLE GENERAL EZPONDA 3 C.P. (10003)",
+    "latitud": "39.475481",
+    "longitud": "-6.374267"
+  },
+  {
+    "ciudad": "EL CAMPELLO",
+    "direccion": "MUTXAMEL 1 C.P. (03560)",
+    "latitud": "38.4234315",
+    "longitud": "-0.3934386"
+  },
+  {
+    "ciudad": "LEGANES",
+    "direccion": "C/ MONDRAGON S/N C.P. (28917)",
+    "latitud": "40.3586032",
+    "longitud": "-3.7789963"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": "AV SIMON BOLIVAR, S/N, LOCAL B41 C.P. (29011)",
+    "latitud": "36.7328537",
+    "longitud": "-4.4357836"
+  },
+  {
+    "ciudad": "FUENLABRADA",
+    "direccion": "AVENIDA PABLO IGLESIAS 17 C.P. (28942)",
+    "latitud": "40.303275",
+    "longitud": "-3.8340328"
+  },
+  {
+    "ciudad": "SAN SEBASTIAN DE LOS REYES",
+    "direccion": "CALLE SALVADOR DE MADARIAGA S/N C.P. (28702)",
+    "latitud": "40.5670016",
+    "longitud": "-3.6111554"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "AVENIDA DE MANOTERAS 40 C.P. (28050)",
+    "latitud": "40.4863027",
+    "longitud": "-3.668236"
+  },
+  {
+    "ciudad": "JEREZ DE LA FRONTERA",
+    "direccion": "RONDA DE AURORA BOREAL S/N C.P. (11408)",
+    "latitud": "36.6947414",
+    "longitud": "-6.1608553"
+  },
+  {
+    "ciudad": "CORDOBA",
+    "direccion": "C/ POETA EMILIO PRADOS S/N C.P. (14011)",
+    "latitud": "37.899304",
+    "longitud": "-4.7925863"
+  },
+  {
+    "ciudad": "ALBACETE",
+    "direccion": "AV DE LA ILUSTRACION 51 C.P. (02006)",
+    "latitud": "39.0086003",
+    "longitud": "-1.8813452"
+  },
+  {
+    "ciudad": "HUELVA",
+    "direccion": "RONDA EXTERIOR ZONA SUR S/N C.P. (21007)",
+    "latitud": "37.2718445",
+    "longitud": "-6.9224125"
+  },
+  {
+    "ciudad": "GRAN CANARIA",
+    "direccion": "AVENIDA FRANCISCO VEGA MONROY, 21 C.P. (35290)",
+    "latitud": "27.767194",
+    "longitud": "-15.6037654"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "AUTOPISTA DEL SALER 16 C.P. (46013)",
+    "latitud": "39.2744871",
+    "longitud": "-0.2797735"
+  },
+  {
+    "ciudad": "LANZAROTE",
+    "direccion": "CALLE CHIMIDAS 20, LOCAL 21, 1ª PLANTA C.P. (35509)",
+    "latitud": "29.0398299",
+    "longitud": "-13.7907596"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "AVENIDA DE LOS LABRADORES 9-11 C.P. (28760)",
+    "latitud": "40.5996523",
+    "longitud": "-3.7113625"
+  },
+  {
+    "ciudad": "VECINDARIO",
+    "direccion": "CALLE ADARGOMA S/N C.P. (35110)",
+    "latitud": "27.8452606",
+    "longitud": "-15.4440114"
+  },
+  {
+    "ciudad": "LAS PALMAS DE GRAN CANARIA",
+    "direccion": "CALLE RUIZ DE ALDA 26 C.P. (35007)",
+    "latitud": "28.1358917",
+    "longitud": "-15.4352074"
+  },
+  {
+    "ciudad": "CIUDAD REAL",
+    "direccion": "CALLE REYES 1 C.P. (13002)",
+    "latitud": "38.985665",
+    "longitud": "-3.9327807"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "CALLE POSTAS 12 C.P. (28012)",
+    "latitud": "40.4160783",
+    "longitud": "-3.7080026"
+  },
+  {
+    "ciudad": "GRANOLLERS",
+    "direccion": "CALLE MUSEO 10 C.P. (08401)",
+    "latitud": "41.6072124",
+    "longitud": "2.2844248"
+  },
+  {
+    "ciudad": "BILBAO",
+    "direccion": "CALLE LICENCIADO POZAS 48 C.P. (48013)",
+    "latitud": "43.2625716",
+    "longitud": "-2.9446435"
+  },
+  {
+    "ciudad": "ALCOY",
+    "direccion": "CALLE ELS ALZAMORA 41 C.P. (03802)",
+    "latitud": "38.697839",
+    "longitud": "-0.4837787"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "CALLE DE VICENTE ZARAGOZA 15 C.P. (46020)",
+    "latitud": "39.485174",
+    "longitud": "-0.3651387"
+  },
+  {
+    "ciudad": "VITORIA",
+    "direccion": "CALLE DE POSTAS 15 C.P. (01004)",
+    "latitud": "42.8459432",
+    "longitud": "-2.6725281"
+  },
+  {
+    "ciudad": "JACINTO BENAVENTE",
+    "direccion": "CALLE DE CARRETAS 14 C.P. (28012)",
+    "latitud": "40.4148155",
+    "longitud": "-3.7058421"
+  },
+  {
+    "ciudad": "OVIEDO",
+    "direccion": "ALTAMIRANO 1 C.P. (33003)",
+    "latitud": "43.3614439",
+    "longitud": "-5.8468849"
+  },
+  {
+    "ciudad": "VILLAVICIOSA DE ODON",
+    "direccion": "C/ CARRETAS 18 C.P. (28670)",
+    "latitud": "40.3578441",
+    "longitud": "-3.9046287"
+  },
+  {
+    "ciudad": "TORRELAVEGA",
+    "direccion": "BULEVAR LUCIANO DEMETRIO HERRERO 2 C.P. (39300)",
+    "latitud": "43.3492433",
+    "longitud": "-4.0530125"
+  },
+  {
+    "ciudad": "PLAYA DE SAN JUAN",
+    "direccion": "AVENIDA DE NIZA, 12 C.P. (03540)",
+    "latitud": "38.3704297",
+    "longitud": "-0.412866"
+  },
+  {
+    "ciudad": "FUENLABRADA",
+    "direccion": "AVENIDA DE LA UNIVERSIDAD 1 C.P. (28942)",
+    "latitud": "40.2849341",
+    "longitud": "-3.8184087"
+  },
+  {
+    "ciudad": "ZAFRA",
+    "direccion": "AVENIDA DE LA ESTACION 10 C.P. (06300)",
+    "latitud": "38.4142476",
+    "longitud": "-6.4087873"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "AVENIDA DE LA BUHAIRA 17 C.P. (41018)",
+    "latitud": "37.3852572",
+    "longitud": "-5.9807987"
+  },
+  {
+    "ciudad": "BADAJOZ",
+    "direccion": "AVENIDA DE ELVAS 6, CC ATICA, LOCAL 4-5 C.P. (06006)",
+    "latitud": "38.883597",
+    "longitud": "-7.0185795"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "AVENIDA DE BRASIL 14 C.P. (28020)",
+    "latitud": "40.4553676",
+    "longitud": "-3.6953653"
+  },
+  {
+    "ciudad": "VILLAREAL",
+    "direccion": "AVDA. FRANCESC TARREGA 26 C.P. (15540)",
+    "latitud": "40.6804854",
+    "longitud": "0.4815586"
+  },
+  {
+    "ciudad": "BOADILLA DEL MONTE",
+    "direccion": "AVDA INFANTE DON LUIS 6, LOCAL 3 C.P. (28669)",
+    "latitud": "40.403657",
+    "longitud": "-3.8327476"
+  },
+  {
+    "ciudad": "BENIDORM",
+    "direccion": "AVDA DE LA ARMADA ESPAÑOLA 7-8 C.P. (03502)",
+    "latitud": "38.537312",
+    "longitud": "-0.1434595"
+  },
+  {
+    "ciudad": "ZARAGOZA",
+    "direccion": "AV GOYA, EDIFICIO ENTRE C/ FERNANDO EL CATOLICO 2 Y C/ BALTASAR GRACIAN 1 C.P. (50006)",
+    "latitud": "41.6442291",
+    "longitud": "-0.8945976"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": "AVENIDA BLAS INFANTE 6 C.P. (29631)",
+    "latitud": "36.5987083",
+    "longitud": "-4.5373925"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "ALAMEDA DE HÉRCULES 33 C.P. (41002)",
+    "latitud": "37.3994524",
+    "longitud": "-5.9963317"
+  },
+  {
+    "ciudad": "SEGOVIA",
+    "direccion": "PLAZA LA ACADEMIA DE ARTILLERIA (ORIENTAL) 1 C.P. (40001)",
+    "latitud": "40.9462517",
+    "longitud": "-4.1196635"
+  },
+  {
+    "ciudad": "COSLADA",
+    "direccion": "PLAZA DEL MAR CARIBE, 2 C.P. (28821)",
+    "latitud": "40.419944",
+    "longitud": "-3.5699287"
+  },
+  {
+    "ciudad": "ELCHE",
+    "direccion": "PLAZA DEL CONGRESO EUCARISTICO 1, ESQ. CALLE PUERTA DEL ORGANO 1 C.P. (03202)",
+    "latitud": "38.2677642",
+    "longitud": "-0.6997986"
+  },
+  {
+    "ciudad": "GETAFE",
+    "direccion": "AVENIDA RIO GUADALQUIVIR 13 C.P. (28906)",
+    "latitud": "40.2726754",
+    "longitud": "-3.6996562"
+  },
+  {
+    "ciudad": "STA CRUZ DE LA PALMA",
+    "direccion": "MARINA LA PALMA C.P. (38700)",
+    "latitud": "28.6795496",
+    "longitud": "-17.7686497"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "GLORIETA DE SAN VICENTE 1 C.P. (28008)",
+    "latitud": "40.4206186",
+    "longitud": "-3.7230959"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "PLAZA DE LA ENCARNACIÓN 18 C.P. (41003)",
+    "latitud": "37.3932476",
+    "longitud": "-5.9934899"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "PASEO DE LAS DELICIAS 1 C.P. (41001)",
+    "latitud": "37.3821637",
+    "longitud": "-5.9977051"
+  },
+  {
+    "ciudad": "ALCORCON",
+    "direccion": "AVENIDA DE AMERICA 7-9 C.P. (28922)",
+    "latitud": "40.3583889",
+    "longitud": "-3.8334963"
+  },
+  {
+    "ciudad": "CORNELLA DEL LLOBREGAT",
+    "direccion": "AVENIDA DEL BAIX LLOBREGAT S/N C.P. (08940)",
+    "latitud": "41.350633",
+    "longitud": "2.0674336"
+  },
+  {
+    "ciudad": "CASTELLON",
+    "direccion": "CTRA. NACIONAL 340, KM 64,500 C.P. (12004)",
+    "latitud": "40.0168607",
+    "longitud": "-0.0467368"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "CALLE ARACNE S/N C.P. (28022)",
+    "latitud": "40.4460453",
+    "longitud": "-3.5912133"
+  },
+  {
+    "ciudad": "SAN SEBASTIAN DE LOS REYES",
+    "direccion": "AVENIDA DEL JUNCAL 11-12 C.P. (28703)",
+    "latitud": "40.5402631",
+    "longitud": "-3.6222671"
+  },
+  {
+    "ciudad": "ALICANTE",
+    "direccion": "AVENIDA DE DENIA S/N C.P. (03016)",
+    "latitud": "38.3653115",
+    "longitud": "-0.4626907"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "PLAZA DE LA LEGION S/N C.P. (41001)",
+    "latitud": "37.3908709",
+    "longitud": "-6.0045528"
+  },
+  {
+    "ciudad": "COLLADO VILLALBA",
+    "direccion": "AVENIDA DE JUAN CARLOS I, 46 C.P. (28400)",
+    "latitud": "40.6372328",
+    "longitud": "-4.0192887"
+  },
+  {
+    "ciudad": "LEGANES",
+    "direccion": "AVENIDA GRAN BRETAÑA S/N C.P. (28916)",
+    "latitud": "40.3407152",
+    "longitud": "-3.7450613"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "CALLE MONASTERIO DE ARLANZA 20 C.P. (28034)",
+    "latitud": "40.5103945",
+    "longitud": "-3.6922468"
+  },
+  {
+    "ciudad": "SANTA CRUZ DE TENERIFE",
+    "direccion": "AV MANUEL HERMOSO ROJAS 16, LOCAL K4 C.P. (38005)",
+    "latitud": "28.4569257",
+    "longitud": "-16.2608804"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "EDIFICIO MAREMAGNUM, MOLL D´ESPANYA 5 C.P. (08039)",
+    "latitud": "41.3752401",
+    "longitud": "2.1804528"
+  },
+  {
+    "ciudad": "LAS PALMAS DE GRAN CANARIA",
+    "direccion": "CARRETERA GC-308, KM 15 DE TAMARACEITE C.P. (35018)",
+    "latitud": "28.0943985",
+    "longitud": "-15.4790189"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "AVENIDA DE MONFORTE DE LEMOS 36 C.P. (28029)",
+    "latitud": "40.4798363",
+    "longitud": "-3.7092117"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "C/ CALDERILLA 1 C.P. (28054)",
+    "latitud": "40.3637319",
+    "longitud": "-3.7396678"
+  },
+  {
+    "ciudad": "ISLANTILLA",
+    "direccion": "AVENIDA ISLANTILLA, S/N C.P. (21499)",
+    "latitud": "37.2066169",
+    "longitud": "-7.2362034"
+  },
+  {
+    "ciudad": "RIVAS-VACIAMADRID",
+    "direccion": "CALLE MARIE CURIE 4 C.P. (28521)",
+    "latitud": "40.3372569",
+    "longitud": "-3.5288801"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": "PUERTO DE MALAGA, MUELLE 1 C.P. (29016)",
+    "latitud": "36.7151207",
+    "longitud": "-4.4168471"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "CALLE DE SILVANO 77 C.P. (28043)",
+    "latitud": "40.4632254",
+    "longitud": "-3.6392482"
+  },
+  {
+    "ciudad": "ALCALA DE HENARES",
+    "direccion": "CARRETERA N-II, KM 34 C.P. (28801)",
+    "latitud": "41.0666882",
+    "longitud": "-2.2175578"
+  },
+  {
+    "ciudad": "LAS PALMAS DE GRAN CANARIA",
+    "direccion": "CALLE SAN PEDRO 2 C.P. (35002)",
+    "latitud": "28.1034945",
+    "longitud": "-15.4175045"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "AVDA. DE LA ALBUFERA 153 C.P. (28038)",
+    "latitud": "40.3925541",
+    "longitud": "-3.6579775"
+  },
+  {
+    "ciudad": "CORDOBA",
+    "direccion": "CALLE VICTORIANO RIVERA 8 C.P. (14002)",
+    "latitud": "37.8849574",
+    "longitud": "-4.781836"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "CALLE TALLERS 70 C.P. (08001)",
+    "latitud": "41.3851043",
+    "longitud": "2.1640572"
+  },
+  {
+    "ciudad": "TORREVIEJA",
+    "direccion": "CALLE RAMON Y CAJAL 63 C.P. (03182)",
+    "latitud": "37.9758903",
+    "longitud": "-0.6751569"
+  },
+  {
+    "ciudad": "DENIA",
+    "direccion": "CALLE MARQUES DE CAMPO 51 C.P. (03700)",
+    "latitud": "38.8415348",
+    "longitud": "0.1098584"
+  },
+  {
+    "ciudad": "MERIDA",
+    "direccion": "CALLE DELGADO VALENCIA, 11 C.P. (06800)",
+    "latitud": "38.9180829",
+    "longitud": "-6.3456169"
+  },
+  {
+    "ciudad": "Valencia",
+    "direccion": "CALLE DE SAN VICENTE MARTIR 52 C.P. (46002)",
+    "latitud": "39.4704639",
+    "longitud": "-0.3804687"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "CALLE DE LEGANES 51 C.P. (28945)",
+    "latitud": "40.292783",
+    "longitud": "-3.7935658"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "CALLE CONVENTO SANTA CLARA 10 C.P. (46002)",
+    "latitud": "39.4683765",
+    "longitud": "-0.3785519"
+  },
+  {
+    "ciudad": "VALLADOLID",
+    "direccion": "CALLE CONCEPCION 1 C.P. (47003)",
+    "latitud": "41.655014",
+    "longitud": "-4.7299987"
+  },
+  {
+    "ciudad": "CARTAGENA",
+    "direccion": "CALLE DEL CARMEN 10 C.P. (30201)",
+    "latitud": "37.6041409",
+    "longitud": "-0.9915176"
+  },
+  {
+    "ciudad": "SANTANDER",
+    "direccion": "CALLE ATAULFO ARGENTA, 23 (ANTIGUA GENERAL MOLA) C.P. (39004)",
+    "latitud": "43.462335",
+    "longitud": "-3.8036973"
+  },
+  {
+    "ciudad": "SAN SEBASTIAN",
+    "direccion": "CALLE SIMONA DE LAJUST 8, LOCAL 13B y Nº 10 - LOCAL 15 C.P. (20018)",
+    "latitud": "43.3062045",
+    "longitud": "-2.0102691"
+  },
+  {
+    "ciudad": "MADRID",
+    "direccion": "C/ ARCHIDUQUE ALBERTO 19, 21 Y 23 & C/ PRINCIPE CARLOS 50 (SANCHINARRO) C.P. (28050)",
+    "latitud": "40.4938737",
+    "longitud": "-3.657723"
+  },
+  {
+    "ciudad": "MÁLAGA",
+    "direccion": "AVENIDA JESÚS SANTOS REIN 8 C.P. (29640)",
+    "latitud": "36.5436967",
+    "longitud": "-4.6241944"
+  },
+  {
+    "ciudad": "Madrid",
+    "direccion": "AVENIDA FELIPE II, 34 C.P. (28009)",
+    "latitud": "40.4236683",
+    "longitud": "-3.6750102"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "AVENIDA DE BLASCO IBAÑEZ 65 C.P. (46021)",
+    "latitud": "39.4749921",
+    "longitud": "-0.351802"
+  },
+  {
+    "ciudad": "SANTA CRUZ DE TENERIFE",
+    "direccion": "CLS ANAGA 19 (AV. FRANCISCO LA ROCHE 19 - STA. CRUZ DE TENERIFE) C.P. (38001)",
+    "latitud": "28.4713039",
+    "longitud": "-16.2496135"
+  },
+  {
+    "ciudad": "Las Palmas",
+    "direccion": "(CARRETERA DEL RINCON S/N, LOCAL T-28 Las Palmas de Gran Canarias) C.P. (35010) ",
+    "latitud": "28.1288412",
+    "longitud": "-15.4539728"
+  }
+]

@@ -10,7 +10,7 @@ namespace QPlanAPI.Infrastructure
         {
             services.AddScoped<IRestaurantsFeederService<FeedHtmlRestaurantsRequest>, HtmlRestaurantsFeeder>();
             services.AddScoped<IRestaurantsFeederService<FeedApiRestaurantsRequest>, ApiRestaurantsFeeder>();
-
+            services.AddScoped<IRestaurantsFeederService<FeedLocalRestaurantsRequest>, LocalRestaurantsFeeder>();
         }
     }
 }

@@ -18,6 +18,11 @@ namespace QPlanAPI.Core.Interfaces.Services.RestaurantsFeeder
 
     }
 
+    public class FeedLocalRestaurantsRequest : FeedRestaurantsRequest
+    {
+        public string FileContent { get; set; }
+    }
+
     #region Enums
 
     public enum RestaurantFormat
