@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QPlanAPI.DataAccess\QPlanAPI.DataAccess.csproj"/>
+    <ProjectReference Include="..\QPlanAPI.Core\QPlanAPI.Core.csproj"/>
+    <ProjectReference Include="..\QPlanAPI.Infrastructure\QPlanAPI.Infrastructure.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presenters\"/>
+    <Folder Include="Serialization\"/>
+  </ItemGroup>
+    <ItemGroup>
+    <Content Update="Config\*">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
