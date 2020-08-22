@@ -9,6 +9,6 @@
 
 Dimas De La Fuente Hernández
 
-Vicente Gónzalez Rodríguez
+Vicente Gónzalez Ortega
 
 Darío Alonso Díaz 
