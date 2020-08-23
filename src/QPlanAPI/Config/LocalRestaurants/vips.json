@@ -1,0 +1,707 @@
+﻿[
+  {
+    "name" : "VIPS Julián Romea",
+    "latitude" : "40.442753",
+    "longitude" : "-3.713255"
+  },
+  {
+    "name" : "VIPS Velázquez",
+    "latitude" : "40.439607",
+    "longitude" : "-3.682541"
+  },
+  {
+    "name" : "VIPS Princesa",
+    "latitude" : "40.425335",
+    "longitude" : "-3.712633"
+  },
+  {
+    "name" : "VIPS Beatriz",
+    "latitude" : "40.430529",
+    "longitude" : "-3.682918"
+  },
+  {
+    "name" : "VIPS Habana",
+    "latitude" : "40.450094",
+    "longitude" : "-3.687944"
+  },
+  {
+    "name" : "VIPS Orense",
+    "latitude" : "40.459366",
+    "longitude" : "-3.694332"
+  },
+  {
+    "name" : "VIPS Gran Vía",
+    "latitude" : "40.420603",
+    "longitude" : "-3.706826"
+  },
+  {
+    "name" : "VIPS Azca",
+    "latitude" : "40.449496",
+    "longitude" : "-3.695054"
+  },
+  {
+    "name" : "VIPS Sexta Avenida",
+    "latitude" : "40.467558",
+    "longitude" : "-3.816495"
+  },
+  {
+    "name" : "VIPS Alcobendas",
+    "latitude" : "40.547772",
+    "longitude" : "-3.640647"
+  },
+  {
+    "name" : "VIPS Serrano",
+    "latitude" : "40.428667",
+    "longitude" : "-3.687462"
+  },
+  {
+    "name" : "VIPS Quevedo",
+    "latitude" : "40.433590",
+    "longitude" : "-3.703786"
+  },
+  {
+    "name" : "VIPS Padre Damián",
+    "latitude" : "40.458028",
+    "longitude" : "-3.685373"
+  },
+  {
+    "name" : "VIPS Miguel Ángel",
+    "latitude" : "40.435281",
+    "longitude" : "-3.691287"
+  },
+  {
+    "name" : "VIPS Clara del Rey",
+    "latitude" : "40.445556",
+    "longitude" : "-3.668351"
+  },
+  {
+    "name" : "VIPS Tres Cantos",
+    "latitude" : "40.605300",
+    "longitude" : "-3.717650"
+  },
+  {
+    "name" : "VIPS Equinoccio",
+    "latitude" : "40.454279",
+    "longitude" : "-3.874217"
+  },
+  {
+    "name" : "VIPS Neptuno",
+    "latitude" : "40.414981",
+    "longitude" : "-3.694886"
+  },
+  {
+    "name" : "VIPS Alcorcón",
+    "latitude" : "40.348805",
+    "longitude" : "-3.849209"
+  },
+  {
+    "name" : "VIPS Avenida del Mediterráneo",
+    "latitude" : "40.407572",
+    "longitude" : "-3.673528"
+  },
+  {
+    "name" : "VIPS Plaza de España",
+    "latitude" : "40.422613",
+    "longitude" : "-3.709985"
+  },
+  {
+    "name" : "VIPS Príncipe de Vergara",
+    "latitude" : "40.457775",
+    "longitude" : "-3.676680"
+  },
+  {
+    "name" : "VIPS Moraleja Green",
+    "latitude" : "40.518714",
+    "longitude" : "-3.656735"
+  },
+  {
+    "name" : "VIPS Vaguada",
+    "latitude" : "40.479732",
+    "longitude" : "-3.708489"
+  },
+  {
+    "name" : "VIPS Heron City",
+    "latitude" : "40.515924",
+    "longitude" : "-3.897280"
+  },
+  {
+    "name" : "VIPS Cibeles",
+    "latitude" : "40.419804",
+    "longitude" : "-3.691479"
+  },
+  {
+    "name" : "VIPS Goya",
+    "latitude" : "40.424985",
+    "longitude" : "-3.680128"
+  },
+  {
+    "name" : "VIPS Ciudad de la Imagen",
+    "latitude" : "40.394339",
+    "longitude" : "-3.799486"
+  },
+  {
+    "name" : "VIPS Peligros",
+    "latitude" : "40.418099",
+    "longitude" : "-3.699208"
+  },
+  {
+    "name" : "VIPS Diversia",
+    "latitude" : "40.530538",
+    "longitude" : "-3.638532"
+  },
+  {
+    "name" : "VIPS Ribera Curtidores",
+    "latitude" : "40.404714",
+    "longitude" : "-3.706554"
+  },
+  {
+    "name" : "VIPS Parque Norte",
+    "latitude" : "40.476290",
+    "longitude" : "-3.671007"
+  },
+  {
+    "name" : "VIPS Alcalá 474",
+    "latitude" : "40.439255",
+    "longitude" : "-3.632362"
+  },
+  {
+    "name" : "VIPS Ática",
+    "latitude" : "40.440227",
+    "longitude" : "-3.786281"
+  },
+  {
+    "name" : "VIPS Palacio de Hielo",
+    "latitude" : "40.462843",
+    "longitude" : "-3.635943"
+  },
+  {
+    "name" : "VIPS Condesa de Venadito",
+    "latitude" : "40.444721",
+    "longitude" : "-3.654103"
+  },
+  {
+    "name" : "VIPS Moscatelares",
+    "latitude" : "40.544154",
+    "longitude" : "-3.613428"
+  },
+  {
+    "name" : "VIPS Tres Aguas",
+    "latitude" : "40.358394",
+    "longitude" : "-3.832174"
+  },
+  {
+    "name" : "VIPS CC Xanadú",
+    "latitude" : "40.299910",
+    "longitude" : "-3.925315"
+  },
+  {
+    "name" : "VIPS La Finca",
+    "latitude" : "40.418740",
+    "longitude" : "-3.800672"
+  },
+  {
+    "name" : "VIPS Fuencarral",
+    "latitude" : "40.427931",
+    "longitude" : "-3.702033"
+  },
+  {
+    "name" : "VIPS Príncipe Pío",
+    "latitude" : "40.421620",
+    "longitude" : "-3.719969"
+  },
+  {
+    "name" : "VIPS Planetocio Villalba",
+    "latitude" : "40.637297",
+    "longitude" : "-4.017401"
+  },
+  {
+    "name" : "VIPS La Garena",
+    "latitude" : "40.482056",
+    "longitude" : "-3.396256"
+  },
+  {
+    "name" : "VIPS El Palmeral",
+    "latitude" : "40.523526",
+    "longitude" : "-3.890895"
+  },
+  {
+    "name" : "VIPS Albatros",
+    "latitude" : "40.533953",
+    "longitude" : "-3.627047"
+  },
+  {
+    "name" : "VIPS Génova 27",
+    "latitude" : "40.426061",
+    "longitude" : "-3.692047"
+  },
+  {
+    "name" : "VIPS Tucumán",
+    "latitude" : "40.454915",
+    "longitude" : "-3.622506"
+  },
+  {
+    "name" : "VIPS El Muelle",
+    "latitude" : "28.141672",
+    "longitude" : "-15.427278"
+  },
+  {
+    "name" : "VIPS Plenilunio",
+    "latitude" : "40.447116",
+    "longitude" : "-3.587401"
+  },
+  {
+    "name" : "VIPS Alfafar",
+    "latitude" : "39.416257",
+    "longitude" : "-0.381169"
+  },
+  {
+    "name" : "VIPS Plaza Mar 2",
+    "latitude" : "38.354647",
+    "longitude" : "-0.471437"
+  },
+  {
+    "name" : "VIPS Mirasierra",
+    "latitude" : "40.490583",
+    "longitude" : "-3.722641"
+  },
+  {
+    "name" : "VIPS Rivas Futura",
+    "latitude" : "40.337781",
+    "longitude" : "-3.526995"
+  },
+  {
+    "name" : "VIPS Viapol",
+    "latitude" : "37.378828",
+    "longitude" : "-5.978796"
+  },
+  {
+    "name" : "VIPS Nassica",
+    "latitude" : "40.272051",
+    "longitude" : "-3.695102"
+  },
+  {
+    "name" : "VIPS Vialia",
+    "latitude" : "36.710844",
+    "longitude" : "-4.430750"
+  },
+  {
+    "name" : "VIPS Intu Asturias",
+    "latitude" : "43.390606",
+    "longitude" : "-5.801800"
+  },
+  {
+    "name" : "VIPS Gorbea",
+    "latitude" : "40.496392",
+    "longitude" : "-3.666823"
+  },
+  {
+    "name" : "VIPS Toledo",
+    "latitude" : "39.861939",
+    "longitude" : "-3.980385"
+  },
+  {
+    "name" : "VIPS Alcalá Magna",
+    "latitude" : "40.495116",
+    "longitude" : "-3.359546"
+  },
+  {
+    "name" : "VIPS CC Las Rosas",
+    "latitude" : "40.418207",
+    "longitude" : "-3.623174"
+  },
+  {
+    "name" : "VIPS Ferial Plaza",
+    "latitude" : "40.622231",
+    "longitude" : "-3.166288"
+  },
+  {
+    "name" : "VIPS Islazul",
+    "latitude" : "40.363789",
+    "longitude" : "-3.738019"
+  },
+  {
+    "name" : "VIPS Méndez Álvaro",
+    "latitude" : "40.392780",
+    "longitude" : "-3.678742"
+  },
+  {
+    "name" : "VIPS Federico Soto",
+    "latitude" : "38.344320",
+    "longitude" : "-0.489723"
+  },
+  {
+    "name" : "VIPS Alcalá 200",
+    "latitude" : "40.430336",
+    "longitude" : "-3.663786"
+  },
+  {
+    "name" : "VIPS CC La Gavia",
+    "latitude" : "40.368546",
+    "longitude" : "-3.597976"
+  },
+  {
+    "name" : "VIPS CC Parque Corredor",
+    "latitude" : "40.476265",
+    "longitude" : "-3.480753"
+  },
+  {
+    "name" : "VIPS Parquesur",
+    "latitude" : "40.340952",
+    "longitude" : "-3.731206"
+  },
+  {
+    "name" : "VIPS Zaragoza",
+    "latitude" : "41.648498",
+    "longitude" : "-0.884316"
+  },
+  {
+    "name" : "VIPS República Argentina",
+    "latitude" : "37.377817",
+    "longitude" : "-6.001793"
+  },
+  {
+    "name" : "VIPS El Saler",
+    "latitude" : "39.452090",
+    "longitude" : "-0.355094"
+  },
+  {
+    "name" : "VIPS Málaga-Nostrum",
+    "latitude" : "36.685341",
+    "longitude" : "-4.471777"
+  },
+  {
+    "name" : "VIPS Marqués del Turia",
+    "latitude" : "39.467234",
+    "longitude" : "-0.369097"
+  },
+  {
+    "name" : "VIPS Bonaire",
+    "latitude" : "39.471232",
+    "longitude" : "-0.487902"
+  },
+  {
+    "name" : "VIPS Castellana 280",
+    "latitude" : "40.476394",
+    "longitude" : "-3.686094"
+  },
+  {
+    "name" : "VIPS CC Marineda City",
+    "latitude" : "43.344274",
+    "longitude" : "-8.428725"
+  },
+  {
+    "name": "VIPS La Maquinista",
+    "latitude": "41.442744",
+    "longitude": "2.200215"
+  },
+  {
+    "name" : "VIPS Puerto Venecia",
+    "latitude" : "41.609554",
+    "longitude" : "-0.886967"
+  },
+  {
+    "name" : "VIPS Bravo Murillo",
+    "latitude" : "40.448314",
+    "longitude" : "-3.703953"
+  },
+  {
+    "name" : "VIPS Ruzafa 21",
+    "latitude" : "39.465833",
+    "longitude" : "-0.378569"
+  },
+  {
+    "name" : "VIPS Moncloa",
+    "latitude" : "40.433742",
+    "longitude" : "-3.717565"
+  },
+  {
+    "name" : "VIPS CC Tres Cantos",
+    "latitude" : "40.599571",
+    "longitude" : "-3.709401"
+  },
+  {
+    "name" : "VIPS Sol",
+    "latitude" : "40.416727",
+    "longitude" : "-3.703387"
+  },
+  {
+    "name" : "VIPS Torre Sevilla",
+    "latitude" : "37.392514",
+    "longitude" : "-6.010605"
+  },
+  {
+    "name" : "VIPS Albufera",
+    "latitude" : "40.397295",
+    "longitude" : "-3.667006"
+  },
+  {
+    "name" : "VIPS Finestrat",
+    "latitude" : "38.532535",
+    "longitude" : "-0.171087"
+  },
+  {
+    "name" : "VIPS CC Nuevo Centro",
+    "latitude" : "39.480751",
+    "longitude" : "-0.390886"
+  },
+  {
+    "name" : "VIPS Ronda de Valencia 8",
+    "latitude" : "40.405747",
+    "longitude" : "-3.700939"
+  },
+  {
+    "name" : "VIPS Alberto Aguilera",
+    "latitude" : "40.430167",
+    "longitude" : "-3.709991"
+  },
+  {
+    "name" : "VIPS Smart Plaza Norte II",
+    "latitude" : "40.540815",
+    "longitude" : "-3.613584"
+  },
+  {
+    "name" : "VIPS Smart Kinépolis",
+    "latitude" : "40.396132",
+    "longitude" : "-3.799227"
+  },
+  {
+    "name" : "VIPS Smart Manoteras",
+    "latitude" : "40.486235",
+    "longitude" : "-3.665446"
+  },
+  {
+    "name" : "VIPS Smart Santa Engracia 93",
+    "latitude" : "40.436341",
+    "longitude" : "-3.699537"
+  },
+  {
+    "name" : "VIPS Smart CC Nassica",
+    "latitude" : "40.272518",
+    "longitude" : "-3.696134"
+  },
+  {
+    "name" : "VIPS Smart San Juan",
+    "latitude" : "38.368973",
+    "longitude" : "-0.410477"
+  },
+  {
+    "name" : "VIPS Smart Isabel Colbrand",
+    "latitude" : "40.510418",
+    "longitude" : "-3.678193"
+  },
+  {
+    "name" : "VIPS Smart As Cancelas Santiago",
+    "latitude" : "42.889180",
+    "longitude" : "-8.526224"
+  },
+  {
+    "name" : "VIPS Smart Heron City Paterna",
+    "latitude" : "39.529719",
+    "longitude" : "-0.440252"
+  },
+  {
+    "name" : "VIPS Smart CC Gran Vía Vigo",
+    "latitude" : "42.220834",
+    "longitude" : "-8.724177"
+  },
+  {
+    "name" : "VIPS Smart Pz Estación Fuenlabrada",
+    "latitude" : "40.282804",
+    "longitude" : "-3.800936"
+  },
+  {
+    "name" : "VIPS Smart Alcalá 336",
+    "latitude" : "40.434064",
+    "longitude" : "-3.645843"
+  },
+  {
+    "name" : "VIPS Smart Cimadevilla",
+    "latitude" : "43.360969",
+    "longitude" : "-5.844967"
+  },
+  {
+    "name" : "VIPS Smart Agatángelo Soler",
+    "latitude" : "38.365630",
+    "longitude" : "-0.471303"
+  },
+  {
+    "name" : "VIPS Smart Gran Casa",
+    "latitude" : "41.670439",
+    "longitude" : "-0.890013"
+  },
+  {
+    "name" : "VIPS Smart Vidanova Parc",
+    "latitude" : "39.673471",
+    "longitude" : "-0.262422"
+  },
+  {
+    "name" : "VIPS Smart CC Nueva Condomina",
+    "latitude" : "38.039368",
+    "longitude" : "-1.148790"
+  },
+  {
+    "name" : "VIPS Smart CC Espacio Leon",
+    "latitude" : "42.613258",
+    "longitude" : "-5.596678"
+  },
+  {
+    "name" : "VIPS Smart Talavera de la Reina",
+    "latitude" : "39.962743",
+    "longitude" : "-4.796755"
+  },
+  {
+    "name" : "VIPS Smart Gran Plaza II",
+    "latitude" : "40.491542",
+    "longitude" : "-3.898668"
+  },
+  {
+    "name" : "VIPS Smart Alegra",
+    "latitude" : "40.567942",
+    "longitude" : "-3.609774"
+  },
+  {
+    "name" : "VIPS Smart L'ALJUB",
+    "latitude" : "38.262393",
+    "longitude" : "-0.720603"
+  },
+  {
+    "name" : "VIPS Smart CC Loranca",
+    "latitude" : "40.302273",
+    "longitude" : "-3.832702"
+  },
+  {
+    "name" : "VIPS Smart Aqua",
+    "latitude" : "39.456485",
+    "longitude" : "-0.346218"
+  },
+  {
+    "name" : "VIPS Smart El Pinar de Las Rozas",
+    "latitude" : "40.523698",
+    "longitude" : "-3.883813"
+  },
+  {
+    "name" : "VIPS Smart CC Urbil",
+    "latitude" : "43.276044",
+    "longitude" : "-2.023935"
+  },
+  {
+    "name" : "VIPS Smart Segovia",
+    "latitude" : "40.947850",
+    "longitude" : "-4.119601"
+  },
+  {
+    "name" : "VIPS Smart CC La Vital",
+    "latitude" : "38.968365",
+    "longitude" : "-0.168092"
+  },
+  {
+    "name" : "VIPS Smart Siam Mall",
+    "latitude" : "28.069098",
+    "longitude" : "-16.723076"
+  },
+  {
+    "name" : "VIPS Smart San Vicente",
+    "latitude" : "38.383314",
+    "longitude" : "-0.507591"
+  },
+  {
+    "name" : "VIPS Smart Valdemoro",
+    "latitude" : "40.190224",
+    "longitude" : "-3.691826"
+  },
+  {
+    "name" : "VIPS Smart Sambil Outlet",
+    "latitude" : "40.358961",
+    "longitude" : "-3.776097"
+  },
+  {
+    "name" : "VIPS Smart El Osito",
+    "latitude" : "39.577595",
+    "longitude" : "-0.528850"
+  },
+  {
+    "name" : "VIPS Smart CC Alisios",
+    "latitude" : "28.094863",
+    "longitude" : "-15.477551"
+  },
+  {
+    "name" : "VIPS Smart Montecarmelo",
+    "latitude" : "40.509985",
+    "longitude" : "-3.690128"
+  },
+  {
+    "name" : "VIPS La Morea",
+    "latitude" : "42.784546",
+    "longitude" : "-1.631544"
+  },
+  {
+    "name" : "VIPS Ciudad Lineal",
+    "latitude" : "40.457609",
+    "longitude" : "-3.658429"
+  },
+  {
+    "name" : "VIPS Majadahonda",
+    "latitude" : "40.468174",
+    "longitude" : "-3.870885"
+  },
+  {
+    "name" : "VIPS Fuenlabrada",
+    "latitude" : "40.281260",
+    "longitude" : "-3.814455"
+  },
+  {
+    "name" : "VIPS Boadilla",
+    "latitude" : "40.408448",
+    "longitude" : "-3.880734"
+  },
+  {
+    "name" : "VIPS Albacete",
+    "latitude" : "38.992022",
+    "longitude" : "-1.853777"
+  },
+  {
+    "name" : "VIPS Valdemarín",
+    "latitude" : "40.464892",
+    "longitude" : "-3.785834"
+  },
+  {
+    "name" : "VIPS  CC Arco",
+    "latitude" : "40.488528",
+    "longitude" : "-3.897718"
+  },
+  {
+    "name" : "VIPS 7 Palmas",
+    "latitude" : "28.097547",
+    "longitude" : "-15.455736"
+  },
+  {
+    "name" : "VIPS Canónigo Molina",
+    "latitude" : "36.834863",
+    "longitude" : "-2.461103"
+  },
+  {
+    "name" : "VIPS CC El Faro",
+    "latitude" : "38.884102",
+    "longitude" : "-7.022091"
+  },
+  {
+    "name" : "VIPS Móstoles",
+    "latitude" : "40.329663",
+    "longitude" : "-3.883095"
+  },
+  {
+    "name": "VIPS Fan Mallorca",
+    "latitude": "39.553018",
+    "longitude": "2.706575"
+  },
+  {
+    "name" : "VIPS Avd. de Burgos",
+    "latitude" : "40.473936",
+    "longitude" : "-3.676107"
+  },
+  {
+    "name" : "VIPS Aragonia",
+    "latitude" : "41.639630",
+    "longitude" : "-0.908924"
+  }
+]

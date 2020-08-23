@@ -1,0 +1,1928 @@
+﻿[
+  {
+    "ciudad": "Chiclana de la Frontera",
+    "direccion": "Ctra. de la Barrosa, 98 11139",
+    "latitud": "36.371152",
+    "longitud": "-6.181297"
+  },
+  {
+    "ciudad": "Ciudad Quesada",
+    "direccion": "Av. de las Naciones, 41  03170 Cdad. Quesada  Alicante",
+    "latitud": "38.063938",
+    "longitud": "-0.716858"
+  },
+  {
+    "ciudad": "Liria",
+    "direccion": "Calle San Vicente Ferrer, 9 46160 ",
+    "latitud": "39.627357",
+    "longitud": "-0.595873"
+  },
+  {
+    "ciudad": "Salou",
+    "direccion": "Passeig de Jaume I, 14 43840 Salou Tarragona",
+    "latitud": "41.075349",
+    "longitud": "1.137144"
+  },
+  {
+    "ciudad": "Madrid",
+    "direccion": "Avenida de América 33",
+    "latitud": "40.439576",
+    "longitud": "-3.673047"
+  },
+  {
+    "ciudad": "Castellón",
+    "direccion": "Av. E. Gimeno, 101, 12006 Castellón de la Plana, Castellón",
+    "latitud": "39.974673",
+    "longitud": "-0.061991"
+  },
+  {
+    "ciudad": "Madrid",
+    "direccion": "Calle de las Escuelas, 46, 28607 El Álamo, Madrid",
+    "latitud": "40.229523",
+    "longitud": "-3.994041"
+  },
+  {
+    "ciudad": "Madrid",
+    "direccion": "Plaza de San Juan 2, Parla 28982 Madrid",
+    "latitud": "40.238408",
+    "longitud": "-3.770026"
+  },
+  {
+    "ciudad": "Madrid",
+    "direccion": "Paseo del General Martínez Campos, 8, 28010 Madrid",
+    "latitud": "40.434822",
+    "longitud": "-3.697684"
+  },
+  {
+    "ciudad": "Madrid",
+    "direccion": "Paseo de la Castellana, 153, 28046 Madrid",
+    "latitud": "40.461038",
+    "longitud": "-3.690473"
+  },
+  {
+    "ciudad": "Madrid",
+    "direccion": "Av. de la Libertad, 75, 28924 Alcorcón, Madrid",
+    "latitud": "40.352602 ",
+    "longitud": "-3.804057"
+  },
+  {
+    "ciudad": "ALMERÍA",
+    "direccion": "Av. Medico Francisco Perez Company, 04009 Almería",
+    "latitud": "36.859868",
+    "longitud": " -2.439227"
+  },
+  {
+    "ciudad": "SANTIAGO DE COMPOSTELA",
+    "direccion": "Santiago de Compostela",
+    "latitud": " 42.8774937",
+    "longitud": " -8.5457236"
+  },
+  {
+    "ciudad": "ZARAGOZA",
+    "direccion": "Teatro Principal Zaragoza",
+    "latitud": " 41.6523222",
+    "longitud": " -0.8789029"
+  },
+  {
+    "ciudad": "ZARAGOZA",
+    "direccion": "Paseo Sagasta",
+    "latitud": " 41.6458513",
+    "longitud": " -0.8860904"
+  },
+  {
+    "ciudad": "ZARAGOZA",
+    "direccion": "CC Puerto Venecia",
+    "latitud": " 41.6091212",
+    "longitud": " -0.8915013"
+  },
+  {
+    "ciudad": "ZARAGOZA",
+    "direccion": "CC Plaza Imperial",
+    "latitud": " 41.6352246",
+    "longitud": " -0.9830617"
+  },
+  {
+    "ciudad": "ZARAGOZA",
+    "direccion": "C/ Doctor Val-Carreres Ortiz 1 (Capitan Portoles)",
+    "latitud": " 41.65076",
+    "longitud": " -0.8850418"
+  },
+  {
+    "ciudad": "ZARAGOZA",
+    "direccion": "C/ de María Zambrano",
+    "latitud": " 41.6706698",
+    "longitud": " -0.8890248"
+  },
+  {
+    "ciudad": "BILBAO",
+    "direccion": "Estacion Abondo Indalecio Prieto",
+    "latitud": "43.26022409999999",
+    "longitud": "-2.928216099999986"
+  },
+  {
+    "ciudad": "PORTUGALETE",
+    "direccion": "CC Ballonti",
+    "latitud": " 43.316392",
+    "longitud": " -3.023477"
+  },
+  {
+    "ciudad": "LEIOA",
+    "direccion": "CC Artea",
+    "latitud": " 43.34077",
+    "longitud": " -2.99398"
+  },
+  {
+    "ciudad": "BILBAO",
+    "direccion": "Mercado la Sureña C/ Licenciado Pozas 48",
+    "latitud": " 43.2625677",
+    "longitud": " -2.9424548"
+  },
+  {
+    "ciudad": "BILBAO",
+    "direccion": "CC ZUBIARTE",
+    "latitud": " 43.2679685",
+    "longitud": " -2.9407071"
+  },
+  {
+    "ciudad": "BILBAO",
+    "direccion": "C/ Maria Muñoz 4",
+    "latitud": " 43.2577371",
+    "longitud": " -2.9217179"
+  },
+  {
+    "ciudad": "BARAKALDO",
+    "direccion": "CC Max Center",
+    "latitud": " 43.2864807",
+    "longitud": " -3.0065885"
+  },
+  {
+    "ciudad": "VALLADOLID",
+    "direccion": "Plaza del Val 6",
+    "latitud": " 41.6531468",
+    "longitud": " -4.7274628"
+  },
+  {
+    "ciudad": "VALLADOLID",
+    "direccion": "CC Vallsur",
+    "latitud": " 41.6314339",
+    "longitud": " -4.7404453"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "Plaza de la Reina",
+    "latitud": " 39.4746231",
+    "longitud": " -0.3759038"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "Gayano Lluch ",
+    "latitud": "39.4930721",
+    "longitud": "-0.3816881000000194"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "CC Nuevo Centro",
+    "latitud": " 39.480548",
+    "longitud": " -0.3902873"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "CC Arena Multiespacio",
+    "latitud": " 39.4943961",
+    "longitud": " -0.3626796"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "CC Aqua",
+    "latitud": " 39.456555",
+    "longitud": " -0.3458557"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": " C/ del Consulat del Mar 1",
+    "latitud": " 39.462939",
+    "longitud": " -0.4110886"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": " C/ de Vicente Zaragoza",
+    "latitud": " 39.3567119",
+    "longitud": " -0.4110886"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "C/ Convento de Sta. Clara 9",
+    "latitud": " 39.4682113",
+    "longitud": " -0.3761965"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "C/ Conde Altea 25",
+    "latitud": " 39.4665045",
+    "longitud": " -0.3670467"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "C/ Burgos 11",
+    "latitud": " 39.4701299",
+    "longitud": " -0.3995054"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "C/ Archiduque Carlo 76",
+    "latitud": " 39.4598513",
+    "longitud": " -0.400984"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "Avda. de Blasco Ibañez 87",
+    "latitud": " 39.4744741",
+    "longitud": " -0.3472788"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "Avda. de Blasco Ibañez 20",
+    "latitud": " 39.4779469",
+    "longitud": " -0.363009"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "Avda. de las Cortes Valencianas 26",
+    "latitud": " 39.4925264",
+    "longitud": " -0.4001201"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "Torrente",
+    "latitud": "39.4258615",
+    "longitud": "-0.4817510000000311"
+  },
+  {
+    "ciudad": "VALENCIA",
+    "direccion": "Juan XXIII",
+    "latitud": "39.4931237",
+    "longitud": "-0.38170660000002954"
+  },
+  {
+    "ciudad": "SAGUNTO",
+    "direccion": " CC L´epicentre",
+    "latitud": " 39.6715927",
+    "longitud": " -0.2488505"
+  },
+  {
+    "ciudad": "PATERNA",
+    "direccion": "CC y de Ocio Heron City",
+    "latitud": " 39.5286091",
+    "longitud": " -0.4373966"
+  },
+  {
+    "ciudad": "ONTINYENT",
+    "direccion": "CC El Teler",
+    "latitud": " 38.8244977",
+    "longitud": " -0.6028355"
+  },
+  {
+    "ciudad": "L´ELIANA",
+    "direccion": "CC El Osito",
+    "latitud": " 39.5768605",
+    "longitud": " -0.5255619"
+  },
+  {
+    "ciudad": "GANDIA",
+    "direccion": "Paseo Maritimo Neptuno 10",
+    "latitud": " 38.9976935",
+    "longitud": " -0.157673"
+  },
+  {
+    "ciudad": "GANDIA",
+    "direccion": "Paseo Germanias 26",
+    "latitud": " 38.9656314",
+    "longitud": " -0.1822541"
+  },
+  {
+    "ciudad": "GANDIA",
+    "direccion": "CC La Vital",
+    "latitud": " 38.9693118",
+    "longitud": " -0.1698367"
+  },
+  {
+    "ciudad": "CULLERA",
+    "direccion": "C/ Cabañal 6 ",
+    "latitud": " 39.1641925",
+    "longitud": " -0.245727"
+  },
+  {
+    "ciudad": "CARCAIXENT",
+    "direccion": "CC Ribera del Xuquer",
+    "latitud": " 39.1261346",
+    "longitud": " -0.4440825"
+  },
+  {
+    "ciudad": "BAJO MISLATA",
+    "direccion": "C/ San Antonio, 107",
+    "latitud": " 39.4766633",
+    "longitud": " -0.4216866"
+  },
+  {
+    "ciudad": "ALFAFAR",
+    "direccion": "CC MN4 (Local)",
+    "latitud": " 39.4162917",
+    "longitud": " -0.3810735"
+  },
+  {
+    "ciudad": "ALFAFAR",
+    "direccion": "CC MN4 (Quiosco)",
+    "latitud": " 39.4162917 ",
+    "longitud": " -0.3810735"
+  },
+  {
+    "ciudad": "TOLEDO",
+    "direccion": "CC Luz del Tajo",
+    "latitud": " 39.8636402",
+    "longitud": " -4.8137324"
+  },
+  {
+    "ciudad": "TALAVERA DE LA REINA",
+    "direccion": " CC Los Alfares",
+    "latitud": " 39.962337",
+    "longitud": " -4.8137324"
+  },
+  {
+    "ciudad": "VILLA DE LA OROTAVA",
+    "direccion": "CC La Villa",
+    "latitud": " 28.395479",
+    "longitud": " -16.5477933"
+  },
+  {
+    "ciudad": "TENERIFE",
+    "direccion": "Plaza de la Candelaria",
+    "latitud": " 28.4671702",
+    "longitud": " -16.2485328"
+  },
+  {
+    "ciudad": "STA CRUZ DE TENERIFE",
+    "direccion": "CC Meridiano (Quiosco) ",
+    "latitud": " 28.45692",
+    "longitud": " -16.25865"
+  },
+  {
+    "ciudad": "SAN CRISTOBAL DE LA LAGUNA",
+    "direccion": "San Cristobal de la Laguna",
+    "latitud": " 28.4882923",
+    "longitud": " -16.3158694"
+  },
+  {
+    "ciudad": "EL MEDANO",
+    "direccion": "El Medano",
+    "latitud": " 28.044701",
+    "longitud": " -16.537931"
+  },
+  {
+    "ciudad": "ARONA",
+    "direccion": "Puerto de los Cristianos",
+    "latitud": " 28.0516801",
+    "longitud": " -16.7171534"
+  },
+  {
+    "ciudad": "ARONA",
+    "direccion": "CC Parque Santiago 6",
+    "latitud": " 28.056819",
+    "longitud": " -16.7172809"
+  },
+  {
+    "ciudad": "ADEJE",
+    "direccion": "CC Siam Mall",
+    "latitud": " 28.0675682",
+    "longitud": " -16.7225624"
+  },
+  {
+    "ciudad": "TARRAGONA",
+    "direccion": "CC Les Gavarres",
+    "latitud": " 41.1307687",
+    "longitud": " 1.2001348"
+  },
+  {
+    "ciudad": "TARRAGONA",
+    "direccion": "CC Parc Central",
+    "latitud": " 41.1170683",
+    "longitud": " 1.2401738"
+  },
+  {
+    "ciudad": "REUS",
+    "direccion": "CC La Fira",
+    "latitud": " 41.1619594",
+    "longitud": " 1.1107973"
+  },
+  {
+    "ciudad": "REUS",
+    "direccion": "C/ del Preso 9",
+    "latitud": " 41.1552336",
+    "longitud": " 1.1100029"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "Santa Justa",
+    "latitud": "37.3911385",
+    "longitud": "-5.975470800000039"
+  },
+  {
+    "ciudad": "TOMARES",
+    "direccion": "Tomares",
+    "latitud": " 37.3693478",
+    "longitud": " -6.0406643"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "Mercado la Sureña Avda. de la Buhaira 17",
+    "latitud": " 37.3853503",
+    "longitud": " -5.9785955"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "Mercado la Sureña Alameda de Hercules",
+    "latitud": " 37.3996716",
+    "longitud": " -5.9941676"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "Rec+ Avda. de Reina Mercedes",
+    "latitud": " 37.3586505",
+    "longitud": " -5.9860715"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "La Campana",
+    "latitud": " 37.3927698",
+    "longitud": " -5.994832"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "CC Los Arcos",
+    "latitud": " 37.3868919",
+    "longitud": " -5.9506165"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "C/ San Jacinto 89",
+    "latitud": " 37.3812372",
+    "longitud": " -6.0084826"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "C/ Corinto 3",
+    "latitud": " 37.3985148",
+    "longitud": " -5.9820092"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "C/ Balbino Marron (Edificio Viapol) ",
+    "latitud": " 37.3797625",
+    "longitud": " -5.9778286"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "CALLE Avicena 7",
+    "latitud": " 37.4047164",
+    "longitud": " -5.9943711"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "C/ San Fernando 29",
+    "latitud": " 37.3817863",
+    "longitud": " -5.9904605"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "Avda. Sanchez Pizjuan 12",
+    "latitud": " 37.4086682",
+    "longitud": " -5.9877021"
+  },
+  {
+    "ciudad": "BERMEJALES",
+    "direccion": "Avda. Finlandia",
+    "latitud": " 37.3438359",
+    "longitud": " -5.9785356"
+  },
+  {
+    "ciudad": "SEVILLA",
+    "direccion": "Avda. de la Constitución 9",
+    "latitud": " 37.3869099",
+    "longitud": " -5.9940631"
+  },
+  {
+    "ciudad": "SAN JUAN DE AZNALFARACHE",
+    "direccion": "CC El Corte Ingles",
+    "latitud": " 37.3871196",
+    "longitud": " -6.029818"
+  },
+  {
+    "ciudad": "SAN JOSE DE LA RINCONADA",
+    "direccion": "CC The Original Factory Sevilla Aeropuerto",
+    "latitud": " 37.4365092",
+    "longitud": " -5.8805941"
+  },
+  {
+    "ciudad": "MAIRENA DEL ALJARAFE",
+    "direccion": "CC Metromar",
+    "latitud": " 37.3501972",
+    "longitud": " -6.0512053"
+  },
+  {
+    "ciudad": " LOS PALACIOS Y VILLAFRANCA",
+    "direccion": "Los Palacios",
+    "latitud": " 37.1625729",
+    "longitud": " -5.9234084"
+  },
+  {
+    "ciudad": "ECIJA",
+    "direccion": "CC N4 ",
+    "latitud": " 37.5340904",
+    "longitud": " -5.942518"
+  },
+  {
+    "ciudad": "DOS HERMANAS",
+    "direccion": "CC Sevilla Factory",
+    "latitud": " 37.287997",
+    "longitud": " -5.942518"
+  },
+  {
+    "ciudad": "CASTILLEJA DE LA CUESTA ",
+    "direccion": "CC Airesur",
+    "latitud": " 37.3853105",
+    "longitud": " -6.0470841"
+  },
+  {
+    "ciudad": "CARMONA",
+    "direccion": "C/ Paseo del Estatuto 27",
+    "latitud": " 37.4706046",
+    "longitud": " -5.6446346"
+  },
+  {
+    "ciudad": "ALCALA DE GUADAIRA",
+    "direccion": "CC Los Alcores",
+    "latitud": " 37.3514721",
+    "longitud": " -5.857726"
+  },
+  {
+    "ciudad": "SEGOVIA",
+    "direccion": "Avda. Fernández Ladreda 11",
+    "latitud": " 40.947413",
+    "longitud": " -4.1185456"
+  },
+  {
+    "ciudad": "SALAMANCA",
+    "direccion": "CC Vialia",
+    "latitud": " 40.9706317",
+    "longitud": " -5.6524997"
+  },
+  {
+    "ciudad": "SALAMANCA",
+    "direccion": "C/ Concejo 3",
+    "latitud": " 40.9656383",
+    "longitud": " -5.664462"
+  },
+  {
+    "ciudad": "VIGO",
+    "direccion": "Plaza de Compostela",
+    "latitud": " 42.2388428",
+    "longitud": " -8.7238132"
+  },
+  {
+    "ciudad": "PONTEVEDRA",
+    "direccion": "C/ Real 1",
+    "latitud": " 42.4325392",
+    "longitud": " -8.6451327"
+  },
+  {
+    "ciudad": "ORENSE",
+    "direccion": "Ponte Vella Centro Comercial y Ocio",
+    "latitud": " 42.3447015",
+    "longitud": " -7.8652066"
+  },
+  {
+    "ciudad": "PAMPLONA",
+    "direccion": "C.C. Itaroa",
+    "latitud": "42.828545",
+    "longitud": "-1.5841500000000224"
+  },
+  {
+    "ciudad": "TUDELA",
+    "direccion": "Plaza Sancho VII El Fuerte 13",
+    "latitud": " 42.0615943",
+    "longitud": " -1.6037808"
+  },
+  {
+    "ciudad": "PAMPLONA",
+    "direccion": "Avda. de Pio XII",
+    "latitud": " 42.8078009",
+    "longitud": " -1.6594404"
+  },
+  {
+    "ciudad": "CORDOVILLA",
+    "direccion": "CC La Morea",
+    "latitud": " 42.784534",
+    "longitud": " -1.631545"
+  },
+  {
+    "ciudad": "MURCIA",
+    "direccion": "Plaza Santo Domingo",
+    "latitud": " 37.9870288",
+    "longitud": " -1.128897"
+  },
+  {
+    "ciudad": "MURCIA",
+    "direccion": "Lorca",
+    "latitud": "37.636766",
+    "longitud": "-1.6993179999999484"
+  },
+  {
+    "ciudad": "MURCIA",
+    "direccion": "Centro de Ocio Zig Zag",
+    "latitud": " 37.9986196",
+    "longitud": " -1.1384505"
+  },
+  {
+    "ciudad": "MOLINA DE SEGURA",
+    "direccion": "CC Vega Plaza",
+    "latitud": " 38.0562734",
+    "longitud": " -1.2161493"
+  },
+  {
+    "ciudad": "EL PALMAR",
+    "direccion": "Galeria Comercial Arrixaca",
+    "latitud": " 37.9361877",
+    "longitud": " -1.1606336"
+  },
+  {
+    "ciudad": "CHURRA",
+    "direccion": "CC Thander",
+    "latitud": " 38.0321709",
+    "longitud": " -1.1492602"
+  },
+  {
+    "ciudad": "CHURRA",
+    "direccion": "CC Nueva Condomina",
+    "latitud": " 38.0343201",
+    "longitud": " -1.1492391"
+  },
+  {
+    "ciudad": "CARTAGENA",
+    "direccion": "CC Espacio Mediterraneo",
+    "latitud": " 37.6260049",
+    "longitud": " -0.9492596"
+  },
+  {
+    "ciudad": "AGUILAS",
+    "direccion": "CC Aguilas Plaza",
+    "latitud": " 37.4102816",
+    "longitud": " -1.5636336"
+  },
+  {
+    "ciudad": "PALMA DE MALLORCA",
+    "direccion": "Plaza de España 1",
+    "latitud": " 39.5755638",
+    "longitud": " 2.6528162"
+  },
+  {
+    "ciudad": "VELEZ-MALAGA",
+    "direccion": "CC El Ingenio",
+    "latitud": " 36.7618562",
+    "longitud": " -4.0987557"
+  },
+  {
+    "ciudad": "TORREMOLINOS",
+    "direccion": "Torremolinos",
+    "latitud": " 36.62101 ",
+    "longitud": " -4.50657"
+  },
+  {
+    "ciudad": "RONDA",
+    "direccion": "Plaza de España 1",
+    "latitud": " 36.741339",
+    "longitud": " -5.1660969"
+  },
+  {
+    "ciudad": "RINCON DE LA VICTORIA",
+    "direccion": "Rincon de la Victoria",
+    "latitud": " 36.7151718",
+    "longitud": " -4.286038"
+  },
+  {
+    "ciudad": "MARBELLA",
+    "direccion": "Parque Comercial La Cañada",
+    "latitud": " 36.52133",
+    "longitud": " -4.875306"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": "CC Vialia",
+    "latitud": " 36.7108437",
+    "longitud": " -4.4307496"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": " CC Rosaleda",
+    "latitud": " 36.7346111",
+    "longitud": " -4.4321259"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": "CC Plaza Mayor",
+    "latitud": " 36.6568275",
+    "longitud": " -4.478582"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": "CC Megaocio",
+    "latitud": " 36.6849646",
+    "longitud": " -4.4717794"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": "CC Larios Centro",
+    "latitud": " 36.716138",
+    "longitud": " -4.4320544"
+  },
+  {
+    "ciudad": "TORREMOLINOS",
+    "direccion": "CC El Pinillo",
+    "latitud": "36.6645609",
+    "longitud": "-4.504618499999992"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": " CC El Muelle Uno",
+    "latitud": " 36.71596",
+    "longitud": " -4.4142172"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": "C/ Sagasta 3",
+    "latitud": " 36.7189543",
+    "longitud": " -4.4235295"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": "C/ Alcazabilla 12",
+    "latitud": " 36.7222664",
+    "longitud": " -4.4170441"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": "Avda. de Plutarco 18",
+    "latitud": " 36.7212488",
+    "longitud": " -4.4793717"
+  },
+  {
+    "ciudad": "MALAGA",
+    "direccion": "Pacífico",
+    "latitud": "36.6904002",
+    "longitud": "-4.442858900000033"
+  },
+  {
+    "ciudad": "FUENGIROLA",
+    "direccion": "CC Miramar",
+    "latitud": " 36.5292429",
+    "longitud": " -4.6323394"
+  },
+  {
+    "ciudad": "FUENGIROLA",
+    "direccion": "C/ Jacinto Benavente",
+    "latitud": " 36.5404277",
+    "longitud": " -4.620599"
+  },
+  {
+    "ciudad": "BENALMADENA",
+    "direccion": "Puerto Marina",
+    "latitud": " 36.5987143",
+    "longitud": " -4.5120855"
+  },
+  {
+    "ciudad": "ARROYO DE LA MIEL",
+    "direccion": "Mercado la Sureña Arroyo de la miel",
+    "latitud": " 36.598704",
+    "longitud": " -4.5352038"
+  },
+  {
+    "ciudad": "ANTEQUERA - MALAGA ",
+    "direccion": "CC La Veronica",
+    "latitud": " 37.0250578",
+    "longitud": " -4.5728134"
+  },
+  {
+    "ciudad": "LEGANES",
+    "direccion": "CC Parquesur",
+    "latitud": " 40.3382361",
+    "longitud": " -3.7375815"
+  },
+  {
+    "ciudad": "LEGANES",
+    "direccion": "Avda. de la Universidad 31",
+    "latitud": " 40.3315972",
+    "longitud": " -3.7679445"
+  },
+  {
+    "ciudad": "LAS ROZAS",
+    "direccion": "Mercado la Sureña CC Heron City",
+    "latitud": " 40.516383",
+    "longitud": " -3.8986199"
+  },
+  {
+    "ciudad": "LAS ROZAS",
+    "direccion": "Plaza de España 10",
+    "latitud": " 40.4934622",
+    "longitud": " -3.8761451"
+  },
+  {
+    "ciudad": "LAS ROZAS",
+    "direccion": "C/ Bruselas 40",
+    "latitud": " 40.5052025",
+    "longitud": " -3.8924548"
+  },
+  {
+    "ciudad": "GETAFE",
+    "direccion": "Nassica Centro Comercial y Ocio",
+    "latitud": " 40.2726701",
+    "longitud": " -3.6974641"
+  },
+  {
+    "ciudad": "GETAFE",
+    "direccion": "CC Getafe 3",
+    "latitud": " 40.288877",
+    "longitud": " -3.7492663"
+  },
+  {
+    "ciudad": "GETAFE",
+    "direccion": "C/ Madrid 29",
+    "latitud": " 40.306755",
+    "longitud": " -3.7308027"
+  },
+  {
+    "ciudad": "FUENLABRADA",
+    "direccion": "Mercado la Sureña Avda. de la Universidad 1",
+    "latitud": " 40.28493",
+    "longitud": " -3.81622"
+  },
+  {
+    "ciudad": "FUENLABRADA",
+    "direccion": "CC Plaza de la Estación",
+    "latitud": " 40.2841575",
+    "longitud": " -3.8002074"
+  },
+  {
+    "ciudad": "FUENLABRADA",
+    "direccion": "C/ de Leganes 51",
+    "latitud": " 40.2914165",
+    "longitud": " -3.7909373"
+  },
+  {
+    "ciudad": "COLMENAR VIEJO",
+    "direccion": "CC El Ventanal de la Sierra",
+    "latitud": " 40.6597953",
+    "longitud": " -3.7534127"
+  },
+  {
+    "ciudad": "COLLADO VILLALBA",
+    "direccion": "Collado Villalba",
+    "latitud": " 40.6316635",
+    "longitud": " -4.007463"
+  },
+  {
+    "ciudad": "COLLADO VILLALBA",
+    "direccion": "CC Los Valles",
+    "latitud": " 40.6367949",
+    "longitud": " -4.0084662"
+  },
+  {
+    "ciudad": "CIENPOZUELOS",
+    "direccion": "Cienpozuelos",
+    "latitud": " 40.1586168",
+    "longitud": " -3.6193794"
+  },
+  {
+    "ciudad": "CARABANCHEL ALTO",
+    "direccion": " Avda. de la Peseta 36",
+    "latitud": " 40.3615614",
+    "longitud": " -3.7542548"
+  },
+  {
+    "ciudad": "BOADILLA DEL MONTE",
+    "direccion": "Mercado la Sureña Avda. Infante Don Luis 6",
+    "latitud": " 40.4059808",
+    "longitud": " -3.8973849"
+  },
+  {
+    "ciudad": "BARAJAS",
+    "direccion": "Terminal T2 Aeropuerto de Madrid",
+    "latitud": " 40.4686323",
+    "longitud": " -3.5752572"
+  },
+  {
+    "ciudad": "BARAJAS",
+    "direccion": "Plaza Hermanos Falcó y Álvarez de Toledo",
+    "latitud": " 40.4740867",
+    "longitud": " -3.5777488"
+  },
+  {
+    "ciudad": "ARROYOMOLINOS",
+    "direccion": "CC Xanadu",
+    "latitud": " 40.2832399",
+    "longitud": " -3.9099062"
+  },
+  {
+    "ciudad": "ARGANDA DEL REY",
+    "direccion": "Arganda del Rey",
+    "latitud": " 40.3012651",
+    "longitud": " -3.4423256"
+  },
+  {
+    "ciudad": "ARANJUEZ",
+    "direccion": "C/ de San Antonio 56",
+    "latitud": " 40.0334561",
+    "longitud": " -3.6047305"
+  },
+  {
+    "ciudad": "ALCORCON",
+    "direccion": " CC Tres Aguas",
+    "latitud": " 40.3591844",
+    "longitud": " -3.8336586"
+  },
+  {
+    "ciudad": "ALCORCON",
+    "direccion": "C/ Mayor 71",
+    "latitud": " 40.3449045",
+    "longitud": " -3.8275314"
+  },
+  {
+    "ciudad": "ALCOBENDAS",
+    "direccion": "Centro de Ocio Heron Diversia",
+    "latitud": " 40.5304122",
+    "longitud": " -3.6384856"
+  },
+  {
+    "ciudad": "ALCOBENDAS",
+    "direccion": "CC La Gran Manzana",
+    "latitud": " 40.5479807",
+    "longitud": " -3.6406026"
+  },
+  {
+    "ciudad": "ALCALA DE HENARES",
+    "direccion": "CC La Dehesa",
+    "latitud": " 40.5130335",
+    "longitud": " -3.3487276"
+  },
+  {
+    "ciudad": "ALCALA DE HENARES",
+    "direccion": "CC Alcala Magna",
+    "latitud": " 40.49507",
+    "longitud": " -3.35933"
+  },
+  {
+    "ciudad": "ALCALA DE HENARES",
+    "direccion": "C/ Atienza 1",
+    "latitud": " 40.4859065",
+    "longitud": " -3.3606587"
+  },
+  {
+    "ciudad": "PONFERRADA",
+    "direccion": "CC El Rosal",
+    "latitud": " 42.55643",
+    "longitud": " -6.60408"
+  },
+  {
+    "ciudad": "LEÓN",
+    "direccion": "CC Espacio León ",
+    "latitud": " 42.6126903",
+    "longitud": " -5.5961567"
+  },
+  {
+    "ciudad": "LOGROÑO",
+    "direccion": "Logroño",
+    "latitud": " 42.4654115",
+    "longitud": " -2.4504869"
+  },
+  {
+    "ciudad": "JAEN",
+    "direccion": "Paseo de España",
+    "latitud": " 37.785492",
+    "longitud": " -3.7896386"
+  },
+  {
+    "ciudad": "JAEN",
+    "direccion": "CC La Loma",
+    "latitud": " 37.7841946",
+    "longitud": " -3.7840672"
+  },
+  {
+    "ciudad": "IBIZA",
+    "direccion": "C/ Carlos V, s/n",
+    "latitud": " 38.910468",
+    "longitud": " 1.432431"
+  },
+  {
+    "ciudad": "HUESCA",
+    "direccion": "Plaza de Nuestra Señora de Salas",
+    "latitud": " 42.1360948",
+    "longitud": " -0.4056796"
+  },
+  {
+    "ciudad": "LEPE",
+    "direccion": "Lepe",
+    "latitud": "37.2517864",
+    "longitud": "-7.198449500000038"
+  },
+  {
+    "ciudad": "ISLANTILLA",
+    "direccion": "CC y de Ocio Islantilla",
+    "latitud": " 37.2066094",
+    "longitud": " -7.2341184"
+  },
+  {
+    "ciudad": "ISLANTILLA",
+    "direccion": "Avda. Castilla",
+    "latitud": " 37.2065803",
+    "longitud": " -7.21719"
+  },
+  {
+    "ciudad": "HUELVA",
+    "direccion": "Mercado la Sureña CC Holea",
+    "latitud": " 37.2722997",
+    "longitud": " -6.92073"
+  },
+  {
+    "ciudad": "AYAMONTE",
+    "direccion": "CC La Plaza",
+    "latitud": " 37.2253401",
+    "longitud": " -7.4033684"
+  },
+  {
+    "ciudad": "IRUN",
+    "direccion": "Irun",
+    "latitud": " 43.3399935",
+    "longitud": " -1.7903549"
+  },
+  {
+    "ciudad": "DONOSTIA",
+    "direccion": "Antonio Gaztañeta Kalea 4",
+    "latitud": " 43.3109324",
+    "longitud": " -2.0079876"
+  },
+  {
+    "ciudad": "GUADALAJARA",
+    "direccion": "CC Ferial Plaza",
+    "latitud": " 40.62195",
+    "longitud": " -3.1655"
+  },
+  {
+    "ciudad": "GUADALAJARA",
+    "direccion": "C/ Miguel Fluiters 10",
+    "latitud": "40.63451209999999",
+    "longitud": "-3.167304800000011"
+  },
+  {
+    "ciudad": "SIERRA NEVADA",
+    "direccion": "Sierra Nevada",
+    "latitud": " 37.0953622",
+    "longitud": " -3.3991457"
+  },
+  {
+    "ciudad": "PULIANAS",
+    "direccion": "Parque Comercial Kinepolis",
+    "latitud": " 37.2141994",
+    "longitud": " -3.6152193"
+  },
+  {
+    "ciudad": "GRANADA",
+    "direccion": "Camino de Ronda 114",
+    "latitud": " 37.1741829",
+    "longitud": " -3.6080205"
+  },
+  {
+    "ciudad": "GRANADA",
+    "direccion": "C/ Acera del Darro 24",
+    "latitud": " 37.1721967",
+    "longitud": " -3.5995031"
+  },
+  {
+    "ciudad": "ARMILLA",
+    "direccion": "CC Parque Nevada",
+    "latitud": " 37.1469907",
+    "longitud": " -3.614625"
+  },
+  {
+    "ciudad": "VECINDARIO",
+    "direccion": "Mercado la Sureña CC Atlantico",
+    "latitud": " 27.8451768",
+    "longitud": " -15.441587"
+  },
+  {
+    "ciudad": "TELDE",
+    "direccion": "CC Las Terrazas de Jinamar \"Quiosco\"",
+    "latitud": " 28.0289576",
+    "longitud": " -15.3943938"
+  },
+  {
+    "ciudad": "LAS PALMAS DE GRAN CANARIA",
+    "direccion": "CC Alisios",
+    "latitud": "28.0959528",
+    "longitud": "-15.474288099999967"
+  },
+  {
+    "ciudad": "SAN BARTOLOME",
+    "direccion": "CC Deiland Plaza",
+    "latitud": " 28.9570134",
+    "longitud": " -13.5869927"
+  },
+  {
+    "ciudad": "LAS PALMAS DE GRAN CANARIA",
+    "direccion": "Paseo de las Canteras 5",
+    "latitud": " 28.1479396",
+    "longitud": " -15.4306074"
+  },
+  {
+    "ciudad": "LAS PALMAS DE GRAN CANARIA",
+    "direccion": "CC El Muelle",
+    "latitud": " 28.1410688",
+    "longitud": " -15.4265293"
+  },
+  {
+    "ciudad": "LAS PALMAS DE GRAN CANARIA",
+    "direccion": "CC El Mirador",
+    "latitud": " 28.1090568",
+    "longitud": " -15.4151008"
+  },
+  {
+    "ciudad": "LAS PALMAS DE GRAN CANARIA",
+    "direccion": "CC 7 Palmas",
+    "latitud": " 28.0966984",
+    "longitud": " -15.4558604"
+  },
+  {
+    "ciudad": "LAS PALMAS DE GRAN CANARIA",
+    "direccion": "C/ Ruiz de Alda",
+    "latitud": " 28.135887",
+    "longitud": " -15.4330187"
+  },
+  {
+    "ciudad": "EL TABLERO",
+    "direccion": "Mercado la Sureña CC El Tablero",
+    "latitud": " 27.7683279",
+    "longitud": " -15.6020519"
+  },
+  {
+    "ciudad": "ARRECIFE",
+    "direccion": "CC Marina Lanzarote",
+    "latitud": " 28.962414",
+    "longitud": " -13.5427193"
+  },
+  {
+    "ciudad": "FIGUERAS",
+    "direccion": "Plaza Gala y Salvador Dalí",
+    "latitud": " 42.2679879",
+    "longitud": " 2.9596627"
+  },
+  {
+    "ciudad": "CUENCA",
+    "direccion": "C/ San Francisco",
+    "latitud": " 40.0715422",
+    "longitud": " -2.1354849"
+  },
+  {
+    "ciudad": "CORDOBA",
+    "direccion": "C.C. La Sierra",
+    "latitud": "37.896243",
+    "longitud": "-4.791569999999979"
+  },
+  {
+    "ciudad": "CORDOBA",
+    "direccion": "Mercado la Sureña Glorieta Amadora",
+    "latitud": " 37.892806",
+    "longitud": " -4.7992995"
+  },
+  {
+    "ciudad": "CORDOBA",
+    "direccion": "Plaza de San Miguel",
+    "latitud": " 37.8858564",
+    "longitud": " -4.7797841"
+  },
+  {
+    "ciudad": "CORDONA",
+    "direccion": "CC El Arcangel",
+    "latitud": " 37.8794563",
+    "longitud": " -4.7651148"
+  },
+  {
+    "ciudad": "VALDEPEÑAS",
+    "direccion": "Valdepeñas",
+    "latitud": " 38.7586948",
+    "longitud": " -3.381932"
+  },
+  {
+    "ciudad": "CIUDAD REAL",
+    "direccion": "Mercado la Sureña C/ Reyes 1",
+    "latitud": " 38.9857329",
+    "longitud": " -3.9305215"
+  },
+  {
+    "ciudad": "CIUDAD REAL",
+    "direccion": "Cine Parque de Ocio Las Vias",
+    "latitud": " 38.9779612",
+    "longitud": " -3.9305637"
+  },
+  {
+    "ciudad": "VILA-REAL",
+    "direccion": "Avda. Fransesc Tarrega 26",
+    "latitud": " 39.9386881",
+    "longitud": " -0.0965481"
+  },
+  {
+    "ciudad": "CASTELLON",
+    "direccion": "Avda. Rey Don Jaime",
+    "latitud": " 39.9867843",
+    "longitud": " -0.0404223"
+  },
+  {
+    "ciudad": "VILLAREAL",
+    "direccion": "Avda. Francesc Tàrrega",
+    "latitud": "39.9386881",
+    "longitud": "-0.09654810000006364"
+  },
+  {
+    "ciudad": "CASTELLON",
+    "direccion": "CC Salera",
+    "latitud": " 39.9617105",
+    "longitud": " -0.0727553"
+  },
+  {
+    "ciudad": "TORRELAVEGA",
+    "direccion": "Mercado la Sureña Bulevar Luciano Demetrio Herrero 2",
+    "latitud": " 43.3492394",
+    "longitud": " -4.0508238"
+  },
+  {
+    "ciudad": "SANTANDER",
+    "direccion": "CC El Corte Ingles",
+    "latitud": " 43.4384381",
+    "longitud": " -3.8389643"
+  },
+  {
+    "ciudad": "SANTANDER",
+    "direccion": "C/ Calderon de la Barca 19",
+    "latitud": " 43.4599942",
+    "longitud": " -3.8069146"
+  },
+  {
+    "ciudad": "PEÑACASTILLO",
+    "direccion": "CC Peñacastillo",
+    "latitud": " 43.4447794",
+    "longitud": " -3.8542646"
+  },
+  {
+    "ciudad": "SANLUCAR DE BARRAMEDA",
+    "direccion": " Plaza Gran Cinema",
+    "latitud": " 36.7824979",
+    "longitud": " -6.3558282"
+  },
+  {
+    "ciudad": "SANLUCAR DE BARRAMEDA",
+    "direccion": "CC Las Dunas",
+    "latitud": " 36.7663123",
+    "longitud": " -6.3469937"
+  },
+  {
+    "ciudad": "SAN FERNANDO",
+    "direccion": "CC Bahia Sur",
+    "latitud": " 36.4696871",
+    "longitud": " -6.2101772"
+  },
+  {
+    "ciudad": "SAN FERNANDO",
+    "direccion": "CC San Fernando Plaza",
+    "latitud": " 36.4625828",
+    "longitud": " -6.2025186"
+  },
+  {
+    "ciudad": "ROTA",
+    "direccion": "Rota",
+    "latitud": " 36.619782",
+    "longitud": " -6.3625838"
+  },
+  {
+    "ciudad": "ROTA",
+    "direccion": "(Cerrado Temporalmente) CC El Lago (Costa Ballena)",
+    "latitud": " 36.6856023",
+    "longitud": " -6.4103203"
+  },
+  {
+    "ciudad": "LOS BARRIOS",
+    "direccion": "CC Bahia Plaza",
+    "latitud": " 36.186647",
+    "longitud": " -5.432142"
+  },
+  {
+    "ciudad": "JEREZ DE LA FRONTERA",
+    "direccion": "Mercado la Sureña Terrazas de Chapin",
+    "latitud": " 36.6951022",
+    "longitud": " -6.1057638"
+  },
+  {
+    "ciudad": "JEREZ DE LA FRONTERA",
+    "direccion": "Mercado la Sureña CC Luz Shopping",
+    "latitud": " 36.6938827",
+    "longitud": " -6.1601969"
+  },
+  {
+    "ciudad": "JEREZ DE LA FRONTERA",
+    "direccion": "Lanceria",
+    "latitud": " 36.682302",
+    "longitud": " -6.1370243"
+  },
+  {
+    "ciudad": "JEREZ DE LA FRONTERA",
+    "direccion": "CC Area Sur",
+    "latitud": " 36.7016148",
+    "longitud": " -6.0892722"
+  },
+  {
+    "ciudad": "EL PUERTO DE SANTA MARIA",
+    "direccion": "CC Vigalpe",
+    "latitud": " 36.5783503",
+    "longitud": " -6.2577244"
+  },
+  {
+    "ciudad": "CHIPIONA",
+    "direccion": "Chipiona",
+    "latitud": " 36.7395875 ",
+    "longitud": " -6.4365064"
+  },
+  {
+    "ciudad": "CADIZ",
+    "direccion": "Plaza de la Catedral",
+    "latitud": " 36.5295552",
+    "longitud": " -6.2946072"
+  },
+  {
+    "ciudad": "CADIZ",
+    "direccion": "C/ Fernandez Ballesteros 2 ",
+    "latitud": " 36.5092291",
+    "longitud": " -6.2805743"
+  },
+  {
+    "ciudad": "ARCOS DE LA FRONTERA",
+    "direccion": "CC Carrefour",
+    "latitud": " 36.7479683",
+    "longitud": " -5.8247132"
+  },
+  {
+    "ciudad": "ALGECIRAS",
+    "direccion": "Algeciras",
+    "latitud": " 36.1322866",
+    "longitud": " -5.4494301"
+  },
+  {
+    "ciudad": "CACERES",
+    "direccion": "Mercado la Sureña General Ezponda 3",
+    "latitud": " 39.4754735",
+    "longitud": " -6.3720919"
+  },
+  {
+    "ciudad": "CACERES",
+    "direccion": "C/ de San Pedro de Alcantara 7",
+    "latitud": " 39.4708072",
+    "longitud": " -6.3797486"
+  },
+  {
+    "ciudad": "BURGOS",
+    "direccion": "CC El Mirador",
+    "latitud": " 42.3733473",
+    "longitud": " -3.6917476"
+  },
+  {
+    "ciudad": "BURGOS",
+    "direccion": "C/ Paloma 9-11",
+    "latitud": " 42.3412829",
+    "longitud": " -3.7028504"
+  },
+  {
+    "ciudad": "ARANDA DE DUERO",
+    "direccion": "Plaza de la Constitución 2",
+    "latitud": " 41.6709162",
+    "longitud": " -3.6862249"
+  },
+  {
+    "ciudad": "VILANOVA I LA GELTRU",
+    "direccion": "Rambla de la Pau 6-8 ",
+    "latitud": " 41.2204203",
+    "longitud": " 1.7266923"
+  },
+  {
+    "ciudad": "SANT ADRIA DEL BESOS",
+    "direccion": "Avda. de la Cataluña 80",
+    "latitud": " 41.4226077",
+    "longitud": " 2.2236219"
+  },
+  {
+    "ciudad": "SANT CUGAT DEL VALLES",
+    "direccion": "CC San Cugat",
+    "latitud": " 41.4827521",
+    "longitud": " 2.0528984"
+  },
+  {
+    "ciudad": "SABADELL",
+    "direccion": "C/ Esglesia 13",
+    "latitud": " 41.547013",
+    "longitud": " 2.1083071"
+  },
+  {
+    "ciudad": "HOSPITALET DE LLOBREGAT",
+    "direccion": "Mercado la Sureña Rambla Just Oliveras 1",
+    "latitud": " 41.3599883",
+    "longitud": " 2.1018857"
+  },
+  {
+    "ciudad": "GRANOLLERS",
+    "direccion": "Mercado la Sureña C/ Museo 10",
+    "latitud": " 41.6072084",
+    "longitud": " 2.2866135"
+  },
+  {
+    "ciudad": "GRANOLLERS",
+    "direccion": "C.C. El Nord",
+    "latitud": " 41.6097752",
+    "longitud": " 2.3020776"
+  },
+  {
+    "ciudad": "CORNELLA DE LLOBREGAT",
+    "direccion": "CC Splau",
+    "latitud": " 41.3509956",
+    "longitud": " 2.0685717"
+  },
+  {
+    "ciudad": "CASTELDEFELLS",
+    "direccion": "CC L´anec Blau",
+    "latitud": " 41.2830175",
+    "longitud": " 1.9860025"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "M.la Sureña-Paseo de Sant Joan 77",
+    "latitud": " 41.3977583",
+    "longitud": " 2.1713133"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "Rambla del Raval 41",
+    "latitud": " 41.3782942",
+    "longitud": " 2.1703281"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "Rambla del Poblenou 76",
+    "latitud": " 41.4013124",
+    "longitud": " 2.2011336"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "Rambla de Cataluña 11",
+    "latitud": " 41.3877829",
+    "longitud": " 2.1673207"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "Plaza de Urquinaona",
+    "latitud": " 41.3891256",
+    "longitud": " 2.1722476"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "CC La Maquinista",
+    "latitud": " 41.4395562",
+    "longitud": " 2.1986319"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "CC Heron City",
+    "latitud": " 41.4352431",
+    "longitud": " 2.1808688"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "C/ del Rosello 110",
+    "latitud": " 41.3883984",
+    "longitud": " 2.1509922"
+  },
+  {
+    "ciudad": "BARBERA DEL VALLES",
+    "direccion": "CC Baricentro",
+    "latitud": " 41.5087933",
+    "longitud": " 2.1379465"
+  },
+  {
+    "ciudad": "BARCELONA",
+    "direccion": "CC Magic Badalona",
+    "latitud": " 41.4434226",
+    "longitud": " 2.2297412"
+  },
+  {
+    "ciudad": "ZAFRA",
+    "direccion": "Mercado la Sureña Avda. de la Estación 10",
+    "latitud": " 38.4201436",
+    "longitud": " -6.413343"
+  },
+  {
+    "ciudad": "VILLANUEVA DE LA SERENA",
+    "direccion": "Villanueva de la Serena",
+    "latitud": " 38.972384",
+    "longitud": " -5.7902729"
+  },
+  {
+    "ciudad": "MERIDA",
+    "direccion": "C/ Felix Valverde Lillo 3",
+    "latitud": " 38.9173547",
+    "longitud": " -6.3456164"
+  },
+  {
+    "ciudad": "MERIDA",
+    "direccion": "Avda. Constitución 5",
+    "latitud": " 38.9110213",
+    "longitud": " -6.3568085"
+  },
+  {
+    "ciudad": "DON BENITO",
+    "direccion": "Avda. Alonso Martin 41",
+    "latitud": " 38.9610364",
+    "longitud": " -5.8668665"
+  },
+  {
+    "ciudad": "BADAJOZ",
+    "direccion": "Merc. la Sureña Valdepasillas",
+    "latitud": " 38.8694483",
+    "longitud": " -6.9882363"
+  },
+  {
+    "ciudad": "BADAJOZ",
+    "direccion": "Merc. la Sureña Plaza de España 7",
+    "latitud": " 38.8779897",
+    "longitud": " -6.9702195"
+  },
+  {
+    "ciudad": "BADAJOZ",
+    "direccion": "Merc.la Sureña Avda. de Elvas 6",
+    "latitud": " 38.8837429",
+    "longitud": " -6.9931542"
+  },
+  {
+    "ciudad": "BADAJOZ",
+    "direccion": "CC El Faro",
+    "latitud": " 38.8837416",
+    "longitud": " -7.0209052"
+  },
+  {
+    "ciudad": "BADAJOZ",
+    "direccion": "Avda. Villanueva 5",
+    "latitud": " 38.8716445",
+    "longitud": " -6.9774265"
+  },
+  {
+    "ciudad": "BADAJOZ",
+    "direccion": "Avda. Ricardo Carapeto 108",
+    "latitud": " 38.8784599",
+    "longitud": " -6.9542"
+  },
+  {
+    "ciudad": "ALMENDRALEJO",
+    "direccion": "Avda de la Paz Esq.C/Magisterio",
+    "latitud": " 38.680015",
+    "longitud": " -6.410491"
+  },
+  {
+    "ciudad": "AVILA",
+    "direccion": "C/ Estrada 1",
+    "latitud": " 40.6548046",
+    "longitud": " -4.6959966"
+  },
+  {
+    "ciudad": "PAREDES",
+    "direccion": " CC Intu Asturias (antiguo CC Parque Principado)",
+    "latitud": " 43.3899709",
+    "longitud": " -5.8015427"
+  },
+  {
+    "ciudad": "AVILES",
+    "direccion": "C/ Ruiz Gómez 1",
+    "latitud": " 43.5554122",
+    "longitud": " -5.9213474"
+  },
+  {
+    "ciudad": "ROQUETAS DE MAR",
+    "direccion": "CC Gran Plaza",
+    "latitud": " 36.7785406",
+    "longitud": " -2.609797"
+  },
+  {
+    "ciudad": "EL EJIDO",
+    "direccion": "CC Copo",
+    "latitud": " 36.7242296",
+    "longitud": " -2.7961595"
+  },
+  {
+    "ciudad": "XABIA",
+    "direccion": "Avda. de la Libertad 47",
+    "latitud": " 38.77283",
+    "longitud": " 0.18821"
+  },
+  {
+    "ciudad": "TORREVIEJA",
+    "direccion": "CC Habaneras",
+    "latitud": " 37.9897829",
+    "longitud": " -0.6861469"
+  },
+  {
+    "ciudad": "TORREVIEJA",
+    "direccion": "C/ Ramon Gallud 98",
+    "latitud": " 37.9773967",
+    "longitud": " -0.6770613"
+  },
+  {
+    "ciudad": "SANTA POLA",
+    "direccion": "Avda. Fernando Pérez de Ojeda, 4, BAJO 3",
+    "latitud": " 38.1918656",
+    "longitud": " -0.5607785"
+  },
+  {
+    "ciudad": "SAN VICENTE DEL RASPEIG",
+    "direccion": "The Outlet Stores",
+    "latitud": " 38.3828488",
+    "longitud": " -0.5065273"
+  },
+  {
+    "ciudad": "PLAYA DE SAN JUAN",
+    "direccion": "Mercado la Sureña AVenida de Niza 12",
+    "latitud": " 38.3703299",
+    "longitud": " -0.4106027"
+  },
+  {
+    "ciudad": "ALICANTE",
+    "direccion": "Rambla Mendez Nuñez",
+    "latitud": " 38.3457497",
+    "longitud": " -0.4837497"
+  },
+  {
+    "ciudad": "ALICANTE",
+    "direccion": "Plaza de los Luceros",
+    "latitud": " 38.3454792",
+    "longitud": " -0.4907891"
+  },
+  {
+    "ciudad": "ALICANTE",
+    "direccion": "CC Puerta de Alicante",
+    "latitud": " 38.3423285",
+    "longitud": " -0.5170867"
+  },
+  {
+    "ciudad": "ALICANTE",
+    "direccion": "CC Plaza Mar 2",
+    "latitud": " 38.3664351",
+    "longitud": " -0.4599205"
+  },
+  {
+    "ciudad": "ALICANTE",
+    "direccion": "CC Gran Via",
+    "latitud": " 38.3666887",
+    "longitud": " -0.4694231"
+  },
+  {
+    "ciudad": "PETRER",
+    "direccion": "CC Carrefour Petrer",
+    "latitud": " 38.4877093",
+    "longitud": " -0.7753824"
+  },
+  {
+    "ciudad": "ORIHUELA COSTA",
+    "direccion": "CC Zenia Boulevard",
+    "latitud": " 37.9311799",
+    "longitud": " -0.7368809"
+  },
+  {
+    "ciudad": "ORIHUELA",
+    "direccion": "CC Ociopia",
+    "latitud": " 38.0867156",
+    "longitud": " -0.9524469"
+  },
+  {
+    "ciudad": "ONDARA",
+    "direccion": "CC Portal de la Marina",
+    "latitud": " 38.8176016",
+    "longitud": " 0.022446"
+  },
+  {
+    "ciudad": "ELDA",
+    "direccion": "ELDA",
+    "latitud": " 38.4781164",
+    "longitud": " -0.7926643"
+  },
+  {
+    "ciudad": "ELCHE",
+    "direccion": "ELCHE",
+    "latitud": " 38.2658373",
+    "longitud": " -0.6961924"
+  },
+  {
+    "ciudad": "ELCHE",
+    "direccion": "CC L´aljub",
+    "latitud": " 38.2623698",
+    "longitud": " -0.7206308"
+  },
+  {
+    "ciudad": "ELCHE",
+    "direccion": "Avda. de la Libertad 74",
+    "latitud": " 38.269246",
+    "longitud": " -0.7082042"
+  },
+  {
+    "ciudad": "EL CAMPELLO",
+    "direccion": "Mercado la Sureña",
+    "latitud": "  38.4114626",
+    "longitud": " - -0.442552"
+  },
+  {
+    "ciudad": "DENIA",
+    "direccion": "DENIA",
+    "latitud": " 38.7894368",
+    "longitud": " 0.1607687"
+  },
+  {
+    "ciudad": "CALPE",
+    "direccion": "Edificio Apolo 7",
+    "latitud": " 38.6443165",
+    "longitud": " 0.0505976"
+  },
+  {
+    "ciudad": "BENIDORM",
+    "direccion": "Av. Armada Española 7-8",
+    "latitud": " 38.5372888",
+    "longitud": " -0.1412695"
+  },
+  {
+    "ciudad": "BENIDORM",
+    "direccion": "Avda. de Europa esq. C/ Lepanto",
+    "latitud": " 38.5389874",
+    "longitud": " -0.1203509"
+  },
+  {
+    "ciudad": "BENIDORM",
+    "direccion": "C/ Pal 5 ",
+    "latitud": " 38.5360262",
+    "longitud": " -0.1293419"
+  },
+  {
+    "ciudad": "ALICANTE",
+    "direccion": "C/Pintor Xavier Soler",
+    "latitud": "38.3628936",
+    "longitud": "-0.4663832999999613"
+  },
+  {
+    "ciudad": "ALBACETE",
+    "direccion": "C.C. Imaginalia",
+    "latitud": "39.008738",
+    "longitud": "-1.8767950000000155"
+  },
+  {
+    "ciudad": "Albacete",
+    "direccion": "CC Albacenter",
+    "latitud": " 38.993541",
+    "longitud": " -1.8480232"
+  },
+  {
+    "ciudad": "VITORIA",
+    "direccion": "Mercado la Sureña C/ de Postas 15",
+    "latitud": " 42.8459785",
+    "longitud": " -2.6703534"
+  },
+  {
+    "ciudad": "A CORUÑA",
+    "direccion": "CC Marineda City",
+    "latitud": " 43.3440866 ",
+    "longitud": " -8.4277599"
+  },
+  {
+    "ciudad": "A CORUÑA",
+    "direccion": "C/ GALERA 40",
+    "latitud": " 43.3702161",
+    "longitud": " -8.4008913"
+  },
+  {
+    "ciudad": "SANTIAGO DE COMPOSTELA",
+    "direccion": "As Canselas",
+    "latitud": "42.8894436",
+    "longitud": "-8.526445400000057"
+  },
+  {
+    "ciudad": "ALMERÍA",
+    "direccion": "CC Mediterraneo",
+    "latitud": "36.8410872",
+    "longitud": "-2.4472786"
+  },
+  {
+    "ciudad": "CADIZ",
+    "direccion": "ECI Bahía de Cádiz",
+    "latitud": "36.5214281",
+    "longitud": "-6.2772993"
+  },
+  {
+    "ciudad": "ALDAIA",
+    "direccion": "CC Bonaire",
+    "latitud": "39.4684798",
+    "longitud": "-0.4878809"
+  },
+  {
+    "ciudad": "ALCOY",
+    "direccion": "C/ ELS Alzamora 41",
+    "latitud": "38.6978408",
+    "longitud": "-0.4815806"
+  },
+  {
+    "ciudad": "ALCORCON",
+    "direccion": "CC Tres Aguas",
+    "latitud": "40.3591844",
+    "longitud": "-3.8336586"
+  },
+  {
+    "ciudad": "ALCORCON",
+    "direccion": "C/ Mayor 71",
+    "latitud": "40.3449045",
+    "longitud": "-3.8275314"
+  },
+  {
+    "ciudad": "ALCOBENDAS",
+    "direccion": "Centro de ocio Heron Diversia",
+    "latitud": "40.5304122",
+    "longitud": "-3.6384856"
+  },
+  {
+    "ciudad": "ALCOBENDAS",
+    "direccion": "CC La Gran Manzana",
+    "latitud": "40.5479807",
+    "longitud": "-3.6406026"
+  },
+  {
+    "ciudad": "ALCIRA",
+    "direccion": "Alzira",
+    "latitud": "39.1513601",
+    "longitud": "-0.4377285"
+  },
+  {
+    "ciudad": " ALCAZAR DE SAN JUAN",
+    "direccion": "Alcazar de San Juan ",
+    "latitud": "39.39382",
+    "longitud": "-3.21929"
+  },
+  {
+    "ciudad": "A CORUÑA",
+    "direccion": "C/ GALERA 40",
+    "latitud": " 43.3702161",
+    "longitud": " -8.4008913"
+  },
+  {
+    "ciudad": "A CORUÑA",
+    "direccion": "CC Marineda City",
+    "latitud": " 43.3440866 ",
+    "longitud": " -8.4277599"
+  },
+  {
+    "ciudad": "ADEJE",
+    "direccion": "CC Siam Mall",
+    "latitud": " 28.0675682",
+    "longitud": " -16.7225624"
+  },
+  {
+    "ciudad": "AGUILAS",
+    "direccion": "CC Aguilas Plaza",
+    "latitud": " 37.4102816",
+    "longitud": " -1.5636336"
+  },
+  {
+    "ciudad": "Albacete",
+    "direccion": "CC Albacenter",
+    "latitud": " 38.993541",
+    "longitud": " -1.8480232"
+  },
+  {
+    "ciudad": "ALBACETE",
+    "direccion": "C.C. Imaginalia",
+    "latitud": "39.008738",
+    "longitud": "-1.8767950000000155"
+  },
+  {
+    "ciudad": "ALCALA DE GUADAIRA",
+    "direccion": "CC Los Alcores",
+    "latitud": " 37.3514721",
+    "longitud": " -5.857726"
+  },
+  {
+    "ciudad": "ALCALA DE HENARES",
+    "direccion": "C/ Atienza 1",
+    "latitud": " 40.4859065",
+    "longitud": " -3.3606587"
+  }
+]
